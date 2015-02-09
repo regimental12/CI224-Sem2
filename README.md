@@ -5,7 +5,7 @@
 - George Vicarey
 - Richard Hankins
 
-##thing we'd like
+##what we'd like to implement
 This will likely consist of some of the following:-
 - [ ] A cube world
 - [ ] Procedurally generated terrain.
@@ -14,6 +14,8 @@ This will likely consist of some of the following:-
 - [ ] GUI/HUD
 - [ ] Terrain has some form of chunk system
 - [ ] Some form of networking
+- [ ] First person camera
+- [ ] 
 
 #Project Pitch
 For this project we will be endeavouring to make a basic minecraft clone. It will be a voxel world structured in 16*16*256 chunks. The world will be pseudo-infinite, and procedurally generated.
