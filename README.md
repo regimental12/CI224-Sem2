@@ -8,4 +8,7 @@ Team:
 
 
 This will consist of  
-[ ] Procedurally generated terrain.
+- [ ] A cube world
+- [ ] Procedurally generated terrain.
+- [ ] Basic inventory system
+- [ ] Entities with pathfinding
