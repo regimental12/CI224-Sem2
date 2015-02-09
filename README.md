@@ -1,12 +1,11 @@
 # CI224-Sem2 
-Our project will be a minecraft clone.
 
-Team:
+#Overview
+##Team:
 - George Vicarey
 - Richard Hankins
 
-##Overview
-
+##thing we'd like
 This will likely consist of some of the following:-
 - [ ] A cube world
 - [ ] Procedurally generated terrain.
@@ -20,3 +19,5 @@ This will likely consist of some of the following:-
 For this project we will be endeavouring to make a basic minecraft clone. It will be a voxel world structured in 16*16*256 chunks. The world will be pseudo-infinite, and procedurally generated.
 
 #Project Plan
+
+#Proposed technology
