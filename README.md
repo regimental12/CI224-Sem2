@@ -6,4 +6,4 @@ Team:
 - Richard Hankins
 
 This will consist of 
-1. Procedurally generated terrain.
+[ ] Procedurally generated terrain.
