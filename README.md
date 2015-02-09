@@ -15,8 +15,8 @@ This will likely consist of some of the following:-
 - [ ] GUI/HUD
 - [ ] Terrain has some form of chunk system
 - [ ] Some form of networking
-- 
 
 #Project Pitch
+For this project we will be endeavouring to make a basic minecraft clone. It will be a voxel world structured in 16*16*256 chunks. The world will be pseudo-infinite, and procedurally generated.
 
 #Project Plan
