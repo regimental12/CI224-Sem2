@@ -16,9 +16,11 @@
 - [ ] Add and Remove blocks
 - [ ] Some form of networking
 - [ ] First person camera
-- [ ] Night and day cycle.
-- [ ] Pretty shaders.
-- [ ] Audio.
+- [ ] Night and day cycle
+- [ ] Pretty shaders
+- [ ] Audio
+- [ ] Load/Save game
+- [ ] Game menu
 - [ ] Multi user git intergration.
 - [ ] Continous intergration
 - [ ] Auto build system.
@@ -29,7 +31,7 @@ For this project we will be endeavouring to make a basic minecraft clone. It wil
 Our aim is to work on these three features until they are completely polished. We'd much rather have three working features that leave us with a playable game than implement every feature badly and have a game that's so bug ridden it needs an exterminator. 
 
 #Project Plan
-Building off of both our work from last semester we will compile a common codebase that implements a basic block world. 
+Our first goal will be to use both of our existing code from semester one to make a working basic cube world, in one codebase that we can then start working on our other features. At this point we will list the features we want to implement (which we already know) and break them down into tasks that need doing, if the scope of a single tasks looks to be too big we will break it down into sub tasks. Once we've broken down all the features into manageable tasks we can assign ourselves tasks to work on and implement individually.  
 
 #Proposed technology
 - C++
@@ -61,12 +63,12 @@ Building off of both our work from last semester we will compile a common codeba
   - [ ] A procedural block world with proper data structure - 20%
 
 **Working player (only one applies)**
-  - [ ] plaer that moves - 5%
+  - [ ] player that moves - 5%
   - [ ] player with gui - 10%
   - [ ] player with interaction - 15%
   - [ ] player with interaction and gui and inventory - 20%
 
 **Working entities (only one applies)**
   - [ ] Entities with Basic AI (Just wander aimlessly) - 10%
-  - [ ] Entities with path finding and goals (can actively attack/find the palyer) - 20%
+  - [ ] Entities with path finding and goals (can actively attack/find the player) - 20%
 
