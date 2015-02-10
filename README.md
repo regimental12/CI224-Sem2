@@ -41,27 +41,28 @@ Do lots, Code much!
 - Do less well rather than lots badly.  
   - Implement fewer features fully, rather than all features badly.
 
-- Use of indistry standard tools. 
+- Use of indistry standard tools (any apply)
   - Git - 5%
   - Continuous Integration - 5%
   - Build System - 5%
   - Unit testing - 5%
 
-- Quality of code.
-- Abiltilty of code/engine to be added too.
+- Quality of code (any apply)
+  - Clean structure - 5%
+  - Modularity of engine/codebase - 10%
 
-- Working block world 
-  - [ ] A basic block world (hard coded) - 10%
-  - [ ] A procederal block world  - 20%
-  - [ ] A procedural block world with proper data structure - 30%
+- Working block world (only one applies)
+  - [ ] A basic block world (hard coded) - 5%
+  - [ ] A procederal block world  - 10%
+  - [ ] A procedural block world with proper data structure - 20%
 
-- Working player
+- Working player (only one applies)
   - [ ] plaer that moves - 5%
-  - [ ] player with ygui - 10%
+  - [ ] player with gui - 10%
   - [ ] player with interaction - 15%
   - [ ] player with interaction and gui and inventory - 20%
 
-- Working entities 
+- Working entities (only one applies)
   - Entities with Basic AI (Just wander aimlessly) - 10%
   - Entities with path finding and goals (can actively attack/find the palyer) - 20%
 
