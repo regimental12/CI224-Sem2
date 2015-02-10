@@ -45,12 +45,14 @@ Do lots, Code much!
 - extra features added.  
 - abiltilty of code/engine to be added too.
 
-- [ ] block world 10% 
-  - [ ] procederal block world 20%
+- Working block world 
+  - [ ] A basic block world (hard coded) - 10%
+  - [ ] A procederal block world  - 20%
 
-- [ ] player 5%
-  - [ ] player with gui 10%
-  - [ ] player with interaction 15%
-  - [ ] player withinteraction and gui and inventory 20%
+- Working player
+  - [ ] plaer that moves - 5%
+  - [ ] player with gui - 10%
+  - [ ] player with interaction - 15%
+  - [ ] player withinteraction and gui and inventory - 20%
 
 
