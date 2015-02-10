@@ -38,8 +38,8 @@ Do lots, Code much!
 - [ ] Automated build tools.
 
 #Marking Scheme
-- Do less well rather than lots badly.  
-  - Implement fewer features fully, rather than all features badly.
+
+**Implement fewer features fully, rather than all features badly.**
 
 - Use of indistry standard tools (any apply)
   - Git - 5%
@@ -50,6 +50,7 @@ Do lots, Code much!
 - Quality of code (any apply)
   - Clean structure - 5%
   - Modularity of engine/codebase - 10%
+  - Cross platform build - 10%
 
 - Working block world (only one applies)
   - [ ] A basic block world (hard coded) - 5%
