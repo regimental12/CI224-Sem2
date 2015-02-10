@@ -28,7 +28,7 @@
 For this project we will be endeavouring to make a basic minecraft clone. It will be procedurally generated and contain at least 3 different types of textured block. and as many of the things we can get done from the list.
 
 #Project Plan
-Do lots, Code much!
+Building off of bot our work from last semester we will compile a common codebase that implements a basic block world. Once this is acieved we will work on our choice of features, prioritising Procedurally generated blcok world witha ppropriate data structures, having a working player and having entities with workign AI.
 
 #Proposed technology
 - [ ] C++
@@ -38,7 +38,6 @@ Do lots, Code much!
 - [ ] Automated build tools.
 
 #Marking Scheme
-
 **Implement fewer features fully, rather than all features badly.**
 
 - Use of indistry standard tools (any apply)
