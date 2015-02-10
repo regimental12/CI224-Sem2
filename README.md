@@ -38,19 +38,19 @@ Do lots, Code much!
 - [ ] Automated build tools.
 
 #Marking Scheme
--do less well rather than lots badly.
--use of tools. e.g. Git Travis Ide Documentation etc.
--quality of code.
--implementation of core features.
--extra features added.
--abiltilty of code/engine to be added too.
+- do less well rather than lots badly.  
+- use of tools. e.g. Git Travis Ide Documentation etc.  
+- quality of code.  
+- implementation of core features.  
+- extra features added.  
+- abiltilty of code/engine to be added too.
 
 - [ ] block world 10% 
-- [ ] procederal block world 20%
+  - [ ] procederal block world 20%
 
 - [ ] player 5%
-- [ ] player with gui 10%
-- [ ] player with interaction 15%
-- [ ] player withinteraction and gui and inventory 20%
+  - [ ] player with gui 10%
+  - [ ] player with interaction 15%
+  - [ ] player withinteraction and gui and inventory 20%
 
 
