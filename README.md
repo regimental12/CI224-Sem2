@@ -40,11 +40,13 @@ Do lots, Code much!
 #Marking Scheme
 - Do less well rather than lots badly.  
   - Implement fewer features fully, rather than all features badly.
+
 - Use of indistry standard tools. 
-  - Git
-  - Continuous Integration
-  - Build System
-  - Unit testing
+  - Git - 5%
+  - Continuous Integration - 5%
+  - Build System - 5%
+  - Unit testing - 5%
+
 - Quality of code.
 - Abiltilty of code/engine to be added too.
 
@@ -55,8 +57,11 @@ Do lots, Code much!
 
 - Working player
   - [ ] plaer that moves - 5%
-  - [ ] player with gui - 10%
+  - [ ] player with ygui - 10%
   - [ ] player with interaction - 15%
-  - [ ] player withinteraction and gui and inventory - 20%
+  - [ ] player with interaction and gui and inventory - 20%
 
+- Working entities 
+  - Entities with Basic AI (Just wander aimlessly) - 10%
+  - Entities with path finding and goals (can actively attack/find the palyer) - 20%
 
