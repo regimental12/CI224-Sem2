@@ -5,8 +5,8 @@
 - George Vicarey
 - Richard Hankins
 
-##what we'd like to implement
-This will likely consist of some of the following:-
+##Features we'd like to implement
+
 - [ ] A cube world
 - [ ] Procedurally generated terrain.
 - [ ] Basic inventory system
