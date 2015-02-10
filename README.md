@@ -38,16 +38,20 @@ Do lots, Code much!
 - [ ] Automated build tools.
 
 #Marking Scheme
-- do less well rather than lots badly.  
-- use of tools. e.g. Git Travis Ide Documentation etc.  
-- quality of code.  
-- implementation of core features.  
-- extra features added.  
-- abiltilty of code/engine to be added too.
+- Do less well rather than lots badly.  
+  - Implement fewer features fully, rather than all features badly.
+- Use of indistry standard tools. 
+  - Git
+  - Continuous Integration
+  - Build System
+  - Unit testing
+- Quality of code.
+- Abiltilty of code/engine to be added too.
 
 - Working block world 
   - [ ] A basic block world (hard coded) - 10%
   - [ ] A procederal block world  - 20%
+  - [ ] A procedural block world with proper data structure - 30%
 
 - Working player
   - [ ] plaer that moves - 5%
