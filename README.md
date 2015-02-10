@@ -25,17 +25,21 @@
 - [ ] Multi-platform
 
 #Project Pitch
-For this project we will be endeavouring to make a basic minecraft clone. It will be procedurally generated and contain at least 3 different types of textured block. and as many of the things we can get done from the list.
+For this project we will be endeavouring to make a basic minecraft clone. It will be procedurally generated and contain at least 3 different types of textured block. The above list is a list of all the features we'd like to implement, although this doesn't necessarily mean we actually will. The mechanics we're definitely aiming to have finished are a procedurally generated block world saved using a chunk type data structure, in game entities which will have a form of artificial intelligence which will allow them to use path finding to attack the player, and a playable player this means we want interaction with the environment including a basic inventory system and heads-up-display.
+Our aim is to work on these three features until they are completely polished. We'd much rather have three working features that leave us with a playable game than implement every feature badly and have a game that's so bug ridden it needs an exterminator. 
 
 #Project Plan
-Building off of bot our work from last semester we will compile a common codebase that implements a basic block world. Once this is acieved we will work on our choice of features, prioritising Procedurally generated blcok world witha ppropriate data structures, having a working player and having entities with workign AI.
+Building off of both our work from last semester we will compile a common codebase that implements a basic block world. 
 
 #Proposed technology
-- [ ] C++
-- [ ] openGL
-- [ ] SDL
-- [ ] Unit Testing
-- [ ] Automated build tools.
+- C++
+- **Libraries we'll use:**
+  - SDL2
+  - SDL2_image
+  - libNoise
+- openGL
+- Unit Testing
+- Automated build tools.
 
 #Marking Scheme
 **Implement fewer features fully, rather than all features badly.**
