@@ -39,6 +39,7 @@ Our first goal will be to use both of our existing code from semester one to mak
   - SDL2
   - SDL2_image
   - libNoise
+  - BulletPhysics
 - openGL
 - Unit Testing
 - Automated build tools.
@@ -47,15 +48,15 @@ Our first goal will be to use both of our existing code from semester one to mak
 **Implement fewer features fully, rather than all features badly.**
 
 **Use of indistry standard tools (any apply)**
-  - Git - 5%
-  - Continuous Integration - 5%
-  - Build System - 5%
-  - Unit testing - 5%
+  - [ ] Git - 5%
+  - [ ] Continuous Integration - 5%
+  - [ ] Build System - 5%
+  - [ ] Unit testing - 5%
 
 **Quality of code (any apply)**
-  - Clean structure - 5%
-  - Modularity of engine/codebase - 10%
-  - Cross platform build - 10%
+  - [ ] Clean structure - 5%
+  - [ ] Modularity of engine/codebase - 10%
+  - [ ] Cross platform build - 10%
 
 **Working block world (only one applies)**
   - [ ] A basic block world (hard coded) - 5%
