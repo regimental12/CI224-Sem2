@@ -1,9 +1,11 @@
 # CI224-Sem2 
 
 #Overview
-##Team:
+##Team members
 - George Vicarey
+  - Lord of pointers
 - Richard Hankins
+  - Commander in chief of Null Terminators
 
 ##Features we'd like to implement
 
