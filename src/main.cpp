@@ -1,8 +1,8 @@
-/*
+/**
  * main.cpp
  *
- *  Created on: 12 Feb 2015
- *      Author: George
+ * 	Main entry point for application.
+ *  
  */
 
 #include <iostream>
