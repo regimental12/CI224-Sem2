@@ -3,6 +3,7 @@
 
 #include "SDL2/SDL.h"
 #include "GL/glew.h"
+#include "GL/gl.h"
 
 class Game
 {
@@ -10,16 +11,14 @@ public:
   Game();
   ~Game();
   void Init();
-  void Loop;
+  void Loop();
   void CleanUp();
   
 private:
   SDL_Window* _window;
   SDL_Event mainEvent;
   SDL_GLContext glContext;
-    
-
   
-}
+};
 
 #endif
