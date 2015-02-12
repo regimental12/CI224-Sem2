@@ -6,9 +6,15 @@
  */
 
 #include <iostream>
+#include "Game.h"
 
 using namespace std;
 
-int main(int arc, char** argv) {
-	cout << "hello World!" << endl;
+Game* game = new Game();
+
+int main(int arc, char** argv) 
+{
+  game->Init();
+  game->Loop();
+  game->CleanUp();
 }
