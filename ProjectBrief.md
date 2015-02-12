@@ -6,7 +6,7 @@
   - Lord of pointers
 - Richard Hankins
   - Commander in chief of Null Terminators
-  - Master of the Multiple Inheritence
+  - Master of the Multiple Inheritance
 
 ##Features we'd like to implement
 
