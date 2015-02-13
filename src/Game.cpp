@@ -4,6 +4,7 @@ Game::Game()
 {
   _window = NULL;
   _running = false;
+  glContext = NULL;
 }
 
 Game::~Game()
