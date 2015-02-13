@@ -9,7 +9,8 @@
   - Commander in chief of Null Terminators
   - Master of  Multiple Inheritance
 
-##Features we'd like to implement (BOLD items are defnite, ITALIC items are markable but not neccesary)
+##Features we'd like to implement 
+**OLD items are defnite, ITALIC items are markable but not neccesary, unformatte ditems are stretch goals**
 - [ ] **A cube world**
 - [ ] *Procedurally generated terrain.*
 - [ ] *Basic inventory system*
