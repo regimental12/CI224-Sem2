@@ -17,4 +17,6 @@ int main(int arc, char** argv)
   game->Init();
   game->Loop();
   game->CleanUp();
+
+  return 0;
 }
