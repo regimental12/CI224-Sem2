@@ -4,26 +4,28 @@
 ##Team members
 - George Vicarey
   - Lord of pointers
+  - Warden of the Procedural Realms
 - Richard Hankins
   - Commander in chief of Null Terminators
-  - Master of the Multiple Inheritance
+  - Master of  Multiple Inheritance
 
-##Features we'd like to implement
-
-- [ ] A cube world
-- [ ] Procedurally generated terrain.
-- [ ] Basic inventory system
-- [ ] Entities with pathfinding
-- [ ] GUI/HUD
-- [ ] Terrain has some form of chunk system
-- [ ] Add and Remove blocks
+##Features we'd like to implement (BOLD items are defnite, ITALIC items are markable but not neccesary)
+- [ ] **A cube world**
+- [ ] *Procedurally generated terrain.*
+- [ ] *Basic inventory system*
+- [ ] **Entities**
+- [ ] *Entities with pathfinding*
+- [ ] *GUI/HUD**
+- [ ] *Terrain has some form of chunk system*
+- [ ] *Add and Remove blocks*
 - [ ] Some form of networking
-- [ ] First person camera
+- [ ] **First person camera**
 - [ ] Night and day cycle
 - [ ] Pretty shaders
 - [ ] Audio
 - [ ] Load/Save game
 - [ ] Game menu
+
 - [ ] Multi user git intergration.
 - [ ] Continous intergration
 - [ ] Auto build system.
@@ -38,17 +40,21 @@ Our first goal will be to use both of our existing code from semester one to mak
 
 #Proposed technology
 - C++
-- **Libraries we'll use:**
-  - SDL2
-  - SDL2_image
-  - libNoise
-  - BulletPhysics
+- **Libraries we're likely tp use:**
+  - SDL2 - Opening a window and creatign OpenGL context
+  - SDL2_image - Loading an image to be bound as a texture
+  - libNoise - Generating noise to be used for procedural generation
+  - GLM - for ease of use when calculating vectors/matrices
+  - BulletPhysics - possible substitution to 
 - openGL
 - Unit Testing
-- Automated build tools.
+- Automated build tools
 
 #Marking Scheme
-**Implement fewer features fully, rather than all features badly.**
+**The main aim:**
+*Implement fewer features fully, rather than all features badly.*
+
+This marking scheme is divided into categories some of which have multiple criteria. some categories allow for multiple selections, i.e. whichever ones apply can count to final total, other categories are on a *one* only basis i.e. the pick highest marked item which applies.
 
 **Use of indistry standard tools (any apply)**
   - [ ] Git - 5%
