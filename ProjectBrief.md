@@ -10,7 +10,7 @@
   - Master of  Multiple Inheritance
 
 ##Features we'd like to implement 
-**BOLD items are defnite, ITALIC items are markable but not neccesary, unformatte ditems are stretch goals**
+**BOLD items are definite, ITALIC items are markable but not neccesary, un-formatted items are stretch goals**
 - [ ] **A cube world**
 - [ ] *Procedurally generated terrain.*
 - [ ] *Basic inventory system*
@@ -26,11 +26,7 @@
 - [ ] Audio
 - [ ] Load/Save game
 - [ ] Game menu
-
-- [ ] Multi user git intergration.
-- [ ] Continous intergration
-- [ ] Auto build system.
-- [ ] Multi-platform
+- [ ] **Multi-platform**
 
 #Project Pitch
 For this project we will be endeavouring to make a basic minecraft clone. It will be procedurally generated and contain at least 3 different types of textured block. The above list is a list of all the features we'd like to implement, although this doesn't necessarily mean we actually will. The mechanics we're definitely aiming to have finished are a procedurally generated block world saved using a chunk type data structure, in game entities which will have a form of artificial intelligence which will allow them to use path finding to attack the player, and a playable player this means we want interaction with the environment including a basic inventory system and heads-up-display.
@@ -50,6 +46,7 @@ Our first goal will be to use both of our existing code from semester one to mak
 - openGL
 - Unit Testing
 - Automated build tools
+- Multi-User Git integration
 
 #Marking Scheme
 **The main aim:**
@@ -57,7 +54,7 @@ Our first goal will be to use both of our existing code from semester one to mak
 
 This marking scheme is divided into categories some of which have multiple criteria. some categories allow for multiple selections, i.e. whichever ones apply can count to final total, other categories are on a *one* only basis i.e. the pick highest marked item which applies.
 
-**Use of indistry standard tools (any apply)**
+**Use of industry standard tools (any apply)**
   - [ ] Git - 5%
   - [ ] Continuous Integration - 5%
   - [ ] Build System - 5%
@@ -70,16 +67,16 @@ This marking scheme is divided into categories some of which have multiple crite
 
 **Working block world (only one applies)**
   - [ ] A basic block world (hard coded) - 5%
-  - [ ] A procederal block world  - 10%
+  - [ ] A procedural block world  - 10%
   - [ ] A procedural block world with proper data structure - 20%
 
 **Working player (only one applies)**
-  - [ ] player that moves - 5%
-  - [ ] player with gui - 10%
-  - [ ] player with interaction - 15%
-  - [ ] player with interaction and gui and inventory - 20%
+  - [ ] A player that moves - 5%
+  - [ ] A player with HUD - 10%
+  - [ ] A player with interaction - 15%
+  - [ ] A player with interaction and HUD and inventory - 20%
 
 **Working entities (only one applies)**
-  - [ ] Entities with Basic AI (Just wander aimlessly) - 10%
+  - [ ] Entities with basic AI (Just wander aimlessly) - 10%
   - [ ] Entities with path finding and goals (can actively attack/find the player) - 20%
 
