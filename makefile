@@ -13,7 +13,7 @@ endif
 
 all:
 	@echo 'Building MineClone'
-	g++ src/*.cpp $(LINKS) -o build/MineClone
+	g++ src/*.cpp $(LINKS) -std="c++11" -o build/MineClone
 	@echo 'Finished building'
 	@echo './build/MineClone to run'
 	
