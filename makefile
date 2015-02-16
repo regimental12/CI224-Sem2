@@ -2,12 +2,12 @@
 LINKS=-lSDL2
 
 ifeq ($(OS),Windows_NT)
-	LINKS=-lmingw32 -lSDL2main -lSDL2 -lglew32 -lopengl32
+	LINKS=-lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lglew32 -lopengl32
 else
 	UNAME_S := $(shell uname -s)
 	
 	ifeq ($(UNAME_S),Linux)
-		LINKS=-lSDL2 -lGLEW -lGL
+		LINKS=-lSDL2 -lSDL2_image -lGLEW -lGL
 	endif
 endif
 
