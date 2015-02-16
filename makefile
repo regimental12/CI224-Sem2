@@ -1,3 +1,6 @@
+#directory for .EXE to be put.
+BUILD_DIR=build
+
 #Linked library variable. Will change linked libraries depending on Linux or Windows 
 LINKS=-lSDL2
 
@@ -13,6 +16,10 @@ endif
 
 all:
 	@echo 'Building MineClone'
+	
+	#Test if build directory exists. Then create if not there.
+	test -d $(BUILD_DIR) || mkdir $(BUILD_DIR)
+	
 	g++ src/*.cpp $(LINKS) -std="c++11" -o build/MineClone
 	@echo 'Finished building'
 	@echo './build/MineClone to run'
