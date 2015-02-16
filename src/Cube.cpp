@@ -30,5 +30,7 @@ GLuint Cube::getTexture()
 void Cube::setTexture(std::string fileName)
 {
     // Fill out when image loader done.
-    
+    ImageLoader *iLoader = new ImageLoader();
+    texture = iLoader->LoadTexture("images/image1.jpg");
+    delete iLoader;
 }
