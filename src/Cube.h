@@ -6,6 +6,8 @@
 #include "glm/glm.hpp"
 #include <iostream>
 
+#include "ImageLoader.h"
+
 class Cube 
 {
 public:
