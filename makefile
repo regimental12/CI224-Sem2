@@ -1,6 +1,8 @@
 #Linked library variable. Will change linked libraries depending on Linux or Windows 
-ifeq ($)S),Windows_NT)
-	LINKS=-lmingw32 -lSDL2main -lSDL2 -lglew32s -lopengl32
+LINKS=-lSDL2
+
+ifeq ($(OS),Windows_NT)
+	LINKS=-lmingw32 -lSDL2main -lSDL2 -lglew32 -lopengl32
 else
 	UNAME_S := $(shell uname -s)
 	
@@ -18,3 +20,4 @@ all:
 #deletes outputted .exe	
 clean:
 	rm build/MineClone
+	
