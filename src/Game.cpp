@@ -52,17 +52,33 @@ void Game::Loop()
     {
         while (SDL_PollEvent(&mainEvent))
         {
-            switch (mainEvent.type)
-            {
-                case SDL_QUIT:
-                    _running = false;
-                    break;
-            }
+            HandleEvents(mainEvent);
         }
 
-        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        Update();
+
+        Render();
 
         SDL_GL_SwapWindow(_window);
     }
+}
+
+void Game::HandleEvents(SDL_Event e)
+{
+	switch (e.type) {
+	case SDL_QUIT:
+		_running = false;
+		break;
+	}
+}
+
+void Game::Update()
+{
+
+}
+
+void Game::Render()
+{
+	glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
