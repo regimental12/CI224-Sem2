@@ -11,7 +11,6 @@ install:
   - sudo apt-get install -q -y libsdl2-dev
   - sudo apt-get install -q libglm-dev
   - sudo apt-get install -q libglew-dev
-  - cd Build/
 script:
   - make clean
   - make all
