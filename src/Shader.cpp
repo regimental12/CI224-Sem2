@@ -10,7 +10,7 @@ Shader::~Shader()
 
 }
 
-GLuint Shader::loadShader(std::string vFilename ,std::string fFilename)
+void Shader::loadShader(std::string vFilename ,std::string fFilename)
 {
     try
     {

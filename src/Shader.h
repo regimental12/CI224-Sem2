@@ -15,7 +15,7 @@ class Shader
 public:
   Shader();
   ~Shader();
-  GLuint loadShader(std::string vFilename ,std::string fFilename);
+  void loadShader(std::string vFilename ,std::string fFilename);
   void useShader();
 
 private:
