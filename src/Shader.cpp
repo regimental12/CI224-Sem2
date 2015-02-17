@@ -28,7 +28,7 @@ void Shader::loadShader(std::string vFilename ,std::string fFilename)
         vertexCode = vShaderStream.str();
         fragmentCode = fShaderStream.str();
     }
-    catch (std::exception e)
+    catch (std::exception &e)
     {
         std::cout << "ERROR::SHADER::FILES NOT READ" << std::endl;
     }
