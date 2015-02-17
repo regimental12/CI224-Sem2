@@ -3,14 +3,17 @@ BUILD_DIR=build
 
 #Linked library variable. Will change linked libraries depending on Linux or Windows 
 LINKS=-lSDL2
+EXE=MineClone
 
 ifeq ($(OS),Windows_NT)
 	LINKS=-lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lglew32 -lopengl32
+	EXE=MineClone.exe
 else
 	UNAME_S := $(shell uname -s)
 	
 	ifeq ($(UNAME_S),Linux)
 		LINKS=-lSDL2 -lSDL2_image -lGLEW -lGL
+		EXE=MineClone
 	endif
 endif
 
@@ -26,5 +29,5 @@ all:
 	
 #deletes outputted .exe	
 clean:
-	rm build/MineClone
+	rm build/$(EXE)
 	
