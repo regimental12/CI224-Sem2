@@ -14,7 +14,7 @@ public:
   Cube();
   ~Cube();
   glm::vec3 getPosition();
-  glm::vec3 setPosition(GLuint x , GLuint y , GLuint z);
+  void setPosition(GLfloat x , GLfloat y , GLfloat z);
   
   GLuint getTexture();
   void setTexture(std::string fileName);

@@ -2,7 +2,7 @@
 
 Cube::Cube()
 {
-
+	position = glm::vec3(0.0f, 0.0f, 0.0f);
 }
 
 Cube::~Cube()
@@ -15,7 +15,7 @@ glm::vec3 Cube::getPosition()
     return position;
 }
 
-glm::vec3 Cube::setPosition(GLuint x , GLuint y , GLuint z)
+void Cube::setPosition(GLfloat x , GLfloat y , GLfloat z)
 {
     position.x = x;
     position.y = y;
