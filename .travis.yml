@@ -9,6 +9,7 @@ install:
   - sudo apt-get install -q gcc-4.8
   - sudo apt-get install -q g++-4.8
   - sudo apt-get install -q -y libsdl2-dev
+  - sudo apt-get install -q -y libsdl2-image-dev
   - sudo apt-get install -q libglm-dev
   - sudo apt-get install -q libglew-dev
 script:
