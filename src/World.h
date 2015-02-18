@@ -4,10 +4,10 @@
 class World
 {
 public:
-	World::World();
-	World::~World();
-	void World::Update();
-	void World::Render();
+	World();
+	~World();
+	void Update();
+	void Render();
 private:
 };
 
