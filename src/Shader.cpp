@@ -41,9 +41,7 @@ void Shader::loadShader(std::string vFilename ,std::string fFilename)
     GLuint vertex, fragment;
     GLint success;
     GLchar infoLog[512];
-    GLint* wibble = NULL;
-    int dribble = 512;
-    wibble = &dribble;
+    
 
     vertex = glCreateShader(GL_VERTEX_SHADER);
     glShaderSource(vertex, 1, &vShaderCode, 0);
