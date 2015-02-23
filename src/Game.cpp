@@ -115,8 +115,8 @@ void Game::Render()
     GLint viewLoc = glGetUniformLocation(shader.getProgram(), "view");
     GLint projLoc = glGetUniformLocation(shader.getProgram(), "projection");
 
-    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(camera->view));
-    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(camera->projection));
+    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
 /**
  * Loop through both arrays and render.
  */
