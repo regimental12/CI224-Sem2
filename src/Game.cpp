@@ -16,7 +16,7 @@ void Game::Init()
 {
     SDL_Init(SDL_INIT_EVERYTHING);
 
-    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION , 4);
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION , 3);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
 
@@ -35,6 +35,8 @@ void Game::Init()
     std::cout << "GLSL version: " << glGetString(GL_SHADING_LANGUAGE_VERSION) << std::endl;
     std::cout << "Vendor: " << glGetString(GL_VENDOR) << std::endl;
     std::cout << "Renderer: " << glGetString(GL_RENDERER) << std::endl;
+    
+    shader.loadShader("shaders/Vert.vrt" , "shaders/Frag.frg");
     
     _running = true;
 }
