@@ -7,26 +7,26 @@
   -  Warden of the Procedural Realms
 - Richard Hankins
   -  Commander in chief of Null Terminators
-  -  Master of  Multiple Inheritance
+  -  Master of Multiple Inheritance
   
 ###Features we'd like to implement
-**BOLD items are definite, ITALIC items are markable but not neccesary, un-formatted items are stretch goals**  
-- **A cube world**
-- *Procedurally generated terrain.*
-- *Basic inventory system*
-- **Entities**
-- *Entities with pathfinding*
-- *GUI/HUD*
-- *Terrain has some form of chunk system*
-- *Add and Remove blocks*
-- Some form of networking
-- **First person camera**
-- Night and day cycle
-- Pretty shaders
-- Audio
-- Load/Save game
-- Game menu
-- **Multi-platform**
+**BOLD items are definite, ITALIC items are markable but not necessary, un-formatted items are stretch goals**  
+- **A cube world**  
+- *Procedurally generated terrain.*  
+- *Basic inventory system*  
+- **Entities**  
+- *Entities with pathfinding*  
+- *GUI/HUD*  
+- *Terrain has some form of chunk system*  
+- *Add and Remove blocks*  
+- Some form of networking  
+- **First person camera**  
+- Night and day cycle  
+- Pretty shaders  
+- Audio  
+- Load/Save game  
+- Game menu  
+- **Multi-platform**  
   
 ##Project Pitch  
 For this project we will be endeavouring to make a basic minecraft clone. It will be procedurally generated and contain at least 3 different types of textured block. The above list is a list of all the features we'd like to implement, although this doesn't necessarily mean we actually will. The mechanics we're definitely aiming to have finished are a procedurally generated block world saved using a chunk type data structure, in game entities which will have a form of artificial intelligence which will allow them to use path finding to attack the player, and a playable player this means we want interaction with the environment including a basic inventory system and heads-up-display.  
@@ -37,11 +37,11 @@ Our first goal will be to use both of our existing code from semester one to mak
   
 ##Proposed technology  
 - C++  
-**Libraries we're likely to use:**
+**Libraries we're likely to use:**  
   - SDL2 - Opening a window and creatign OpenGL context  
-  - SDL2_image - Loading an image to be bound as a texture  
-  - libNoise - Generating noise to be used for procedural generation  
-  - GLM - for ease of use when calculating vectors/matrices  
+  - SDL2_image - Loading an image to be bound as a texture    
+  - libNoise - Generating noise to be used for procedural generation   
+  - GLM - for ease of use when calculating vectors/matrices   
   - BulletPhysics - possible substitution to   
 - openGL  
 - Unit Testing  
