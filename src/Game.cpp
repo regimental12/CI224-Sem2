@@ -115,9 +115,9 @@ void Game::Render()
     GLint viewLoc = glGetUniformLocation(shader.getProgram(), "view");
     GLint projLoc = glGetUniformLocation(shader.getProgram(), "projection");
 
-    glm::mat4 view;
+    glm::mat4 view = glm::mat4(0.0);
 
-    glm::mat4 proj;
+    glm::mat4 proj = glm::mat4(0.0);
 
     glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
     glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(proj));
