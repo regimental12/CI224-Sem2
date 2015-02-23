@@ -2,10 +2,19 @@
 #define _GAMEH_
 
 #include "SDL2/SDL.h"
+#define GLEW_STATIC
 #include "GL/glew.h"
 #include "GL/gl.h"
+#include "GL/glut.h"
+#include "GL/glx.h"
 #include "Shader.h"
+#include "Cube.h"
 #include <iostream>
+
+#define GLM_FORCE_RADIANS
+#include "glm/glm.hpp"
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 class Game
 {
@@ -25,6 +34,7 @@ private:
   SDL_GLContext glContext;
   bool _running;
   Shader shader;
+  Cube* cube;
   
 };
 

@@ -10,6 +10,12 @@ Shader::~Shader()
 
 }
 
+GLuint Shader::getProgram()
+{
+    return program;
+}
+
+
 void Shader::loadShader(std::string vFilename ,std::string fFilename)
 {
     try

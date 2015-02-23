@@ -5,6 +5,7 @@ Game::Game()
   _window = NULL;
   _running = false;
   glContext = NULL;
+  cube = new Cube;
 }
 
 Game::~Game()
@@ -16,7 +17,7 @@ void Game::Init()
 {
     SDL_Init(SDL_INIT_EVERYTHING);
 
-    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION , 3);
+    SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION , 4);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
 
@@ -83,4 +84,59 @@ void Game::Render()
 {
 	glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	
+	 glm::vec3 cubePositions[10] [10] [10] ;
+	   for(int x = 0 ; x < 10 ; x++ )
+	   {
+	     for ( int y = 0 ; y < 10 ;y++)
+	     {
+	       for (int z = 0 ;z < 10 ; z++)
+	       {
+		cubePositions[x][y][z] =  glm::vec3(x, y , z);
+	       }
+	     }
+	   }
+	   
+	   glm::vec3 cubePositions2[10] [10] [10] ;
+	   for(int x = 0 ; x < 10 ; x++ )
+	   {
+	     for ( int y = 0 ; y < 10 ;y++)
+	     {
+	       for (int z = 0 ;z < 10 ; z++)
+	       {
+		cubePositions2[x][y][z] =  glm::vec3(x+10, y+10 , z+10);
+	       }
+	     }
+	   }
+    
+    shader.useShader();
+   
+    GLint modelLoc = glGetUniformLocation(shader.getProgram(), "model");
+    GLint viewLoc = glGetUniformLocation(shader.getProgram(), "view");
+    GLint projLoc = glGetUniformLocation(shader.getProgram(), "projection");
+
+    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(camera->view));
+    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(camera->projection));
+/**
+ * Loop through both arrays and render.
+ */
+    glBindVertexArray(cube->getVAO());
+	  for(int x = 0 ; x < 10 ; x++ )
+	   {
+	     for ( int y = 0 ; y < 10;y++)
+	     {
+	       for (int z = 0 ;z < 10; z++)
+	       {
+		  glBindTexture(GL_TEXTURE_2D, cube->getTexture());
+		  glm::mat4 model;
+		  model = glm::translate(model, cubePositions[x][y][z]);
+		  glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		  glDrawArrays(GL_TRIANGLES, 0, 36);
+		  glBindTexture(GL_TEXTURE_2D , 0);
+		}
+	     }
+	   }
+    glBindVertexArray(0);
+
+    
 }

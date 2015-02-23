@@ -12,7 +12,7 @@ else
 	UNAME_S := $(shell uname -s)
 	
 	ifeq ($(UNAME_S),Linux)
-		LINKS=-lSDL2 -lSDL2_image -lGLEW -lGL
+		LINKS=-lSDL2 -lSDL2_image -lGLEW -lGL -lGLU
 		EXE=MineClone
 	endif
 endif

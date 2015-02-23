@@ -17,6 +17,7 @@ public:
   ~Shader();
   void loadShader(std::string vFilename ,std::string fFilename);
   void useShader();
+  GLuint getProgram();
 
 private:
   GLuint program;

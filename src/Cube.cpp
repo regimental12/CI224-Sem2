@@ -3,6 +3,7 @@
 Cube::Cube()
 {
 	position = glm::vec3(0.0f, 0.0f, 0.0f);
+	loadCube();
 }
 
 Cube::~Cube()
@@ -35,9 +36,20 @@ void Cube::setTexture(std::string fileName)
     delete iLoader;
 }
 
+GLuint Cube::getVAO()
+{
+    return VAO;
+}
+
+GLuint Cube::getVBO()
+{
+    return VBO;
+}
+
+
+
 void Cube::loadCube()
 {
-    GLuint VBO, VAO;
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
 
