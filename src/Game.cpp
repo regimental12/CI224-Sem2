@@ -90,10 +90,23 @@ void Game::Render()
     GLint modelLoc = glGetUniformLocation(shader.getProgram(), "model");
     GLint viewLoc = glGetUniformLocation(shader.getProgram(), "view");
     GLint projLoc = glGetUniformLocation(shader.getProgram(), "projection");
+<<<<<<< HEAD
     
     glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
     glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
     
+=======
+
+    glm::mat4 view = glm::mat4(0.0);
+
+    glm::mat4 proj = glm::mat4(0.0);
+
+    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(proj));
+/**
+ * Loop through both arrays and render.
+ */
+>>>>>>> 0dd28c258457315090bfefa5de53c0193b1d63c6
     glBindVertexArray(cube->getVAO());
 	 
 		  glBindTexture(GL_TEXTURE_2D, cube->getTexture());
@@ -104,5 +117,11 @@ void Game::Render()
 		  glBindTexture(GL_TEXTURE_2D , 0);
 	
     glBindVertexArray(0);
+<<<<<<< HEAD
 	    
 }
+=======
+
+    
+}
+>>>>>>> 0dd28c258457315090bfefa5de53c0193b1d63c6
