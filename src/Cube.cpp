@@ -34,8 +34,8 @@ void Cube::setTexture(std::string fileName)
 {
     std::cout  << "enter cube settexure" << std::endl;
     // Fill out when image loader done.
-   /* texture = iLoader->LoadTexture(fileName);
-    delete iLoader;*/
+   texture = iLoader->LoadTexture(fileName);
+    delete iLoader;
 }
 
 GLuint Cube::getVAO()
@@ -62,11 +62,11 @@ void Cube::loadCube()
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
     std::cout  << "2" << std::endl;
     // Position attribute
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(GLfloat), (GLvoid*)0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), (GLvoid*)0);
     glEnableVertexAttribArray(0);
     std::cout  << "3" << std::endl;
     // TexCoord attribute
-    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(GLfloat), (GLvoid*)(6 * sizeof(GLfloat)));
+    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), (GLvoid*)(3 * sizeof(GLfloat)));
     glEnableVertexAttribArray(2);
     std::cout  << "4" << std::endl;
     glBindVertexArray(0);

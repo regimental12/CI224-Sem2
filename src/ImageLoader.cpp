@@ -3,6 +3,9 @@
 ImageLoader::ImageLoader()
 {
     surface = nullptr;
+    texture = 0;
+    height = 0;
+    width = 0;
 }
 
 ImageLoader::~ImageLoader()
@@ -25,18 +28,19 @@ GLuint ImageLoader::LoadTexture(std::string filename)
     /**
      *	Load image and generate opengl texture
      */
+   // std::cout << "enteer LoadTexture" << std::endl;
     surface = IMG_Load(filename.c_str());
-    if(surface = nullptr)
+    if(surface == nullptr)
     {
 	std::cout << "Loading image failed :: " << IMG_GetError() << std::endl;
     }
-    
+    //std:: cout << "1" << std::endl;
     width = surface->w;
     height = surface->h;
     
     glGenTextures(1 , &texture);
     glBindTexture(GL_TEXTURE_2D , texture);
-    
+    std:: cout << "2" << std::endl;
     /**
      *	Set texture parameters
      */
@@ -46,14 +50,16 @@ GLuint ImageLoader::LoadTexture(std::string filename)
     /**
      *	Set texture filtering
      */
+    std:: cout << "3" << std::endl;
     glTexParameteri(GL_TEXTURE_2D , GL_TEXTURE_MIN_FILTER , GL_NEAREST);
     glTexParameteri(GL_TEXTURE_2D , GL_TEXTURE_MAG_FILTER , GL_LINEAR);
-    
-    glTexImage2D(GL_TEXTURE_2D , 0 , GL_RGB , surface->w , surface->h , 0 , GL_RGB , GL_UNSIGNED_BYTE , surface->pixels);
+    std:: cout << "4" << std::endl;
+    glTexImage2D(GL_TEXTURE_2D , 0 , GL_RGB , width, height, 0 , GL_RGB , GL_UNSIGNED_BYTE, surface->pixels);
     
     glGenerateMipmap(GL_TEXTURE_2D);
     SDL_FreeSurface(surface);
     glBindTexture(GL_TEXTURE_2D , 0);
+    std:: cout << "5" << std::endl;
     return texture;
 }
 

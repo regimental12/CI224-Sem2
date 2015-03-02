@@ -51,6 +51,7 @@ void Game::CleanUp()
     SDL_Quit();
 }
 
+GLfloat i = 0 , j = 0 , k = 0;
 void Game::Loop()
 {
     while (_running)
@@ -61,11 +62,15 @@ void Game::Loop()
         }
 
         Update();
+	cube->setPosition(i,j,k);
 
         Render();
 
         SDL_GL_SwapWindow(_window);
     }
+    i++;
+    j++;
+    k++;
 }
 
 void Game::HandleEvents(SDL_Event e)
@@ -104,9 +109,11 @@ void Game::Render()
 
     glBindVertexArray(cube->getVAO());
 	 
-		 // glBindTexture(GL_TEXTURE_2D, cube->getTexture());
+		  glBindTexture(GL_TEXTURE_2D, cube->getTexture());
 		  glm::mat4 model;
-		  model = glm::translate(model, cube->getPosition());
+		  //model = glm::translate(model, cube->getPosition());
+		  GLfloat angle = 20.0f;
+		  model = glm::rotate(model, angle, glm::vec3(1.0f, 1.0f, 1.0f));
 		  glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		  glDrawArrays(GL_TRIANGLES, 0, 36);
 		  glBindTexture(GL_TEXTURE_2D , 0);
