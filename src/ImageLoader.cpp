@@ -26,7 +26,7 @@ GLuint ImageLoader::LoadTexture(std::string filename)
      *	Load image and generate opengl texture
      */
     surface = IMG_Load(filename.c_str());
-    if(surface = nullptr)
+    if(surface == nullptr)
     {
 	std::cout << "Loading image failed :: " << IMG_GetError() << std::endl;
     }
