@@ -11,6 +11,7 @@
 #include "Cube.h"
 #include <iostream>
 
+
 #define GLM_FORCE_RADIANS
 #include "glm/glm.hpp"
 #include <glm/gtc/matrix_transform.hpp>
@@ -35,6 +36,8 @@ private:
   bool _running;
   Shader shader;
   Cube* cube;
+  glm::mat4 view;
+  glm::mat4 projection;
   
 };
 

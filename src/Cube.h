@@ -26,6 +26,7 @@ private:
   glm::vec3 position;
   GLuint texture;
   GLuint VBO, VAO;
+  ImageLoader *iLoader;
   GLfloat vertices[36*5] =
   {
 		 -0.5f, -0.5f, -0.5f,  0.0f, 0.0f,
