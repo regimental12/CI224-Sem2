@@ -34,8 +34,8 @@ void Cube::setTexture(std::string fileName)
 {
     std::cout  << "enter cube settexure" << std::endl;
     // Fill out when image loader done.
-    texture = iLoader->LoadTexture(fileName);
-    delete iLoader;
+   /* texture = iLoader->LoadTexture(fileName);
+    delete iLoader;*/
 }
 
 GLuint Cube::getVAO()

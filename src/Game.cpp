@@ -97,19 +97,14 @@ void Game::Render()
     
 
 
-    glm::mat4 view = glm::mat4(0.0);
-
-    glm::mat4 proj = glm::mat4(0.0);
-
-    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(proj));
+    
 /**
  * Loop through both arrays and render.
  */
 
     glBindVertexArray(cube->getVAO());
 	 
-		  glBindTexture(GL_TEXTURE_2D, cube->getTexture());
+		 // glBindTexture(GL_TEXTURE_2D, cube->getTexture());
 		  glm::mat4 model;
 		  model = glm::translate(model, cube->getPosition());
 		  glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
