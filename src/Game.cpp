@@ -38,7 +38,7 @@ void Game::Init()
     std::cout << "Vendor: " << glGetString(GL_VENDOR) << std::endl;
     std::cout << "Renderer: " << glGetString(GL_RENDERER) << std::endl;
     
-    shader.loadShader("shaders/Vert.vrt" , "shaders/Frag.frg");
+    shader.loadShader("../shaders/Vert.vrt" , "../shaders/Frag.frg");
     
     _running = true;
     cube = new Cube;
@@ -112,11 +112,11 @@ void Game::Render()
 		  glm::mat4 model;
 		  //model = glm::translate(model, cube->getPosition());
 		  GLfloat angle = 20.0f;
-<<<<<<< HEAD
+
 		  model = glm::rotate(model, angle, glm::vec3(1.0f, 1.0f, 1.0f));
-=======
-		  model = glm::rotate(model, angle, glm::vec3(1.0f, 1.0f, 0.5f));
->>>>>>> origin/Dev-George
+
+		  //model = glm::rotate(model, angle, glm::vec3(1.0f, 1.0f, 0.5f));
+
 		  glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		  glDrawArrays(GL_TRIANGLES, 0, 36);
 		  glBindTexture(GL_TEXTURE_2D , 0);
