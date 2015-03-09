@@ -72,5 +72,5 @@ void Cube::loadCube()
     glEnableVertexAttribArray(2);
     std::cout  << "4" << std::endl;
     glBindVertexArray(0);
-    setTexture("../images/wall.jpg");
+    setTexture("images/wall.jpg");
 }

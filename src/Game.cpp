@@ -38,7 +38,7 @@ void Game::Init()
     std::cout << "Vendor: " << glGetString(GL_VENDOR) << std::endl;
     std::cout << "Renderer: " << glGetString(GL_RENDERER) << std::endl;
     
-    shader.loadShader("../shaders/Vert.vrt" , "../shaders/Frag.frg");
+    shader.loadShader("shaders/Vert.vrt" , "shaders/Frag.frg");
     
     _running = true;
     cube = new Cube;
