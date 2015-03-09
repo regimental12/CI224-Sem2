@@ -1,0 +1,28 @@
+/build/*
+
+#eclipse generated crap
+.cproject
+.project
+.settings
+
+#kdevelop generated crap
+CI224-Sem2.kdev4
+
+#Autotools generatec crap
+compile
+config.*
+configure
+depcomp
+install-sh
+libtool
+ltmain.sh
+Makefile.in
+missing
+stamp-h1
+config.h
+src/Makefile.in
+/m4
+/autom4te.cache
+Makefile
+aclocal.m4
+src/.deps/

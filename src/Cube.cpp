@@ -34,7 +34,11 @@ void Cube::setTexture(std::string fileName)
 {
     std::cout  << "enter cube settexure" << std::endl;
     // Fill out when image loader done.
+<<<<<<< HEAD
    texture = iLoader->LoadTexture(fileName);
+=======
+    //texture = iLoader->LoadTexture(fileName.c_str());
+>>>>>>> origin/Dev-George
     delete iLoader;
 }
 
