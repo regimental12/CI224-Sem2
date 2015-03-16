@@ -5,7 +5,7 @@ Game::Game()
   _window = NULL;
   _running = false;
   glContext = NULL;
-  
+  camera = new Camera();
 }
 
 Game::~Game()
@@ -23,7 +23,7 @@ void Game::Init()
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
 
     _window = SDL_CreateWindow("Voxel Game 2.0" , SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1024, 768, SDL_WINDOW_OPENGL);
-
+    
     glContext = SDL_GL_CreateContext(_window);
 
     glewExperimental = GL_TRUE;
@@ -59,8 +59,10 @@ void Game::Loop()
         while (SDL_PollEvent(&mainEvent))
         {
             HandleEvents(mainEvent);
+	    
         }
-
+        camera->handleMovement(&mainEvent);
+	camera->update();
         Update();
 	cube->setPosition(i,j,k);
 
@@ -89,40 +91,7 @@ void Game::Update()
 
 void Game::Render()
 {
-    shader.useShader();
-    glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    GLint modelLoc = glGetUniformLocation(shader.getProgram(), "model");
-    GLint viewLoc = glGetUniformLocation(shader.getProgram(), "view");
-    GLint projLoc = glGetUniformLocation(shader.getProgram(), "projection");
-    
-    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
-    
-
-
-    
-/**
- * Loop through both arrays and render.
- */
-
-    glBindVertexArray(cube->getVAO());
-	 
-		  glBindTexture(GL_TEXTURE_2D, cube->getTexture());
-		  glm::mat4 model;
-		  //model = glm::translate(model, cube->getPosition());
-		  GLfloat angle = 20.0f;
-
-		  model = glm::rotate(model, angle, glm::vec3(1.0f, 1.0f, 1.0f));
-
-		  //model = glm::rotate(model, angle, glm::vec3(1.0f, 1.0f, 0.5f));
-
-		  glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		  glDrawArrays(GL_TRIANGLES, 0, 36);
-		  glBindTexture(GL_TEXTURE_2D , 0);
-	
-    glBindVertexArray(0);
-
+    cube->Render(shader , camera);
 }
 
     

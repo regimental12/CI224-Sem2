@@ -9,6 +9,7 @@
 #include "GL/glx.h"
 #include "Shader.h"
 #include "Cube.h"
+#include "Camera.h"
 #include <iostream>
 
 
@@ -38,6 +39,7 @@ private:
   Cube* cube;
   glm::mat4 view;
   glm::mat4 projection;
+  Camera *camera;
   
 };
 

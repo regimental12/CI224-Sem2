@@ -3,10 +3,16 @@
 
 #include "GL/glew.h"
 #include "GL/gl.h"
-#include "glm/glm.hpp"
 #include <iostream>
 
+#define GLM_FORCE_RADIANS
+#include "glm/glm.hpp"
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+
 #include "ImageLoader.h"
+#include "Shader.h"
+#include "Camera.h"
 
 class Cube 
 {
@@ -15,6 +21,7 @@ public:
   ~Cube();
   glm::vec3 getPosition();
   void setPosition(GLfloat x , GLfloat y , GLfloat z);
+  void Render(Shader shader , Camera* camera);
   
   GLuint getTexture();
   void setTexture(std::string fileName);
