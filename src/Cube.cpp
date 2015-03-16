@@ -2,10 +2,18 @@
 
 Cube::Cube()
 {
-	std::cout  << "enter cube consructor" << std::endl;
 	iLoader = new ImageLoader();
 	position = glm::vec3(0.0f, 0.0f, 0.0f);
 	loadCube();
+}
+
+
+Cube::Cube(GLfloat x, GLfloat y, GLfloat z)
+{
+	iLoader = new ImageLoader();
+	position = glm::vec3(0.0f, 0.0f, 0.0f);
+	loadCube();
+	setPosition(x, y, z);
 }
 
 Cube::~Cube()
@@ -32,7 +40,6 @@ GLuint Cube::getTexture()
 
 void Cube::setTexture(std::string fileName)
 {
-    std::cout  << "enter cube settexure" << std::endl;
     // Fill out when image loader done
    texture = iLoader->LoadTexture(fileName);
 
@@ -54,23 +61,19 @@ GLuint Cube::getVBO()
 
 void Cube::loadCube()
 {
-    std::cout  << "enter cube loadcube" << std::endl;
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
-    std::cout  << "1" << std::endl;
     glBindVertexArray(VAO);
 
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-    std::cout  << "2" << std::endl;
     // Position attribute
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), (GLvoid*)0);
     glEnableVertexAttribArray(0);
-    std::cout  << "3" << std::endl;
     // TexCoord attribute
     glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), (GLvoid*)(3 * sizeof(GLfloat)));
     glEnableVertexAttribArray(2);
-    std::cout  << "4" << std::endl;
+    std::cout  << "cube loaded" << std::endl;
     glBindVertexArray(0);
     setTexture("images/wall.jpg");
 }
@@ -78,8 +81,7 @@ void Cube::loadCube()
 void Cube::Render(Shader shader , Camera* camera)
 {
     shader.useShader();
-    glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
     GLint modelLoc = glGetUniformLocation(shader.getProgram(), "model");
     GLint viewLoc = glGetUniformLocation(shader.getProgram(), "view");
     GLint projLoc = glGetUniformLocation(shader.getProgram(), "projection");
@@ -95,10 +97,10 @@ void Cube::Render(Shader shader , Camera* camera)
 	 
 		  glBindTexture(GL_TEXTURE_2D, texture);
 		  glm::mat4 model;
-		  //model = glm::translate(model, position);
+		  model = glm::translate(model, position);
 		  GLfloat angle = 20.0f;
 
-		  model = glm::rotate(model, angle, glm::vec3(1.0f, 1.0f, 1.0f));
+		  //model = glm::rotate(model, angle, glm::vec3(1.0f, 1.0f, 1.0f));
 
 		  //model = glm::rotate(model, angle, glm::vec3(1.0f, 1.0f, 0.5f));
 
@@ -107,5 +109,6 @@ void Cube::Render(Shader shader , Camera* camera)
 		  glBindTexture(GL_TEXTURE_2D , 0);
 	
     glBindVertexArray(0);
+    glUseProgram(0);
 }
 

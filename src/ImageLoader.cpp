@@ -40,7 +40,6 @@ GLuint ImageLoader::LoadTexture(std::string filename)
     
     glGenTextures(1 , &texture);
     glBindTexture(GL_TEXTURE_2D , texture);
-    std:: cout << "2" << std::endl;
     /**
      *	Set texture parameters
      */
@@ -50,16 +49,13 @@ GLuint ImageLoader::LoadTexture(std::string filename)
     /**
      *	Set texture filtering
      */
-    std:: cout << "3" << std::endl;
     glTexParameteri(GL_TEXTURE_2D , GL_TEXTURE_MIN_FILTER , GL_NEAREST);
     glTexParameteri(GL_TEXTURE_2D , GL_TEXTURE_MAG_FILTER , GL_LINEAR);
-    std:: cout << "4" << std::endl;
     glTexImage2D(GL_TEXTURE_2D , 0 , GL_RGB , width, height, 0 , GL_RGB , GL_UNSIGNED_BYTE, surface->pixels);
     
     glGenerateMipmap(GL_TEXTURE_2D);
     SDL_FreeSurface(surface);
     glBindTexture(GL_TEXTURE_2D , 0);
-    std:: cout << "5" << std::endl;
     return texture;
 }
 

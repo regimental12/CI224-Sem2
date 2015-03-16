@@ -18,6 +18,7 @@ class Cube
 {
 public:
   Cube();
+  Cube(GLfloat x, GLfloat y, GLfloat z);
   ~Cube();
   glm::vec3 getPosition();
   void setPosition(GLfloat x , GLfloat y , GLfloat z);

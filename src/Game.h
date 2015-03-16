@@ -11,6 +11,7 @@
 #include "Cube.h"
 #include "Camera.h"
 #include <iostream>
+#include <vector>
 
 
 #define GLM_FORCE_RADIANS
@@ -29,6 +30,7 @@ public:
   void Render();
   void Update();
   void HandleEvents(SDL_Event);
+  void objinit();
   
 private:
   SDL_Window* _window;
@@ -40,6 +42,7 @@ private:
   glm::mat4 view;
   glm::mat4 projection;
   Camera *camera;
+  std::vector<Cube*> Cubes;
   
 };
 
