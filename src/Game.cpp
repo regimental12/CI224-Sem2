@@ -59,10 +59,7 @@ void Game::Loop()
         while (SDL_PollEvent(&mainEvent))
         {
             HandleEvents(mainEvent);
-	    
         }
-        camera->handleMovement(&mainEvent);
-	camera->update();
         Update();
 	cube->setPosition(i,j,k);
 
@@ -82,11 +79,13 @@ void Game::HandleEvents(SDL_Event e)
 		_running = false;
 		break;
 	}
+
+    camera->handleMovement(&mainEvent);
 }
 
 void Game::Update()
 {
-
+	camera->update();
 }
 
 void Game::Render()
