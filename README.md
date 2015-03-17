@@ -15,10 +15,10 @@ Currently to build you must run  the gcc command to compile all of src/* into an
 This marking scheme is divided into categories some of which have multiple criteria. some categories allow for multiple selections, i.e. whichever ones apply can count to final total, other categories are on a *one* only basis i.e. pick the highest marked item which applies.  
   
 **Use of industry standard tools (any apply)**  
-  -[ ] Git - 5%  
-  -[ ] Continuous Integration - 5%  
-  -[ ] Build System - 5%  
-  -[ ] Unit testing - 5%  
+  - [ ] Git - 5%  
+  - [ ] Continuous Integration - 5%  
+  - [ ] Build System - 5%  
+  - [ ] Unit testing - 5%  
   
 **Quality of code (any apply)**  
   - Clean structure - 5%  
