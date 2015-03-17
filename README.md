@@ -12,7 +12,7 @@ Currently to build you must run  the gcc command to compile all of src/* into an
 **The main aim:**  
 *Implement fewer features fully, rather than all features badly.*  
   
-This marking scheme is divided into categories some of which have multiple criteria. some categories allow for multiple selections, i.e. whichever ones apply can count to final total, other categories are on a *one* only basis i.e. pick the highest marked item which applies.  
+This is our marking scheme copied from ProjectBrief.md which we can check off things taht we've achieved to plot our progress so far.
   
 **Use of industry standard tools (any apply)**  
   - [x] Git - 5%  
