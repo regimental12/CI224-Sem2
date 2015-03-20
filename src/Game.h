@@ -11,8 +11,7 @@
 #include "Cube.h"
 #include "Camera.h"
 #include <iostream>
-#include <vector>
-
+#include "World.h"
 
 #define GLM_FORCE_RADIANS
 #include "glm/glm.hpp"
@@ -38,11 +37,10 @@ private:
   SDL_GLContext glContext;
   bool _running;
   Shader shader;
-  Cube* cube;
   glm::mat4 view;
   glm::mat4 projection;
   Camera *camera;
-  std::vector<Cube*> Cubes;
+  World *world;
   
 };
 

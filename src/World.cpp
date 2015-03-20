@@ -12,6 +12,13 @@
  */
 World::World()
 {
+	for (int x = 0; x < 2; x++) {
+		for (int y = 0; y < 2; y++) {
+			for (int z = 0; z < 2; z++) {
+				Cubes.push_back(new Cube(x, y, z));
+			}
+		}
+	}
 
 }
 
@@ -23,9 +30,11 @@ World::~World()
 /**
  * Render should call each of the 9 loaded chunks own render method
  */
-void World::Render()
+void World::Render(Shader shader, Camera* camera)
 {
-
+	for (int z = 0; z < Cubes.size(); z++) {
+		Cubes[z]->Render(shader, camera);
+	}
 }
 
 /**

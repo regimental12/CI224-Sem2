@@ -46,13 +46,7 @@ void Game::Init()
 
 void Game::objinit()
 {
-	for (int x = 0; x < 2; x++) {
-		for (int y = 0; y < 2; y++) {
-			for (int z = 0; z < 2; z++) {
-				Cubes.push_back(new Cube(x, y, z));
-			}
-		}
-	}
+	world = new World();
 	std::cout << "loaded data" << std::endl;
 }
 
@@ -103,16 +97,7 @@ void Game::Render()
 	glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-	for (int z = 0; z < Cubes.size(); z++) {
-		std::cout << "enter render func" << std::endl;
-		Cubes[z]->Render(shader, camera);
-
-	}
-	/*Cubes[3]->Render(shader, camera);
-	Cubes[6]->Render(shader, camera);*/
-
-
-
+	world->Render(shader, camera);
 }
 
     

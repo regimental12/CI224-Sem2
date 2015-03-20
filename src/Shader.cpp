@@ -2,7 +2,7 @@
 
 Shader::Shader()
 {
-
+	program = NULL;
 }
 
 Shader::~Shader()
