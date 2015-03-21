@@ -75,7 +75,7 @@ void Cube::loadCube()
     glEnableVertexAttribArray(2);
     std::cout  << "cube loaded" << std::endl;
     glBindVertexArray(0);
-    setTexture("images/wall.jpg");
+    setTexture("images/blank.jpg");
 }
 
 void Cube::Render(Shader shader , Camera* camera)
