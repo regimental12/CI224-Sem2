@@ -1,7 +1,7 @@
 #ifndef SRC_WORLD_H_
 #define SRC_WORLD_H_
 
-#include "Cube.h"
+#include "Chunk.h"
 #include <vector>
 
 class World
@@ -12,7 +12,7 @@ public:
 	void Update();
 	void Render(Shader shader, Camera* camera);
 private:
-	  std::vector<Cube*> Cubes;
+	  std::vector<Chunk*> Chunks;
 };
 
 #endif /* SRC_WORLD_H_ */
