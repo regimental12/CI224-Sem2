@@ -18,9 +18,11 @@ public:
 	~Chunk();
 	void Update();
 	void Render(Shader shader, Camera* camera);
+	void Init();
 private:
 	  std::vector<Cube*> Cubes;
 	  glm::vec2 position;
+	  glm::vec3 size;
 };
 
 #endif /* SRC_CHUNK_H_ */

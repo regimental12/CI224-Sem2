@@ -1,32 +1,33 @@
 #include "Chunk.h"
 
 Chunk::Chunk(){
+	size = glm::vec3(4, 4, 4);
 	position.x = 0;
 	position.y = 0;
-	for (int x = 0; x < 10; x++) {
-		for (int y = 0; y < 10; y++) {
-			for (int z = 0; z < 1; z++) {
-				Cubes.push_back(new Cube(x, y, z));
-			}
-		}
-	}
+
+	Init();
 }
 
 Chunk::Chunk(GLfloat X, GLfloat Y){
+	size = glm::vec3(4, 4, 4);
 	position.x = X;
 	position.y = Y;
 
-	for (int x = 0; x < 2; x++) {
-		for (int y = 0; y < 2; y++) {
-			for (int z = 0; z < 2; z++) {
-				Cubes.push_back(new Cube(x, y, z));
-			}
-		}
-	}
+	Init();
 }
 
 Chunk::~Chunk(){
 
+}
+
+void Chunk::Init(){
+	for (int x = 0; x < size.x; x++) {
+		for (int y = 0; y < size.y; y++) {
+			for (int z = 0; z < size.z; z++) {
+				Cubes.push_back(new Cube((position.x*size.x)+x, (position.y*size.y)+y, (size.z)+z));
+			}
+		}
+	}
 }
 
 void Chunk::Render(Shader shader, Camera* camera){
