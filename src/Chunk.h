@@ -20,7 +20,8 @@ public:
 	void Render(Shader shader, Camera* camera);
 	void Init();
 private:
-	  std::vector<Cube*> Cubes;
+//	  std::vector<Cube*> Cubes;
+	Cube* Cubes[16][4][16];
 	  glm::vec3 position;
 	  glm::vec3 size;
 };
