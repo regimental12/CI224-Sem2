@@ -41,7 +41,7 @@ void Chunk::Render(Shader shader, Camera* camera) {
 					// only render cubes that are on the very edges of the chunk.
 					if (x == 0 || x == size.x - 1 || y == 0 || y == size.y - 1
 							|| z == 0 || z == size.z - 1) {
-						//Cubes[x][y][z]->Render(shader, camera);
+						Cubes[x][y][z]->Render(shader, camera);
 					} else {
 						//check all inside cubes
 						//only render cubes if they'res an empty cube on any face
