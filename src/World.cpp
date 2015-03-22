@@ -12,8 +12,8 @@
  */
 World::World()
 {
-	for (int x = -1; x < 2; x++) {
-		for (int z = -1; z < 2; z++) {
+	for (int x = -1; x < 0; x++) {
+		for (int z = -1; z < 0; z++) {
 			Chunks.push_back(new Chunk(x, 0, z));
 		}
 	}
