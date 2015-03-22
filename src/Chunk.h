@@ -14,14 +14,15 @@
 class Chunk {
 public:
 	Chunk();
-	Chunk(GLfloat X, GLfloat Y);
+	Chunk(GLfloat X, GLfloat Y, GLfloat Z);
 	~Chunk();
 	void Update();
 	void Render(Shader shader, Camera* camera);
 	void Init();
 private:
-	  std::vector<Cube*> Cubes;
-	  glm::vec2 position;
+//	  std::vector<Cube*> Cubes;
+	Cube* Cubes[16][24][16];
+	  glm::vec3 position;
 	  glm::vec3 size;
 };
 

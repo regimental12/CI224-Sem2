@@ -41,6 +41,7 @@ private:
   glm::mat4 projection;
   Camera *camera;
   World *world;
+  bool wireframe = false;
   
 };
 

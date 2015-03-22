@@ -73,9 +73,8 @@ void Cube::loadCube()
     // TexCoord attribute
     glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), (GLvoid*)(3 * sizeof(GLfloat)));
     glEnableVertexAttribArray(2);
-    std::cout  << "cube loaded" << std::endl;
     glBindVertexArray(0);
-    setTexture("images/wall.jpg");
+    setTexture("images/blank.jpg");
 }
 
 void Cube::Render(Shader shader , Camera* camera)
@@ -103,6 +102,10 @@ void Cube::Render(Shader shader , Camera* camera)
 		  //model = glm::rotate(model, angle, glm::vec3(1.0f, 1.0f, 1.0f));
 
 		  //model = glm::rotate(model, angle, glm::vec3(1.0f, 1.0f, 0.5f));
+
+//		  //Uncomment below for wireframe
+//		  glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+//		  glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
 		  glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		  glDrawArrays(GL_TRIANGLES, 0, 36);

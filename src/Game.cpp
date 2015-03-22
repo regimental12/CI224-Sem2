@@ -84,6 +84,15 @@ void Game::HandleEvents(SDL_Event e)
 		break;
 	}
 
+	if (e.type == SDL_KEYDOWN) {
+		switch (e.key.keysym.sym) {
+		//IF f1 pressed Toggle wireframe mode
+		case SDLK_F1:
+			wireframe = !wireframe;
+			break;
+		}
+	}
+
     camera->handleMovement(&mainEvent);
 }
 
@@ -94,6 +103,13 @@ void Game::Update()
 
 void Game::Render()
 {
+	//checks wireframe bool and sets LINE or FILL mode accordingly
+	if(wireframe) {
+		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+	} else {
+		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+	}
+
 	glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
