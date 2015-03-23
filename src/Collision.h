@@ -9,39 +9,21 @@
 static int count = 0 ;
 
 static bool Collision(Camera* playerCam , Cube* cube)
-{
-    float playerLeft = playerCam->cameraPos.x  - 0.5f;
-    float playerRight = playerCam->cameraPos.x + 0.5f;
-    
-    float playerBottom = playerCam->cameraPos.y - 0.5f;
-    float playerTop = playerCam->cameraPos.y + 0.5f;
-    
-    float playerBack = playerCam->cameraPos.z - 0.5f;
-    float playerFront = playerCam->cameraPos.z + 0.5f;
-    
-    float cubeLeft = cube->getPosition().x + 0.5f ;
-    float cubeRight = cube->getPosition().x - 0.5f;
-    
-    float cubeBottom = cube->getPosition().y + 0.5f;
-    float cubeTop= cube->getPosition().y - 0.5f;
-    
-    float cubeBack = cube->getPosition().z + 0.5f;
-    float cubeFront = cube->getPosition().z - 0.5f;
-    
-    if(playerLeft > cubeRight)
-    {
-      if(playerTop > cubeBottom)
-      {
-	if(playerFront > cubeBack)
-	{
-	  //std::cout << "Bang!" << count << std::endl;
-	  count++;
-	  return true;
-	}
-      }
-    }
-        
-    //std::cout << "no Bang!" << std::endl;
+{    
+     int x = cube->getPosition().x - playerCam->cameraPos.x;
+     int y = cube->getPosition().y - playerCam->cameraPos.y;
+     int z = cube->getPosition().z - playerCam->cameraPos.z; 
+     
+     int collisionDist = x*x + y*y + z*z;
+     
+     if( collisionDist < 1)
+     {
+       std::cout << "Bang!" << count << std::endl;
+       count++;
+       playerCam->cameraPos -= playerCam->cameraSpeed * playerCam->cameraDir;
+       return true;
+     }
+     
     return false;
 }
 

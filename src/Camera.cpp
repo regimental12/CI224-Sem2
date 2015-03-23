@@ -20,7 +20,7 @@ Camera::Camera() : xPos(1024/2), yPos(768/2), xOffSet(0), yOffSet(0),cameraPos (
  */
 void Camera::handleMovement(SDL_Event *e)
 {
-        if (e->type == SDL_KEYDOWN && e->key.repeat == 0)
+        if (e->type == SDL_KEYDOWN )
         {
             switch (e->key.keysym.sym)
             {
