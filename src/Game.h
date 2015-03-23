@@ -12,6 +12,7 @@
 #include "Camera.h"
 #include <iostream>
 #include "World.h"
+#include "Chunk.h"
 
 #define GLM_FORCE_RADIANS
 #include "glm/glm.hpp"
