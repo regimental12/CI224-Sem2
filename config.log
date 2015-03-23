@@ -56,7 +56,40 @@ configure:2785: checking whether make sets $(MAKE)
 configure:2807: result: yes
 configure:2836: checking whether make supports nested variables
 configure:2853: result: yes
+configure:15211: $? = 0
+configure:15211: result: yes
+configure:15211: checking for glm/glm.hpp
+configure:15211: result: yes
 configure:3011: checking build system type
+configure:15275: checking for pkg-config
+configure:15293: found /usr/bin/pkg-config
+configure:15305: result: /usr/bin/pkg-config
+configure:15330: checking pkg-config is at least version 0.9.0
+configure:15333: result: yes
+configure:15343: checking for gl
+configure:15350: $PKG_CONFIG --exists --print-errors "gl"
+configure:15353: $? = 0
+configure:15367: $PKG_CONFIG --exists --print-errors "gl"
+configure:15370: $? = 0
+configure:15428: result: yes
+configure:15434: checking for glew
+configure:15441: $PKG_CONFIG --exists --print-errors "glew"
+configure:15444: $? = 0
+configure:15458: $PKG_CONFIG --exists --print-errors "glew"
+configure:15461: $? = 0
+configure:15519: result: yes
+configure:15525: checking for sdl2
+configure:15532: $PKG_CONFIG --exists --print-errors "sdl2"
+configure:15535: $? = 0
+configure:15549: $PKG_CONFIG --exists --print-errors "sdl2"
+configure:15552: $? = 0
+configure:15610: result: yes
+configure:15616: checking for sdl2_image
+configure:15623: $PKG_CONFIG --exists --print-errors "SDL2_image"
+configure:15626: $? = 0
+configure:15640: $PKG_CONFIG --exists --print-errors "SDL2_image"
+configure:15643: $? = 0
+configure:15701: result: yes
 configure:3025: result: x86_64-unknown-linux-gnu
 configure:3045: checking host system type
 configure:3058: result: x86_64-unknown-linux-gnu
@@ -69,11 +102,14 @@ configure:3274: found /usr/bin/gcc
 configure:3285: result: gcc
 configure:3514: checking for C compiler version
 configure:3523: gcc --version >&5
+configure:15817: checking that generated files are newer than configure
+configure:15823: result: done
 gcc (Ubuntu 4.8.2-19ubuntu1) 4.8.2
 Copyright (C) 2013 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
+configure:15850: creating ./config.status
 configure:3534: $? = 0
 configure:3523: gcc -v >&5
 Using built-in specs.
@@ -150,6 +186,11 @@ configure:4596: checking for BSD- or MS-compatible name lister (nm)
 configure:4645: result: /usr/bin/nm -B
 configure:4775: checking the name lister (/usr/bin/nm -B) interface
 configure:4782: gcc -c -g -O2  conftest.c >&5
+
+## ---------------- ##
+## Cache variables. ##
+## ---------------- ##
+
 configure:4785: /usr/bin/nm -B "conftest.o"
 configure:4788: output
 0000000000000000 B some_variable
@@ -182,6 +223,291 @@ configure:5674: found /usr/bin/ar
 configure:5685: result: ar
 configure:5722: checking for archiver @FILE support
 configure:5739: gcc -c -g -O2  conftest.c >&5
+ac_cv_build=x86_64-unknown-linux-gnu
+ac_cv_c_compiler_gnu=yes
+ac_cv_cxx_compiler_gnu=yes
+ac_cv_env_CCC_set=
+ac_cv_env_CCC_value=
+ac_cv_env_CC_set=
+ac_cv_env_CC_value=
+ac_cv_env_CFLAGS_set=
+ac_cv_env_CFLAGS_value=
+ac_cv_env_CPPFLAGS_set=
+ac_cv_env_CPPFLAGS_value=
+ac_cv_env_CPP_set=
+ac_cv_env_CPP_value=
+ac_cv_env_CXXCPP_set=
+ac_cv_env_CXXCPP_value=
+ac_cv_env_CXXFLAGS_set=
+ac_cv_env_CXXFLAGS_value=
+ac_cv_env_CXX_set=
+ac_cv_env_CXX_value=
+ac_cv_env_LDFLAGS_set=
+ac_cv_env_LDFLAGS_value=
+ac_cv_env_LIBS_set=
+ac_cv_env_LIBS_value=
+ac_cv_env_PKG_CONFIG_LIBDIR_set=
+ac_cv_env_PKG_CONFIG_LIBDIR_value=
+ac_cv_env_PKG_CONFIG_PATH_set=
+ac_cv_env_PKG_CONFIG_PATH_value=
+ac_cv_env_PKG_CONFIG_set=
+ac_cv_env_PKG_CONFIG_value=
+ac_cv_env_build_alias_set=
+ac_cv_env_build_alias_value=
+ac_cv_env_gl_CFLAGS_set=
+ac_cv_env_gl_CFLAGS_value=
+ac_cv_env_gl_LIBS_set=
+ac_cv_env_gl_LIBS_value=
+ac_cv_env_glew_CFLAGS_set=
+ac_cv_env_glew_CFLAGS_value=
+ac_cv_env_glew_LIBS_set=
+ac_cv_env_glew_LIBS_value=
+ac_cv_env_host_alias_set=
+ac_cv_env_host_alias_value=
+ac_cv_env_sdl2_CFLAGS_set=
+ac_cv_env_sdl2_CFLAGS_value=
+ac_cv_env_sdl2_LIBS_set=
+ac_cv_env_sdl2_LIBS_value=
+ac_cv_env_sdl2_image_CFLAGS_set=
+ac_cv_env_sdl2_image_CFLAGS_value=
+ac_cv_env_sdl2_image_LIBS_set=
+ac_cv_env_sdl2_image_LIBS_value=
+ac_cv_env_target_alias_set=
+ac_cv_env_target_alias_value=
+ac_cv_header_dlfcn_h=yes
+ac_cv_header_glm_glm_hpp=yes
+ac_cv_header_inttypes_h=yes
+ac_cv_header_memory_h=yes
+ac_cv_header_stdc=yes
+ac_cv_header_stdint_h=yes
+ac_cv_header_stdlib_h=yes
+ac_cv_header_string_h=yes
+ac_cv_header_strings_h=yes
+ac_cv_header_sys_stat_h=yes
+ac_cv_header_sys_types_h=yes
+ac_cv_header_unistd_h=yes
+ac_cv_host=x86_64-unknown-linux-gnu
+ac_cv_objext=o
+ac_cv_path_EGREP='/bin/grep -E'
+ac_cv_path_FGREP='/bin/grep -F'
+ac_cv_path_GREP=/bin/grep
+ac_cv_path_SED=/bin/sed
+ac_cv_path_ac_pt_PKG_CONFIG=/usr/bin/pkg-config
+ac_cv_path_install='/usr/bin/install -c'
+ac_cv_path_mkdir=/bin/mkdir
+ac_cv_prog_AWK=mawk
+ac_cv_prog_CPP='gcc -E'
+ac_cv_prog_CXXCPP='g++ -E'
+ac_cv_prog_ac_ct_AR=ar
+ac_cv_prog_ac_ct_CC=gcc
+ac_cv_prog_ac_ct_CXX=g++
+ac_cv_prog_ac_ct_MANIFEST_TOOL=mt
+ac_cv_prog_ac_ct_OBJDUMP=objdump
+ac_cv_prog_ac_ct_RANLIB=ranlib
+ac_cv_prog_ac_ct_STRIP=strip
+ac_cv_prog_cc_c89=
+ac_cv_prog_cc_g=yes
+ac_cv_prog_cxx_g=yes
+ac_cv_prog_make_make_set=yes
+am_cv_CC_dependencies_compiler_type=gcc3
+am_cv_CXX_dependencies_compiler_type=gcc3
+am_cv_make_support_nested_variables=yes
+am_cv_prog_cc_c_o=yes
+lt_cv_ar_at_file=@
+lt_cv_archive_cmds_need_lc=no
+lt_cv_deplibs_check_method=pass_all
+lt_cv_file_magic_cmd='$MAGIC_CMD'
+lt_cv_file_magic_test_file=
+lt_cv_ld_reload_flag=-r
+lt_cv_nm_interface='BSD nm'
+lt_cv_objdir=.libs
+lt_cv_path_LD=/usr/bin/ld
+lt_cv_path_LDCXX='/usr/bin/ld -m elf_x86_64'
+lt_cv_path_NM='/usr/bin/nm -B'
+lt_cv_path_mainfest_tool=no
+lt_cv_prog_compiler_c_o=yes
+lt_cv_prog_compiler_c_o_CXX=yes
+lt_cv_prog_compiler_pic='-fPIC -DPIC'
+lt_cv_prog_compiler_pic_CXX='-fPIC -DPIC'
+lt_cv_prog_compiler_pic_works=yes
+lt_cv_prog_compiler_pic_works_CXX=yes
+lt_cv_prog_compiler_rtti_exceptions=no
+lt_cv_prog_compiler_static_works=yes
+lt_cv_prog_compiler_static_works_CXX=yes
+lt_cv_prog_gnu_ld=yes
+lt_cv_prog_gnu_ldcxx=yes
+lt_cv_sharedlib_from_linklib_cmd='printf %s\n'
+lt_cv_shlibpath_overrides_runpath=no
+lt_cv_sys_global_symbol_pipe='sed -n -e '\''s/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p'\'' | sed '\''/ __gnu_lto/d'\'''
+lt_cv_sys_global_symbol_to_c_name_address='sed -n -e '\''s/^: \([^ ]*\)[ ]*$/  {\"\1\", (void *) 0},/p'\'' -e '\''s/^[ABCDGIRSTW]* \([^ ]*\) \([^ ]*\)$/  {"\2", (void *) \&\2},/p'\'''
+lt_cv_sys_global_symbol_to_c_name_address_lib_prefix='sed -n -e '\''s/^: \([^ ]*\)[ ]*$/  {\"\1\", (void *) 0},/p'\'' -e '\''s/^[ABCDGIRSTW]* \([^ ]*\) \(lib[^ ]*\)$/  {"\2", (void *) \&\2},/p'\'' -e '\''s/^[ABCDGIRSTW]* \([^ ]*\) \([^ ]*\)$/  {"lib\2", (void *) \&\2},/p'\'''
+lt_cv_sys_global_symbol_to_cdecl='sed -n -e '\''s/^T .* \(.*\)$/extern int \1();/p'\'' -e '\''s/^[ABCDGIRSTW]* .* \(.*\)$/extern char \1;/p'\'''
+lt_cv_sys_max_cmd_len=3458764513820540925
+lt_cv_to_host_file_cmd=func_convert_file_noop
+lt_cv_to_tool_file_cmd=func_convert_file_noop
+pkg_cv_gl_CFLAGS='-I/usr/include/libdrm  '
+pkg_cv_gl_LIBS='-lGL  '
+pkg_cv_glew_CFLAGS='-I/usr/include/GL -I/usr/include/libdrm  '
+pkg_cv_glew_LIBS='-lGLEW -lGLU -lGL  '
+pkg_cv_sdl2_CFLAGS='-D_REENTRANT -I/usr/include/SDL2  '
+pkg_cv_sdl2_LIBS='-lSDL2  '
+pkg_cv_sdl2_image_CFLAGS='-D_REENTRANT -I/usr/include/SDL2  '
+pkg_cv_sdl2_image_LIBS='-lSDL2_image -lSDL2  '
+
+## ----------------- ##
+## Output variables. ##
+## ----------------- ##
+
+ACLOCAL='${SHELL} /home/richard/projects/CI224-Sem2/missing aclocal-1.14'
+AMDEPBACKSLASH='\'
+AMDEP_FALSE='#'
+AMDEP_TRUE=''
+AMTAR='$${TAR-tar}'
+AM_BACKSLASH='\'
+AM_DEFAULT_V='$(AM_DEFAULT_VERBOSITY)'
+AM_DEFAULT_VERBOSITY='1'
+AM_V='$(V)'
+AR='ar'
+AUTOCONF='${SHELL} /home/richard/projects/CI224-Sem2/missing autoconf'
+AUTOHEADER='${SHELL} /home/richard/projects/CI224-Sem2/missing autoheader'
+AUTOMAKE='${SHELL} /home/richard/projects/CI224-Sem2/missing automake-1.14'
+AWK='mawk'
+CC='gcc'
+CCDEPMODE='depmode=gcc3'
+CFLAGS='-g -O2'
+CPP='gcc -E'
+CPPFLAGS=''
+CXX='g++'
+CXXCPP='g++ -E'
+CXXDEPMODE='depmode=gcc3'
+CXXFLAGS='-g -O2'
+CYGPATH_W='echo'
+DEFS='-DHAVE_CONFIG_H'
+DEPDIR='.deps'
+DLLTOOL='false'
+DSYMUTIL=''
+DUMPBIN=''
+ECHO_C=''
+ECHO_N='-n'
+ECHO_T=''
+EGREP='/bin/grep -E'
+EXEEXT=''
+FGREP='/bin/grep -F'
+GREP='/bin/grep'
+INSTALL_DATA='${INSTALL} -m 644'
+INSTALL_PROGRAM='${INSTALL}'
+INSTALL_SCRIPT='${INSTALL}'
+INSTALL_STRIP_PROGRAM='$(install_sh) -c -s'
+LD='/usr/bin/ld -m elf_x86_64'
+LDFLAGS=''
+LIBOBJS=''
+LIBS=''
+LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+LIPO=''
+LN_S='ln -s'
+LTLIBOBJS=''
+MAKEINFO='${SHELL} /home/richard/projects/CI224-Sem2/missing makeinfo'
+MANIFEST_TOOL=':'
+MKDIR_P='/bin/mkdir -p'
+NM='/usr/bin/nm -B'
+NMEDIT=''
+OBJDUMP='objdump'
+OBJEXT='o'
+OTOOL64=''
+OTOOL=''
+PACKAGE='mineclone'
+PACKAGE_BUGREPORT=''
+PACKAGE_NAME='MineClone'
+PACKAGE_STRING='MineClone 0.1'
+PACKAGE_TARNAME='mineclone'
+PACKAGE_URL=''
+PACKAGE_VERSION='0.1'
+PATH_SEPARATOR=':'
+PKG_CONFIG='/usr/bin/pkg-config'
+PKG_CONFIG_LIBDIR=''
+PKG_CONFIG_PATH=''
+RANLIB='ranlib'
+SED='/bin/sed'
+SET_MAKE=''
+SHELL='/bin/bash'
+STRIP='strip'
+VERSION='0.1'
+ac_ct_AR='ar'
+ac_ct_CC='gcc'
+ac_ct_CXX='g++'
+ac_ct_DUMPBIN=''
+am__EXEEXT_FALSE=''
+am__EXEEXT_TRUE='#'
+am__fastdepCC_FALSE='#'
+am__fastdepCC_TRUE=''
+am__fastdepCXX_FALSE='#'
+am__fastdepCXX_TRUE=''
+am__include='include'
+am__isrc=''
+am__leading_dot='.'
+am__nodep='_no'
+am__quote=''
+am__tar='$${TAR-tar} chof - "$$tardir"'
+am__untar='$${TAR-tar} xf -'
+bindir='${exec_prefix}/bin'
+build='x86_64-unknown-linux-gnu'
+build_alias=''
+build_cpu='x86_64'
+build_os='linux-gnu'
+build_vendor='unknown'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+exec_prefix='${prefix}'
+gl_CFLAGS='-I/usr/include/libdrm  '
+gl_LIBS='-lGL  '
+glew_CFLAGS='-I/usr/include/GL -I/usr/include/libdrm  '
+glew_LIBS='-lGLEW -lGLU -lGL  '
+host='x86_64-unknown-linux-gnu'
+host_alias=''
+host_cpu='x86_64'
+host_os='linux-gnu'
+host_vendor='unknown'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+install_sh='${SHELL} /home/richard/projects/CI224-Sem2/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+mkdir_p='$(MKDIR_P)'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/usr/local'
+program_transform_name='s,x,x,'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sdl2_CFLAGS='-D_REENTRANT -I/usr/include/SDL2  '
+sdl2_LIBS='-lSDL2  '
+sdl2_image_CFLAGS='-D_REENTRANT -I/usr/include/SDL2  '
+sdl2_image_LIBS='-lSDL2_image -lSDL2  '
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target_alias=''
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "MineClone"
+#define PACKAGE_TARNAME "mineclone"
+#define PACKAGE_VERSION "0.1"
+#define PACKAGE_STRING "MineClone 0.1"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define PACKAGE "mineclone"
+#define VERSION "0.1"
+
+configure: exit 0
 configure:5739: $? = 0
 configure:5742: ar cru libconftest.a @conftest.lst >&5
 configure:5745: $? = 0
@@ -197,6 +523,22 @@ configure:5938: found /usr/bin/ranlib
 configure:5949: result: ranlib
 configure:6051: checking command to parse /usr/bin/nm -B output from gcc object
 configure:6171: gcc -c -g -O2  conftest.c >&5
+
+## ---------------------- ##
+## Running config.status. ##
+## ---------------------- ##
+
+This file was extended by MineClone config.status 0.1, which was
+generated by GNU Autoconf 2.69.  Invocation command line was
+
+  CONFIG_FILES    = 
+  CONFIG_HEADERS  = 
+  CONFIG_LINKS    = 
+  CONFIG_COMMANDS = 
+  $ ./config.status 
+
+on linux-pos
+
 configure:6174: $? = 0
 configure:6178: /usr/bin/nm -B conftest.o \| sed -n -e 's/^.*[ ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[ ][ ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p' | sed '/ __gnu_lto/d' \> conftest.nm
 configure:6181: $? = 0
@@ -217,48 +559,36 @@ configure:7330: checking how to run the C preprocessor
 configure:7361: gcc -E  conftest.c
 configure:7361: $? = 0
 configure:7375: gcc -E  conftest.c
-conftest.c:11:28: fatal error: ac_nonexistent.h: No such file or directory
+conftest.c:2:28: fatal error: ac_nonexistent.h: No such file or directory
  #include <ac_nonexistent.h>
                             ^
 compilation terminated.
 configure:7375: $? = 1
 configure: failed program was:
-| /* confdefs.h */
-| #define PACKAGE_NAME "MineClone"
-| #define PACKAGE_TARNAME "mineclone"
-| #define PACKAGE_VERSION "0.1"
-| #define PACKAGE_STRING "MineClone 0.1"
-| #define PACKAGE_BUGREPORT ""
-| #define PACKAGE_URL ""
-| #define PACKAGE "mineclone"
-| #define VERSION "0.1"
 | /* end confdefs.h.  */
 | #include <ac_nonexistent.h>
 configure:7400: result: gcc -E
 configure:7420: gcc -E  conftest.c
 configure:7420: $? = 0
 configure:7434: gcc -E  conftest.c
-conftest.c:11:28: fatal error: ac_nonexistent.h: No such file or directory
+config.status:1144: creating Makefile
+conftest.c:2:28: fatal error: ac_nonexistent.h: No such file or directory
  #include <ac_nonexistent.h>
                             ^
 compilation terminated.
 configure:7434: $? = 1
 configure: failed program was:
-| /* confdefs.h */
-| #define PACKAGE_NAME "MineClone"
-| #define PACKAGE_TARNAME "mineclone"
-| #define PACKAGE_VERSION "0.1"
-| #define PACKAGE_STRING "MineClone 0.1"
-| #define PACKAGE_BUGREPORT ""
-| #define PACKAGE_URL ""
-| #define PACKAGE "mineclone"
-| #define VERSION "0.1"
 | /* end confdefs.h.  */
 | #include <ac_nonexistent.h>
 configure:7463: checking for ANSI C header files
 configure:7483: gcc -c -g -O2  conftest.c >&5
+config.status:1144: creating src/Makefile
+config.status:1144: creating shaders/Makefile
 configure:7483: $? = 0
+config.status:1144: creating config.h
+config.status:1373: executing depfiles commands
 configure:7556: gcc -o conftest -g -O2   conftest.c  >&5
+config.status:1373: executing libtool commands
 configure:7556: $? = 0
 configure:7556: ./conftest
 configure:7556: $? = 0
@@ -390,21 +720,12 @@ configure:12021: checking how to run the C++ preprocessor
 configure:12048: g++ -E  conftest.cpp
 configure:12048: $? = 0
 configure:12062: g++ -E  conftest.cpp
-conftest.cpp:23:28: fatal error: ac_nonexistent.h: No such file or directory
+conftest.cpp:14:28: fatal error: ac_nonexistent.h: No such file or directory
  #include <ac_nonexistent.h>
                             ^
 compilation terminated.
 configure:12062: $? = 1
 configure: failed program was:
-| /* confdefs.h */
-| #define PACKAGE_NAME "MineClone"
-| #define PACKAGE_TARNAME "mineclone"
-| #define PACKAGE_VERSION "0.1"
-| #define PACKAGE_STRING "MineClone 0.1"
-| #define PACKAGE_BUGREPORT ""
-| #define PACKAGE_URL ""
-| #define PACKAGE "mineclone"
-| #define VERSION "0.1"
 | #define STDC_HEADERS 1
 | #define HAVE_SYS_TYPES_H 1
 | #define HAVE_SYS_STAT_H 1
@@ -423,21 +744,12 @@ configure:12087: result: g++ -E
 configure:12107: g++ -E  conftest.cpp
 configure:12107: $? = 0
 configure:12121: g++ -E  conftest.cpp
-conftest.cpp:23:28: fatal error: ac_nonexistent.h: No such file or directory
+conftest.cpp:14:28: fatal error: ac_nonexistent.h: No such file or directory
  #include <ac_nonexistent.h>
                             ^
 compilation terminated.
 configure:12121: $? = 1
 configure: failed program was:
-| /* confdefs.h */
-| #define PACKAGE_NAME "MineClone"
-| #define PACKAGE_TARNAME "mineclone"
-| #define PACKAGE_VERSION "0.1"
-| #define PACKAGE_STRING "MineClone 0.1"
-| #define PACKAGE_BUGREPORT ""
-| #define PACKAGE_URL ""
-| #define PACKAGE "mineclone"
-| #define VERSION "0.1"
 | #define STDC_HEADERS 1
 | #define HAVE_SYS_TYPES_H 1
 | #define HAVE_SYS_STAT_H 1
@@ -801,15 +1113,6 @@ target_alias=''
 ## confdefs.h. ##
 ## ----------- ##
 
-/* confdefs.h */
-#define PACKAGE_NAME "MineClone"
-#define PACKAGE_TARNAME "mineclone"
-#define PACKAGE_VERSION "0.1"
-#define PACKAGE_STRING "MineClone 0.1"
-#define PACKAGE_BUGREPORT ""
-#define PACKAGE_URL ""
-#define PACKAGE "mineclone"
-#define VERSION "0.1"
 #define STDC_HEADERS 1
 #define HAVE_SYS_TYPES_H 1
 #define HAVE_SYS_STAT_H 1
@@ -840,13 +1143,29 @@ generated by GNU Autoconf 2.69.  Invocation command line was
 
 on linux-pos
 
-config.status:1156: creating Makefile
-config.status:1156: creating src/Makefile
-config.status:1156: creating shaders/Makefile
-config.status:1156: creating config.h
-config.status:1337: config.h is unchanged
-config.status:1385: executing depfiles commands
-config.status:1385: executing libtool commands
+config.status:1148: creating Makefile
+config.status:1148: creating src/Makefile
+config.status:1148: creating shaders/Makefile
+config.status:1148: creating config.h
+config.status:1377: executing depfiles commands
+config.status:1377: executing libtool commands
+
+## ---------------------- ##
+## Running config.status. ##
+## ---------------------- ##
+
+This file was extended by MineClone config.status 0.1, which was
+generated by GNU Autoconf 2.69.  Invocation command line was
+
+  CONFIG_FILES    = 
+  CONFIG_HEADERS  = 
+  CONFIG_LINKS    = 
+  CONFIG_COMMANDS = 
+  $ ./config.status shaders/Makefile
+
+on linux-pos
+
+config.status:1148: creating shaders/Makefile
 
 ## ---------------------- ##
 ## Running config.status. ##
@@ -863,56 +1182,5 @@ generated by GNU Autoconf 2.69.  Invocation command line was
 
 on linux-pos
 
-config.status:1156: creating config.h
-config.status:1337: config.h is unchanged
-
-## ---------------------- ##
-## Running config.status. ##
-## ---------------------- ##
-
-This file was extended by MineClone config.status 0.1, which was
-generated by GNU Autoconf 2.69.  Invocation command line was
-
-  CONFIG_FILES    = 
-  CONFIG_HEADERS  = 
-  CONFIG_LINKS    = 
-  CONFIG_COMMANDS = 
-  $ ./config.status shaders/Makefile
-
-on linux-pos
-
-config.status:1156: creating shaders/Makefile
-
-## ---------------------- ##
-## Running config.status. ##
-## ---------------------- ##
-
-This file was extended by MineClone config.status 0.1, which was
-generated by GNU Autoconf 2.69.  Invocation command line was
-
-  CONFIG_FILES    = 
-  CONFIG_HEADERS  = 
-  CONFIG_LINKS    = 
-  CONFIG_COMMANDS = 
-  $ ./config.status shaders/Makefile
-
-on linux-pos
-
-config.status:1156: creating shaders/Makefile
-
-## ---------------------- ##
-## Running config.status. ##
-## ---------------------- ##
-
-This file was extended by MineClone config.status 0.1, which was
-generated by GNU Autoconf 2.69.  Invocation command line was
-
-  CONFIG_FILES    = 
-  CONFIG_HEADERS  = 
-  CONFIG_LINKS    = 
-  CONFIG_COMMANDS = 
-  $ ./config.status shaders/Makefile
-
-on linux-pos
-
-config.status:1156: creating shaders/Makefile
+config.status:1148: creating config.h
+config.status:1329: config.h is unchanged

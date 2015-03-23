@@ -62,13 +62,14 @@ void Game::Loop()
 {
     while (_running)
     {
-        while (SDL_PollEvent(&mainEvent))
+        while (SDL_PollEvent(&mainEvent) != 0)
         {
             HandleEvents(mainEvent);
         }
         Update();
-
-
+	
+	
+	
         Render();
 
         SDL_GL_SwapWindow(_window);
@@ -92,8 +93,8 @@ void Game::HandleEvents(SDL_Event e)
 			break;
 		}
 	}
-
-    camera->handleMovement(&mainEvent);
+	camera->handleMovement(&mainEvent);
+    
 }
 
 void Game::Update()
