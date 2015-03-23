@@ -8,7 +8,7 @@
 #include "Perlin.h"
 
 Perlin::Perlin() {
-	p = new int[512];
+//	p = new int[512];
 	for (int x = 0; x < 512; x++) {
 		p[x] = permutation[x%256];
 	}
@@ -23,7 +23,7 @@ double Perlin::fade(double t) {
 	return t * t * t * (t * (t * 6 -15) + 10);
 }
 
-double Perlin::Perlin(double x, double y, double z) {
+double Perlin::perlin(double x, double y, double z) {
 
 	int xi = (int)x & 255;
 	int yi = (int)y & 255;
@@ -85,4 +85,23 @@ double Perlin::grad(int hash, double x, double y, double z) {
 double Perlin::lerp(double a, double b, double x) {
 
 	return a + x * (b - a);
+}
+
+
+double Perlin::ocatve(double x, double y, double z, int octaves, double persistance){
+	double total = 0 ;
+	double frequency = 1;
+	double amplitude = 1;
+	double maxValue = 0;
+
+	for (int i = 0; i < octaves; i++) {
+		total += perlin(x * frequency, y * frequency, z * frequency) * amplitude;
+
+		maxValue += amplitude;
+
+		amplitude *= persistance;
+		frequency *= 2;
+	}
+
+	return total/maxValue;
 }

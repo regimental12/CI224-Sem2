@@ -9,7 +9,8 @@ Chunk::Chunk(){
 	Init();
 }
 
-Chunk::Chunk(GLfloat X, GLfloat Y, GLfloat Z){
+Chunk::Chunk(GLfloat X, GLfloat Y, GLfloat Z, Perlin* noise){
+	perlin = noise;
 	size = glm::vec3(16, 24, 16);
 	position.x = X;
 	position.y = Y;

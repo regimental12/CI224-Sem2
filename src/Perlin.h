@@ -12,15 +12,15 @@
 class Perlin {
 public:
 	Perlin();
-	Perlin(double x, double y, double z);
 	~Perlin();
 	double fade(double t);
-	double Perlin(double x, double y, double z);
+	double perlin(double x, double y, double z);
 	int inc(int num);
 	double grad(int hash, double x, double y, double z);
 	double lerp(double a, double b, double x);
+	double ocatve(double x, double y, double z, int octaves, double persistance);
 private:
-	const int permutation[] = {151,160,137,91,90,15, // Hash lookup table as defined by Ken Perlin.  This is a randomly
+	const int permutation[256] = {151,160,137,91,90,15, // Hash lookup table as defined by Ken Perlin.  This is a randomly
 		131,13,201,95,96,53,194,233,7,225,140,36,103,30,69,142,8,99,37,240,21,10,23,// arranged array of all numbers from 0-255 inclusive.
 		190, 6,148,247,120,234,75,0,26,197,62,94,252,219,203,117,35,11,32,57,177,33,
 		88,237,149,56,87,174,20,125,136,171,168, 68,175,74,165,71,134,139,48,27,166,
@@ -35,7 +35,7 @@ private:
 		138,236,205,93,222,114,67,29,24,72,243,141,128,195,78,66,215,61,156,180
 	};
 
-	const int p[];
+	int p[512];
 };
 
 #endif /* SRC_PERLIN_H_ */
