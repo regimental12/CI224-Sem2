@@ -29,7 +29,9 @@ World::~World()
  */
 void World::Render(Shader shader, Camera* camera)
 {
+	
 	for(int i = 0; i < Chunks.size(); i++) {
+		Chunks[i]->Update(camera);
 		Chunks[i]->Render(shader, camera);
 	}
 }

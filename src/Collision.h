@@ -6,20 +6,40 @@
 #include <cmath>
 #include <iostream>
 
+static int count = 0 ;
+
 static bool Collision(Camera* playerCam , Cube* cube)
 {
-    //check the X axi
-   if((playerCam->cameraPos.x + 0.5f  <  cube->getPosition().x - 0.5f))// || (playerCam->cameraPos.x - 0.5f  >  cube->getPosition().x + 0.5f))// player right, cube left
-   {
-	if((playerCam->cameraPos.y - 0.5f  <  cube->getPosition().y + 0.5f))// || (playerCam->cameraPos.y + 0.5f >  cube->getPosition().y - 0.5f)) // player bottom , cube top
+    float playerLeft = playerCam->cameraPos.x  - 0.5f;
+    float playerRight = playerCam->cameraPos.x + 0.5f;
+    
+    float playerBottom = playerCam->cameraPos.y - 0.5f;
+    float playerTop = playerCam->cameraPos.y + 0.5f;
+    
+    float playerBack = playerCam->cameraPos.z - 0.5f;
+    float playerFront = playerCam->cameraPos.z + 0.5f;
+    
+    float cubeLeft = cube->getPosition().x + 0.5f ;
+    float cubeRight = cube->getPosition().x - 0.5f;
+    
+    float cubeBottom = cube->getPosition().y + 0.5f;
+    float cubeTop= cube->getPosition().y - 0.5f;
+    
+    float cubeBack = cube->getPosition().z + 0.5f;
+    float cubeFront = cube->getPosition().z - 0.5f;
+    
+    if(playerLeft > cubeRight)
+    {
+      if(playerTop > cubeBottom)
+      {
+	if(playerFront > cubeBack)
 	{
-	    if((playerCam->cameraPos.z - 0.5f  <  cube->getPosition().z + 0.5f))// || (playerCam->cameraPos.z + 0.5f  >  cube->getPosition().z - 0.5f)) // player top , cube bottom
-	    {
-		    std::cout << "bang!" << std::endl;
-		    return true;
-	    }
+	  std::cout << "Bang!" << count << std::endl;
+	  count++;
+	  return true;
 	}
-   }
+      }
+    }
         
     //std::cout << "no Bang!" << std::endl;
     return false;
