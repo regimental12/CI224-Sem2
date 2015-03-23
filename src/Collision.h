@@ -34,7 +34,7 @@ static bool Collision(Camera* playerCam , Cube* cube)
       {
 	if(playerFront > cubeBack)
 	{
-	  std::cout << "Bang!" << count << std::endl;
+	  //std::cout << "Bang!" << count << std::endl;
 	  count++;
 	  return true;
 	}

@@ -11,9 +11,8 @@ Cube::Cube()
 Cube::Cube(GLfloat x, GLfloat y, GLfloat z)
 {
 	iLoader = new ImageLoader();
-	position = glm::vec3(0.0f, 0.0f, 0.0f);
+	position = glm::vec3(x, y, z);
 	loadCube();
-	setPosition(x, y, z);
 }
 
 Cube::~Cube()
@@ -44,7 +43,7 @@ void Cube::setTexture(std::string fileName)
    texture = iLoader->LoadTexture(fileName);
 
     //texture = iLoader->LoadTexture(fileName.c_str());
-    delete iLoader;
+    //delete iLoader;
 }
 
 GLuint Cube::getVAO()

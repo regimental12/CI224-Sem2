@@ -11,7 +11,7 @@ Chunk::Chunk(){
 
 Chunk::Chunk(GLfloat X, GLfloat Y, GLfloat Z, Perlin* noise){
 	perlin = noise;
-	size = glm::vec3(16, 24, 16);
+	size = glm::vec3(16, 10, 16);
 	position.x = X;
 	position.y = Y;
 	position.z = Z;
@@ -31,9 +31,22 @@ Chunk::~Chunk(){
 
 void Chunk::Init(){
 	for (int x = 0; x < size.x; x++) {
-		for (int y = 0; y < size.y; y++) {
-			for (int z = 0; z < size.z; z++) {
-				Cubes[x][y][z] = new Cube((position.x*size.x)+x, (position.y*size.y)+y, (position.z*size.z)+z);
+		for (int z = 0; z < size.z; z++) {
+
+			// get noise value - using x & z because Y is our up axis
+			double value = perlin->noise((position.x*size.x)+x+5000, (position.z*size.z)+z+5000, 10);
+
+			std::cout << value << std::endl;
+
+			int n = value * size.y;
+
+			std::cout << n << std::endl;
+
+			for (int y = 0; y < size.y; y++) {	// only create cubes up to our value
+					Cubes[x][y][z] = new Cube((position.x*size.x)+x, (position.y*size.y)+y, (position.z*size.z)+z);
+
+					//if(y > n)
+						//Cubes[x][y][z]->setTexture("images/wall.jpg");
 			}
 		}
 	}

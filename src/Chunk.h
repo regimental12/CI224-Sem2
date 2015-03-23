@@ -23,7 +23,6 @@ public:
 	void Init();
 	//Cube* getCubes();
 private:
-//	  std::vector<Cube*> Cubes;
 	Cube* Cubes[16][24][16];
 	  glm::vec3 position;
 	  glm::vec3 size;
