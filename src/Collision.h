@@ -6,22 +6,24 @@
 #include <cmath>
 #include <iostream>
 
+static int count = 0 ;
+
 static bool Collision(Camera* playerCam , Cube* cube)
-{
-    //check the X axi
-   if((playerCam->cameraPos.x + 0.5f  <  cube->getPosition().x - 0.5f))// || (playerCam->cameraPos.x - 0.5f  >  cube->getPosition().x + 0.5f))// player right, cube left
-   {
-	if((playerCam->cameraPos.y - 0.5f  <  cube->getPosition().y + 0.5f))// || (playerCam->cameraPos.y + 0.5f >  cube->getPosition().y - 0.5f)) // player bottom , cube top
-	{
-	    if((playerCam->cameraPos.z - 0.5f  <  cube->getPosition().z + 0.5f))// || (playerCam->cameraPos.z + 0.5f  >  cube->getPosition().z - 0.5f)) // player top , cube bottom
-	    {
-		    std::cout << "bang!" << std::endl;
-		    return true;
-	    }
-	}
-   }
-        
-    //std::cout << "no Bang!" << std::endl;
+{    
+     int x = cube->getPosition().x - playerCam->cameraPos.x;
+     int y = cube->getPosition().y - playerCam->cameraPos.y;
+     int z = cube->getPosition().z - playerCam->cameraPos.z; 
+     
+     int collisionDist = x*x + y*y + z*z;
+     
+     if( collisionDist < 1)
+     {
+       std::cout << "Bang!" << count << std::endl;
+       count++;
+       playerCam->cameraPos -= playerCam->cameraSpeed * playerCam->cameraDir;
+       return true;
+     }
+     
     return false;
 }
 
