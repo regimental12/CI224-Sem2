@@ -22,6 +22,12 @@ Chunk::~Chunk(){
 
 }
 
+/*Cube* Chunk::getCubes()
+{
+      //return Cubes;
+}*/
+
+
 void Chunk::Init(){
 	for (int x = 0; x < size.x; x++) {
 		for (int y = 0; y < size.y; y++) {
@@ -42,6 +48,7 @@ void Chunk::Render(Shader shader, Camera* camera) {
 					if (x == 0 || x == size.x - 1 || y == 0 || y == size.y - 1
 							|| z == 0 || z == size.z - 1) {
 						Cubes[x][y][z]->Render(shader, camera);
+						Update(camera);
 					} else {
 						//check all inside cubes
 						//only render cubes if they'res an empty cube on any face
@@ -49,6 +56,7 @@ void Chunk::Render(Shader shader, Camera* camera) {
 								|| !Cubes[x][y + 1][z] || !Cubes[x][y - 1][z]
 								|| !Cubes[x][y][z + 1] || !Cubes[x][y][z - 1]) {
 							Cubes[x][y][z]->Render(shader, camera);
+							Update(camera);
 						} else {
 
 						}
@@ -60,6 +68,12 @@ void Chunk::Render(Shader shader, Camera* camera) {
 
 }
 
-void Chunk::Update(){
-
+void Chunk::Update(Camera*  cam){
+      for (int x = 0; x < size.x; x++) {
+		for (int y = 0; y < size.y; y++) {
+			for (int z = 0; z < size.z; z++) {
+	    Collision(cam , Cubes[x][y][z]);
+			}
+		}
+	}
 }

@@ -10,15 +10,17 @@
 
 #include "Cube.h"
 #include <vector>
+#include "Collision.h"
 
 class Chunk {
 public:
 	Chunk();
 	Chunk(GLfloat X, GLfloat Y, GLfloat Z);
 	~Chunk();
-	void Update();
+	void Update(Camera* camera);
 	void Render(Shader shader, Camera* camera);
 	void Init();
+	//Cube* getCubes();
 private:
 //	  std::vector<Cube*> Cubes;
 	Cube* Cubes[16][24][16];
