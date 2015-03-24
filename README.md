@@ -28,10 +28,11 @@ This is our marking scheme copied from ProjectBrief.md which we can check off th
 **Working block world (only one applies)**  
   - [x] A basic block world (hard coded) - 5%  
   - [ ] A procedural block world  - 10%  
+  - [x] A block world with data structures (chunks) - 10%
   - [ ] A procedural block world with proper data structure - 20%  
   
 **Working player (only one applies)**  
-  - [ ] A player that moves - 5%  
+  - [x ] A player that moves - 5%  
   - [ ] A player with HUD - 10%  
   - [ ] A player with interaction - 15%  
   - [ ] A player with interaction and HUD and inventory - 20%  
