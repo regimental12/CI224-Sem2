@@ -32,7 +32,7 @@ This is our marking scheme copied from ProjectBrief.md which we can check off th
   - [ ] A procedural block world with proper data structure - 20%  
   
 **Working player (only one applies)**  
-  - [x ] A player that moves - 5%  
+  - [x] A player that moves - 5%  
   - [ ] A player with HUD - 10%  
   - [ ] A player with interaction - 15%  
   - [ ] A player with interaction and HUD and inventory - 20%  
