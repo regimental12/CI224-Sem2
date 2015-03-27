@@ -83,16 +83,15 @@ void Cube::Render(Shader shader , Camera* camera)
     GLint modelLoc = glGetUniformLocation(shader.getProgram(), "model");
     GLint viewLoc = glGetUniformLocation(shader.getProgram(), "view");
     GLint projLoc = glGetUniformLocation(shader.getProgram(), "projection");
-    
+
+
     /*glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
     glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));*/
     
     glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(camera->view));
     glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(camera->projection));
-    
 
     glBindVertexArray(VAO);
-	 
 		  glBindTexture(GL_TEXTURE_2D, texture);
 		  glm::mat4 model;
 		  model = glm::translate(model, position);
@@ -102,14 +101,9 @@ void Cube::Render(Shader shader , Camera* camera)
 
 		  //model = glm::rotate(model, angle, glm::vec3(1.0f, 1.0f, 0.5f));
 
-//		  //Uncomment below for wireframe
-//		  glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-//		  glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-
 		  glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		  glDrawArrays(GL_TRIANGLES, 0, 36);
 		  glBindTexture(GL_TEXTURE_2D , 0);
-	
     glBindVertexArray(0);
     glUseProgram(0);
 }

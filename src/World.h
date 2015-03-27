@@ -14,7 +14,7 @@ public:
 	void Render(Shader shader, Camera* camera);
 private:
 	  std::vector<Chunk*> Chunks;
-	  Perlin* perlin;
+	  Perlin perlin;
 };
 
 #endif /* SRC_WORLD_H_ */

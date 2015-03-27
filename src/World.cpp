@@ -12,10 +12,8 @@
  */
 World::World()
 {
-	perlin = new Perlin();
-
-	for (int x = -1; x < 1; x++) {
-		for (int z = -1; z < 1; z++) {
+	for (int x = -1; x < 2; x++) {
+		for (int z = -1; z < 2; z++) {
 			Chunks.push_back(new Chunk(x, 0, z, perlin));
 		}
 	}
@@ -31,9 +29,9 @@ World::~World()
  */
 void World::Render(Shader shader, Camera* camera)
 {
-	
+
 	for(int i = 0; i < Chunks.size(); i++) {
-		Chunks[i]->Update(camera);
+		//Chunks[i]->Update(camera);
 		Chunks[i]->Render(shader, camera);
 	}
 }

@@ -16,7 +16,7 @@
 class Chunk {
 public:
 	Chunk();
-	Chunk(GLfloat X, GLfloat Y, GLfloat Z, Perlin* noise);
+	Chunk(GLfloat X, GLfloat Y, GLfloat Z, Perlin noise);
 	~Chunk();
 	void Update(Camera* camera);
 	void Render(Shader shader, Camera* camera);
@@ -26,7 +26,7 @@ private:
 	Cube* Cubes[16][24][16];
 	  glm::vec3 position;
 	  glm::vec3 size;
-	  Perlin* perlin;
+	  Perlin perlin;
 };
 
 #endif /* SRC_CHUNK_H_ */
