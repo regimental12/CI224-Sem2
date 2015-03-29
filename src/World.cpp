@@ -12,8 +12,8 @@
  */
 World::World()
 {
-	for (int x = -1; x < 2; x++) {
-		for (int z = -1; z < 2; z++) {
+	for (int x = -1; x < 1; x++) {
+		for (int z = -1; z < 1; z++) {
 			Chunks.push_back(new Chunk(x, 0, z, perlin));
 		}
 	}
@@ -21,7 +21,11 @@ World::World()
 
 World::~World()
 {
-
+	//de-allocate pointers inside vector then clear the vector
+	for (int i = 0; i < Chunks.size(); i++) {
+		delete(Chunks[i]);
+	}
+	Chunks.clear();
 }
 
 /**
@@ -29,9 +33,7 @@ World::~World()
  */
 void World::Render(Shader shader, Camera* camera)
 {
-
 	for(int i = 0; i < Chunks.size(); i++) {
-		//Chunks[i]->Update(camera);
 		Chunks[i]->Render(shader, camera);
 	}
 }
@@ -40,7 +42,9 @@ void World::Render(Shader shader, Camera* camera)
  * Update will find the chunk the player is in and check that all 8 surrounding chunks are loaded.
  * If they arne't it will load them. If they are it will do nothing.
  */
-void World::Update()
+void World::Update(Camera* camera)
 {
-
+	for(int i = 0; i < Chunks.size(); i++) {
+		//Chunks[i]->Update(camera);
+	}
 }

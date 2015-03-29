@@ -11,7 +11,7 @@ Chunk::Chunk(){
 
 Chunk::Chunk(GLfloat X, GLfloat Y, GLfloat Z, Perlin noise){
 	perlin = noise;
-	size = glm::vec3(16, 10, 16);
+	size = glm::vec3(16, 12, 16);
 	position.x = X;
 	position.y = Y;
 	position.z = Z;
@@ -40,42 +40,42 @@ void Chunk::Init(){
 		for (int z = 0; z < size.z; z++) {
 
 			// get noise value - using x & z because Y is our up axis
-			double value = perlin.noise(10 * ((position.x*size.x)+x), 10 * ((position.z*size.z)+z), 0.8);
+			double value = perlin.noise(5 * ((position.x*size.x)+x), 5 * ((position.z*size.z)+z), 0.8);
 
+			//std::cout << (int)(perlin.noise(10 * ((position.x*size.x)+3), 10 * ((position.z*size.z)+9), 0.8) * size.y) << std::endl;
 
-			for (int y = 0; y < (int)(value * size.y); y++) {	// only create cubes up to our value
+			yHeight[x][z] = (int)(value * size.y);
+
+			if (yHeight[x][z] < yLOW) {
+				yLOW = yHeight[x][z];
+			}
+
+			for (int y = 0; y < size.y; y++) {	// only create cubes up to our value
 					Cubes[x][y][z] = new Cube((position.x*size.x)+x, (position.y*size.y)+y, (position.z*size.z)+z);
+
+					if(y >= (int)(value * size.y)) {
+						delete(Cubes[x][y][z]);
+					}
 			}
 		}
 	}
 }
 
 void Chunk::Render(Shader shader, Camera* camera) {
+
 	for (int x = 0; x < size.x; x++) {
 		for (int z = 0; z < size.z; z++) {
+			for (int y = 0; y < yHeight[x][z]; y++) {
 
-			// get noise value - using x & z because Y is our up axis
-			double value = perlin.noise(10 * ((position.x*size.x)+x), 10 * ((position.z*size.z)+z), 0.8);
-
-			for (int y = 0; y < (int)(value * size.y); y++) {
-				// only attempt to render cubes that aren't NULL
+				//check if cube is NULL
 				if (Cubes[x][y][z]) {
-					// only render cubes that are on the very edges of the chunk.
-					if (x == 0 || x == size.x - 1 || y == 0 || y == size.y - 1
-							|| z == 0 || z == size.z - 1) {
+					if(x == 0 || y == 0 || z == 0 || x == size.x-1 || y == yHeight[x][z]-1 || z == size.z-1){
 						Cubes[x][y][z]->Render(shader, camera);
-					} else {
-						//check all inside cubes
-						//only render cubes if they'res an empty cube on any face
-						if (!Cubes[x + 1][y][z] || !Cubes[x - 1][y][z]
-								|| !Cubes[x][y + 1][z] || !Cubes[x][y - 1][z]
-								|| !Cubes[x][y][z + 1] || !Cubes[x][y][z - 1]) {
-
-							Cubes[x][y][z]->Render(shader, camera);
-						} else {
-
-						}
 					}
+						if(y >= yLOW) {
+							Cubes[x][y][z]->Render(shader, camera);
+						}
+
 				}
 			}
 		}

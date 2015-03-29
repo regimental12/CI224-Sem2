@@ -17,7 +17,7 @@ Cube::Cube(GLfloat x, GLfloat y, GLfloat z)
 
 Cube::~Cube()
 {
-
+	delete(iLoader);
 }
 
 glm::vec3 Cube::getPosition()

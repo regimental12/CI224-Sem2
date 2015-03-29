@@ -10,7 +10,7 @@ class World
 public:
 	World();
 	~World();
-	void Update();
+	void Update(Camera* camera);
 	void Render(Shader shader, Camera* camera);
 private:
 	  std::vector<Chunk*> Chunks;

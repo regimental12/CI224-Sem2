@@ -1,5 +1,7 @@
 /build/*
 
+src/MineClone
+
 #eclipse generated crap
 .cproject
 .project

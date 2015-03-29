@@ -24,9 +24,11 @@ public:
 	//Cube* getCubes();
 private:
 	Cube* Cubes[16][24][16];
-	  glm::vec3 position;
-	  glm::vec3 size;
-	  Perlin perlin;
+	glm::vec3 position;
+	glm::vec3 size;
+	Perlin perlin;
+	int yHeight[16][16];
+	int yLOW = 100;
 };
 
 #endif /* SRC_CHUNK_H_ */

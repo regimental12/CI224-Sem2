@@ -6,11 +6,14 @@ Game::Game()
   _running = false;
   glContext = NULL;
   camera = new Camera();
+  world = NULL;
 }
 
 Game::~Game()
 {
-    
+    delete(_window);
+    delete(camera);
+    delete(world);
 }
 
 void Game::Init()
@@ -66,9 +69,8 @@ void Game::Loop()
         {
             HandleEvents(mainEvent);
         }
+
         Update();
-	
-	
 	
         Render();
 
@@ -100,6 +102,7 @@ void Game::HandleEvents(SDL_Event e)
 void Game::Update()
 {
 	camera->update();
+	world->Update(camera);
 }
 
 void Game::Render()
