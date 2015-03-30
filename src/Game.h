@@ -29,11 +29,11 @@ public:
   void CleanUp();
   void Render();
   void Update();
-  void HandleEvents(SDL_Event);
+  void HandleEvents(SDL_Event e , SDL_Window* _window);
   void objinit();
-  
-private:
   SDL_Window* _window;
+private:
+  
   SDL_Event mainEvent;
   SDL_GLContext glContext;
   bool _running;
