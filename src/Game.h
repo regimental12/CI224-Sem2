@@ -2,11 +2,11 @@
 #define _GAMEH_
 
 #include "SDL2/SDL.h"
-#define GLEW_STATIC
+//#define GLEW_STATIC
 #include "GL/glew.h"
 #include "GL/gl.h"
 //#include "GL/glut.h"
-#include "GL/glx.h"
+//#include "GL/glx.h"
 #include "Shader.h"
 #include "Cube.h"
 #include "Camera.h"
