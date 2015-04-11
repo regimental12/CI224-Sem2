@@ -85,7 +85,7 @@ void Camera::handleMovement(SDL_Event *e)
 
 void Camera::update()
 {
-    view = glm::lookAt(cameraPos , cameraPos + cameraDir , cameraUp);    
+     view = glm::lookAt(cameraPos , cameraPos + cameraDir , cameraUp);
 }
 
 

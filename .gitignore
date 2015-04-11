@@ -1,11 +1,13 @@
-/build/*
-
+#The EXE
 src/MineClone
+src/MineClone.exe
 
 #eclipse generated crap
 .cproject
 .project
 .settings
+/Debug/*
+/Build/*
 
 #kdevelop generated crap
 CI224-Sem2.kdev4

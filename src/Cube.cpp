@@ -95,7 +95,6 @@ void Cube::Render(Shader shader , Camera* camera)
 		  glBindTexture(GL_TEXTURE_2D, texture);
 		  glm::mat4 model;
 		  model = glm::translate(model, position);
-		  GLfloat angle = 20.0f;
 
 		  //model = glm::rotate(model, angle, glm::vec3(1.0f, 1.0f, 1.0f));
 
