@@ -26,14 +26,14 @@ void Game::Init()
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
 
-    _window = SDL_CreateWindow("Voxel Game 2.0" , SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1920, 1080, SDL_WINDOW_OPENGL);
+    _window = SDL_CreateWindow("Voxel Game 2.0" , SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1366, 768, SDL_WINDOW_OPENGL);
     
     glContext = SDL_GL_CreateContext(_window);
 
     glewExperimental = GL_TRUE;
     glewInit();
 
-    glViewport(0, 0, 1920, 1080);
+    glViewport(0, 0, 1366, 768);
 
     glEnable(GL_DEPTH_TEST);
     std::cout << "init\n";
