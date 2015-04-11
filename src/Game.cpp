@@ -20,19 +20,20 @@ void Game::Init()
 {
   
     SDL_Init(SDL_INIT_EVERYTHING);
+    //SDL_SetRelativeMouseMode(SDL_TRUE);
 
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION , 3);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
 
-    _window = SDL_CreateWindow("Voxel Game 2.0" , SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1024, 768, SDL_WINDOW_OPENGL);
+    _window = SDL_CreateWindow("Voxel Game 2.0" , SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1920, 1080, SDL_WINDOW_OPENGL);
     
     glContext = SDL_GL_CreateContext(_window);
 
     glewExperimental = GL_TRUE;
     glewInit();
 
-    glViewport(0, 0, 1024, 768);
+    glViewport(0, 0, 1920, 1080);
 
     glEnable(GL_DEPTH_TEST);
     std::cout << "init\n";
@@ -67,7 +68,7 @@ void Game::Loop()
     {
         while (SDL_PollEvent(&mainEvent) != 0)
         {
-            HandleEvents(mainEvent);
+            HandleEvents(mainEvent , _window);
         }
 
         Update();
@@ -79,7 +80,7 @@ void Game::Loop()
 
 }
 
-void Game::HandleEvents(SDL_Event e)
+void Game::HandleEvents(SDL_Event e ,SDL_Window*  _window)
 {
 	switch (e.type) {
 	case SDL_QUIT:
@@ -95,7 +96,8 @@ void Game::HandleEvents(SDL_Event e)
 			break;
 		}
 	}
-	camera->handleMovement(&mainEvent);
+	camera->handleMovement(&mainEvent , _window);
+	
     
 }
 
