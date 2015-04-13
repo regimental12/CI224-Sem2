@@ -49,7 +49,7 @@ void Chunk::Init(){
 			if (yHeight[x][z] < yLOW) {
 				yLOW = yHeight[x][z];
 			}
-
+			// create different cubes here. so find out if we are at the max height.
 			for (int y = 0; y < size.y; y++) {	// only create cubes up to our value
 					Cubes[x][y][z] = new Cube((position.x*size.x)+x, (position.y*size.y)+y, (position.z*size.z)+z);
 

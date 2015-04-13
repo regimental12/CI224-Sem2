@@ -103,8 +103,8 @@ void Game::HandleEvents(SDL_Event e ,SDL_Window*  _window)
 
 void Game::Update()
 {
-	camera->update();
 	world->Update(camera);
+	camera->update();
 }
 
 void Game::Render()

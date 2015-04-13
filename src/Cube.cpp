@@ -2,22 +2,21 @@
 
 Cube::Cube()
 {
-	iLoader = new ImageLoader();
 	position = glm::vec3(0.0f, 0.0f, 0.0f);
 	loadCube();
+	iLoader = nullptr;
 }
 
 
 Cube::Cube(GLfloat x, GLfloat y, GLfloat z)
 {
-	iLoader = new ImageLoader();
 	position = glm::vec3(x, y, z);
 	loadCube();
 }
 
 Cube::~Cube()
 {
-	delete(iLoader);
+	
 }
 
 glm::vec3 Cube::getPosition()
@@ -39,11 +38,8 @@ GLuint Cube::getTexture()
 
 void Cube::setTexture(std::string fileName)
 {
-    // Fill out when image loader done
-   texture = iLoader->LoadTexture(fileName);
-
-    //texture = iLoader->LoadTexture(fileName.c_str());
-    //delete iLoader;
+    iLoader = ImageLoader::getInstance();
+    texture = iLoader->LoadTexture(fileName);
 }
 
 GLuint Cube::getVAO()
@@ -84,10 +80,6 @@ void Cube::Render(Shader shader , Camera* camera)
     GLint viewLoc = glGetUniformLocation(shader.getProgram(), "view");
     GLint projLoc = glGetUniformLocation(shader.getProgram(), "projection");
 
-
-    /*glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));*/
-    
     glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(camera->view));
     glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(camera->projection));
 
@@ -95,11 +87,6 @@ void Cube::Render(Shader shader , Camera* camera)
 		  glBindTexture(GL_TEXTURE_2D, texture);
 		  glm::mat4 model;
 		  model = glm::translate(model, position);
-
-		  //model = glm::rotate(model, angle, glm::vec3(1.0f, 1.0f, 1.0f));
-
-		  //model = glm::rotate(model, angle, glm::vec3(1.0f, 1.0f, 0.5f));
-
 		  glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		  glDrawArrays(GL_TRIANGLES, 0, 36);
 		  glBindTexture(GL_TEXTURE_2D , 0);

@@ -45,6 +45,6 @@ void World::Render(Shader shader, Camera* camera)
 void World::Update(Camera* camera)
 {
 	for(int i = 0; i < Chunks.size(); i++) {
-		//Chunks[i]->Update(camera);
+		Chunks[i]->Update(camera);
 	}
 }
