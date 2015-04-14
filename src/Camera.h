@@ -30,7 +30,6 @@ public:
     GLfloat lastX = 1920/2;
     GLfloat lastY = 1080/2;
     
-    
     GLfloat cameraSpeed = 1.0f;
 
     void handleMovement(SDL_Event *e , SDL_Window*  _window);
@@ -39,6 +38,7 @@ public:
     glm::mat4 view;
     glm::mat4 projection;
     bool firstMove = true;
+    int x1, y1;
 };
 
 #endif

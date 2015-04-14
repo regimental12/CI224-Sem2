@@ -12,6 +12,7 @@
 #include "Perlin.h"
 #include <vector>
 #include "Collision.h"
+#include "Camera.h"
 
 class Chunk {
 public:

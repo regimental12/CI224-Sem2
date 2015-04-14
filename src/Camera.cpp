@@ -1,5 +1,6 @@
 #include "Camera.h"
 
+
 /**
  * Initialise Variables;
  */
@@ -86,6 +87,14 @@ void Camera::handleMovement(SDL_Event *e , SDL_Window* _window)
 	  front.y = sin(glm::radians(pitch));
 	  front.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
 	  cameraDir = glm::normalize(front);
+	}
+	
+	
+	if(e->type == SDL_MOUSEBUTTONDOWN)
+	{
+	  
+	  SDL_GetMouseState(&x1, &y1);
+	  //CalcRay(x1,y1);
 	}
 }
 

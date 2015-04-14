@@ -88,7 +88,9 @@ void Chunk::Update(Camera*  cam){
 			for (int y = 0; y < size.y; y++) {
 				// only attempt to collide cubes that aren't NULL
 				if (Cubes[x][y][z] != NULL) {
-						Collision(cam, Cubes[x][y][z]);
+					//Collision::Collision(cam, Cubes[x][y][z]);
+				  Collision(cam , Cubes[x][y][z]);
+						
 				}
 			}
 		}
