@@ -53,6 +53,12 @@ void Chunk::Init(){
 			for (int y = 0; y < size.y; y++) {	// only create cubes up to our value
 					Cubes[x][y][z] = new Cube((position.x*size.x)+x, (position.y*size.y)+y, (position.z*size.z)+z);
 
+					int dirtbuffer = (rand() % 3) + 1;
+
+					if (y >= yHeight[x][z] - dirtbuffer && y <= yHeight[x][z]) {
+						Cubes[x][y][z]->setType(Cube::Dirt);
+					}
+
 					if(y >= (int)(value * size.y)) {
 						delete(Cubes[x][y][z]);
 					}

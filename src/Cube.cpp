@@ -73,7 +73,7 @@ void Cube::loadCube()
     glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), (GLvoid*)(3 * sizeof(GLfloat)));
     glEnableVertexAttribArray(2);
     glBindVertexArray(0);
-    setTexture("images/blank.jpg");
+    setType(Cube::Stone);
 }
 
 void Cube::Render(Shader shader , Camera* camera)
@@ -107,3 +107,18 @@ void Cube::Render(Shader shader , Camera* camera)
     glUseProgram(0);
 }
 
+void Cube::setType(Type type) {
+	switch (type) {
+	case Cube::Dirt:
+		setTexture("images/dirt.jpg");
+		break;
+
+	case Cube::Stone:
+		setTexture("images/stone.jpg");
+		break;
+
+	default:
+		setTexture("images/stone.jpg");
+		break;
+	}
+}

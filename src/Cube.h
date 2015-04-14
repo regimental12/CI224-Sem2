@@ -17,6 +17,10 @@
 class Cube 
 {
 public:
+	enum Type {
+		Dirt, Stone
+	};
+
   Cube();
   Cube(GLfloat x, GLfloat y, GLfloat z);
   ~Cube();
@@ -29,6 +33,8 @@ public:
   void loadCube();
   GLuint getVAO();
   GLuint getVBO();
+
+  void setType(Type);
 
 private:
   glm::vec3 position;
