@@ -7,6 +7,7 @@ Game::Game()
   glContext = NULL;
   camera = new Camera();
   world = NULL;
+  skyBox = NULL;
 }
 
 Game::~Game()
@@ -41,8 +42,9 @@ void Game::Init()
     std::cout << "GLSL version: " << glGetString(GL_SHADING_LANGUAGE_VERSION) << std::endl;
     std::cout << "Vendor: " << glGetString(GL_VENDOR) << std::endl;
     std::cout << "Renderer: " << glGetString(GL_RENDERER) << std::endl;
-    
+
     shader.loadShader("shaders/Vert.vrt" , "shaders/Frag.frg");
+    skyShader.loadShader("shaders/Vert.vrt" , "shaders/Frag.frg");
     
     _running = true;
     objinit();
@@ -51,6 +53,7 @@ void Game::Init()
 void Game::objinit()
 {
 	world = new World();
+	skyBox = new SkyBox();
 	std::cout << "loaded data" << std::endl;
 }
 
@@ -120,6 +123,7 @@ void Game::Render()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	world->Render(shader, camera);
+	skyBox->Render(skyShader, camera);
 }
 
     

@@ -17,6 +17,8 @@ World::World()
 			Chunks.push_back(new Chunk(x, 0, z, perlin));
 		}
 	}
+
+
 }
 
 World::~World()

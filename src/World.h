@@ -2,6 +2,7 @@
 #define SRC_WORLD_H_
 
 #include "Chunk.h"
+#include "SkyBox.h"
 #include "Perlin.h"
 #include <vector>
 

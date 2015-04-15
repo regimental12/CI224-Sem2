@@ -37,10 +37,12 @@ private:
   SDL_GLContext glContext;
   bool _running;
   Shader shader;
+  Shader skyShader;
   glm::mat4 view;
   glm::mat4 projection;
   Camera *camera;
   World *world;
+  SkyBox *skyBox;
   bool wireframe = false;
   
 };
