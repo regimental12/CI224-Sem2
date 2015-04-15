@@ -9,6 +9,7 @@
 #include "GL/glu.h"
 #include <iostream>
 
+
 #define GLM_FORCE_RADIANS
 
 #include "glm/glm.hpp"
@@ -39,6 +40,8 @@ public:
     glm::mat4 projection;
     bool firstMove = true;
     int x1, y1;
+    glm::vec3 near , far ;
+    bool mouseDown = false;
 };
 
 #endif

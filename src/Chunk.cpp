@@ -31,7 +31,7 @@ Chunk::~Chunk(){
 
 /*Cube* Chunk::getCubes()
 {
-      //return Cubes;
+      return Cubes;
 }*/
 
 
@@ -88,11 +88,30 @@ void Chunk::Update(Camera*  cam){
 			for (int y = 0; y < size.y; y++) {
 				// only attempt to collide cubes that aren't NULL
 				if (Cubes[x][y][z] != NULL) {
-					//Collision::Collision(cam, Cubes[x][y][z]);
 				  Collision(cam , Cubes[x][y][z]);
+				  //RayCollision(cam->near , cam->far , Cubes[x][y][z]);
 						
 				}
 			}
 		}
+	}
+	if(cam->mouseDown)
+	{
+	  for (int x = 0; x < size.x; x++) {
+		for (int z = 0; z < size.z; z++) {
+			for (int y = 0; y < size.y; y++) {
+				// only attempt to collide cubes that aren't NULL
+				if (Cubes[x][y][z] != NULL) {
+				  
+				  if(RayCollision(cam->near , cam->far , Cubes[x][y][z]))
+				  {
+				    Cubes[x][y][z] = NULL;
+				    cam->mouseDown = false;
+				  }
+						
+				}
+			}
+		}
+	}
 	}
 }
