@@ -9,6 +9,7 @@
 #include "Shader.h"
 #include "Cube.h"
 #include "Camera.h"
+#include "SkyBox.h"
 #include <iostream>
 #include "World.h"
 #include "Chunk.h"
