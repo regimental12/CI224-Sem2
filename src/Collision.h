@@ -14,17 +14,23 @@ static int count = 0;
 
 static void Collision(Camera* playerCam, Cube* cube)
 {    
-    int x = cube->getPosition().x - playerCam->cameraPos.x;
-    int y = cube->getPosition().y - playerCam->cameraPos.y;
-    int z = cube->getPosition().z - playerCam->cameraPos.z; 
+    int x = abs(cube->getPosition().x - playerCam->cameraPos.x);
+    int y = abs(cube->getPosition().y - playerCam->cameraPos.y);
+    int z = abs(cube->getPosition().z - playerCam->cameraPos.z); 
     
-    int collisionDist = x*x + y*y + z*z;
+    //int collisionDist = x*x + y*y + z*z;
     
-    if( collisionDist < 1)
-    {
-      std::cout << "Bang!" << count << std::endl;
-      count++;
-      playerCam->cameraPos -= playerCam->cameraSpeed * playerCam->cameraDir;
+    if( x < 1)
+    {  
+      if(y < 1)
+      {
+	if(z < 1)
+	{
+	  std::cout << "Bang!" << count << std::endl;
+	  count++;
+	  playerCam->cameraPos -= playerCam->cameraSpeed * playerCam->cameraDir;
+	}
+      }  
     }
 }
 
@@ -52,7 +58,7 @@ static bool RayCollision(glm::vec3 near , glm::vec3 far , Cube* cube)
       closestPoint = near+ lineDir * t;
     }
     
-    if(glm::distance(cube->getPosition() , closestPoint) < 1.0f)
+    if(glm::distance(cube->getPosition() , closestPoint) < 0.5f)
     {
       std::cout << "rayhit" << std::endl;
       return true;
