@@ -7,7 +7,8 @@ Game::Game()
   glContext = NULL;
   camera = new Camera();
   world = NULL;
-  skyBox = NULL;
+  //skyBox = NULL;
+  iLoader = NULL;
 }
 
 Game::~Game()
@@ -44,7 +45,7 @@ void Game::Init()
     std::cout << "Renderer: " << glGetString(GL_RENDERER) << std::endl;
 
     shader.loadShader("shaders/Vert.vrt" , "shaders/Frag.frg");
-    skyShader.loadShader("shaders/Vert.vrt" , "shaders/Frag.frg");
+    //skyShader.loadShader("shaders/Vert.vrt" , "shaders/Frag.frg");
     
     _running = true;
     objinit();
@@ -52,8 +53,14 @@ void Game::Init()
 
 void Game::objinit()
 {
+	std::cout << "Enter obj init" << std::endl;
+	iLoader = ImageLoader::getInstance();
+	std::cout << "loaded images" << std::endl;
 	world = new World();
-	skyBox = new SkyBox();
+	std::cout << "world" << std::endl;
+	//skyBox = new SkyBox();
+	
+	
 	std::cout << "loaded data" << std::endl;
 }
 
@@ -106,8 +113,9 @@ void Game::HandleEvents(SDL_Event e ,SDL_Window*  _window)
 
 void Game::Update()
 {
-	camera->update();
+	
 	world->Update(camera);
+	camera->update();
 }
 
 void Game::Render()
@@ -123,5 +131,5 @@ void Game::Render()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	world->Render(shader, camera);
-	skyBox->Render(skyShader, camera);
+	//skyBox->Render(skyShader, camera);
 }

@@ -18,6 +18,7 @@ Chunk::Chunk(GLfloat X, GLfloat Y, GLfloat Z, Perlin noise){
 	position.z = Z;
 
 	Init();
+	std::cout << "return from init" << std::endl;
 }
 
 Chunk::~Chunk(){
@@ -35,7 +36,7 @@ Chunk::~Chunk(){
       //return Cubes;
 }*/
 
-
+//int Cubecount = 0;
 void Chunk::Init(){
 	for (int x = 0; x < size.x; x++) {
 		for (int z = 0; z < size.z; z++) {
@@ -57,12 +58,17 @@ void Chunk::Init(){
 					int dirtbuffer = (rand() % 3) + 1;
 
 					if (y >= yHeight[x][z] - dirtbuffer && y <= yHeight[x][z]) {
-						Cubes[x][y][z]->setType(Cube::Dirt);
+						//std::cout << "Cube Type " << Cubecount << std::endl;
+						Cubes[x][y][z]->setType(1);
+						//std::cout << "Cube Type set"  << std::endl;
 					}
-
-					if(y >= (int)(value * size.y)) {
+					
+					// This fucks everything up?
+					/*if(y >= (int)(value * size.y)) {
 						delete(Cubes[x][y][z]);
-					}
+						std::cout << "test"  << std::endl;
+					}*/
+					//Cubecount++;
 			}
 		}
 	}

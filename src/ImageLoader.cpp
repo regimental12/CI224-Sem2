@@ -1,5 +1,6 @@
-
 #include "ImageLoader.h"
+
+ImageLoader* ImageLoader::loader = NULL;
 
 ImageLoader::ImageLoader()
 {
@@ -7,12 +8,48 @@ ImageLoader::ImageLoader()
     texture = 0;
     height = 0;
     width = 0;
+    LoadTextures();
 }
 
 ImageLoader::~ImageLoader()
 {
 
 }
+
+ImageLoader* ImageLoader::getInstance()
+{
+  if(loader == nullptr)
+    {
+      loader = new ImageLoader();
+    }
+    return loader;
+}
+
+void ImageLoader::LoadTextures()
+{
+    Dirt = LoadTexture("images/dirt.jpg");
+    Stone = LoadTexture("images/stone.jpg");
+    std::cout << Dirt << " " << Stone << std::endl;
+}
+
+GLuint ImageLoader::GetTexture(GLuint type)
+{
+  switch(type)
+  {
+    case 1:
+      return Dirt;
+      break;
+    case 2:
+      return Stone;
+      break;
+    default:
+      return Stone;
+      break;
+  }
+  
+}
+
+
 
 int ImageLoader::getheight()
 {
@@ -29,7 +66,6 @@ GLuint ImageLoader::LoadTexture(std::string filename)
     /**
      *	Load image and generate opengl texture
      */
-   // std::cout << "enteer LoadTexture" << std::endl;
     surface = IMG_Load(filename.c_str());
     if(surface == nullptr)
     {

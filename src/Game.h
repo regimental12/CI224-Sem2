@@ -13,6 +13,7 @@
 #include <iostream>
 #include "World.h"
 #include "Chunk.h"
+#include "ImageLoader.h"
 
 #define GLM_FORCE_RADIANS
 #include "glm/glm.hpp"
@@ -43,8 +44,9 @@ private:
   glm::mat4 projection;
   Camera *camera;
   World *world;
-  SkyBox *skyBox;
+  //SkyBox *skyBox;
   bool wireframe = false;
+  ImageLoader* iLoader;
   
 };
 

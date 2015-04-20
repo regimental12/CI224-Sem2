@@ -11,8 +11,8 @@ SkyBox::SkyBox()
 	:position(glm::vec3(0,0,0)),
 	 texture(0),
 	 VBO(0),
-	 VAO(0),
-	 iLoader(new ImageLoader())
+	 VAO(0)/*,
+	 iLoader(new ImageLoader())*/
 {
 	loadSkyBox();
 }

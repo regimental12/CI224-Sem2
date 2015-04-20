@@ -34,11 +34,13 @@ public:
   GLuint getVAO();
   GLuint getVBO();
 
-  void setType(Type);
+  void setType(GLuint cubeType);
+  GLuint getType();
 
 private:
   glm::vec3 position;
   GLuint texture;
+  GLuint type;
   GLuint VBO, VAO;
   ImageLoader *iLoader;
   GLfloat vertices[36*5] =

@@ -12,8 +12,8 @@
  */
 World::World()
 {
-	for (int x = -1; x < 1; x++) {
-		for (int z = -1; z < 1; z++) {
+	for (int x =-1; x < 1; x++) {
+		for (int z = -1 ; z < 1; z++) {
 			Chunks.push_back(new Chunk(x, 0, z, perlin));
 		}
 	}
