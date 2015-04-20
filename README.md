@@ -8,6 +8,18 @@ This project uses a few libraries from the get go these are:-
 ##Build Instructions  
 Currently to build you must run  the gcc command to compile all of src/* into an .exe file. When we implement a Build system the project will be built using `./configure` then `make all`
 
+##Current Plan
+
+ - Code Cleanup
+   - Comments
+   - Inititalisatiopn lists
+   - etc...
+ - Change Image Loader
+ - Magic numbers itno commons.h
+ - Skybox use cube map
+ - Smooth out landscape
+ - work on Player
+
 ##Marking Scheme  
 **The main aim:**  
 *Implement fewer features fully, rather than all features badly.*  
