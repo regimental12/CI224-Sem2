@@ -52,7 +52,7 @@ static bool RayCollision(glm::vec3 near , glm::vec3 far , Cube* cube)
       closestPoint = near+ lineDir * t;
     }
     
-    if(glm::distance(cube->getPosition() , closestPoint) < 0.2)
+    if(glm::distance(cube->getPosition() , closestPoint) < 1.0f)
     {
       std::cout << "rayhit" << std::endl;
       return true;
