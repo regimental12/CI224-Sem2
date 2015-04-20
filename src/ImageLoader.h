@@ -22,7 +22,7 @@ public:
 private:
     ImageLoader();
     static ImageLoader* loader;
-    GLuint Dirt , Stone;
+    GLuint Dirt , Stone , SkyBox;
     GLuint skyBox[6];
     GLuint texture;
     SDL_Surface* surface;

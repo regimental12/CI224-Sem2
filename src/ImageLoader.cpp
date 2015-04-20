@@ -29,7 +29,8 @@ void ImageLoader::LoadTextures()
 {
     Dirt = LoadTexture("images/dirt.jpg");
     Stone = LoadTexture("images/stone.jpg");
-    std::cout << Dirt << " " << Stone << std::endl;
+    SkyBox = LoadTexture("images/skybox.jpg");
+    std::cout << Dirt << " " << Stone  << " "<< SkyBox << std::endl;
 }
 
 GLuint ImageLoader::GetTexture(GLuint type)
@@ -41,6 +42,9 @@ GLuint ImageLoader::GetTexture(GLuint type)
       break;
     case 2:
       return Stone;
+      break;
+    case 3:
+      return SkyBox;
       break;
     default:
       return Stone;

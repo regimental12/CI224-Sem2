@@ -7,7 +7,7 @@ Game::Game()
   glContext = NULL;
   camera = new Camera();
   world = NULL;
-  //skyBox = NULL;
+  skyBox = NULL;
   iLoader = NULL;
 }
 
@@ -45,7 +45,7 @@ void Game::Init()
     std::cout << "Renderer: " << glGetString(GL_RENDERER) << std::endl;
 
     shader.loadShader("shaders/Vert.vrt" , "shaders/Frag.frg");
-    //skyShader.loadShader("shaders/Vert.vrt" , "shaders/Frag.frg");
+    skyShader.loadShader("shaders/Vert.vrt" , "shaders/Frag.frg");
     
     _running = true;
     objinit();
@@ -58,7 +58,7 @@ void Game::objinit()
 	std::cout << "loaded images" << std::endl;
 	world = new World();
 	std::cout << "world" << std::endl;
-	//skyBox = new SkyBox();
+	skyBox = new SkyBox();
 	
 	
 	std::cout << "loaded data" << std::endl;
@@ -113,13 +113,14 @@ void Game::HandleEvents(SDL_Event e ,SDL_Window*  _window)
 
 void Game::Update()
 {
-	
+	std::cout << "enter game update" << std::endl;
 	world->Update(camera);
 	camera->update();
 }
 
 void Game::Render()
 {
+	std::cout << "enter game render" << std::endl;
 	//checks wireframe bool and sets LINE or FILL mode accordingly
 	if(wireframe) {
 		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
@@ -131,5 +132,7 @@ void Game::Render()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	world->Render(shader, camera);
-	//skyBox->Render(skyShader, camera);
+	std::cout << "return world render" << std::endl;
+	skyBox->Render(skyShader, camera);
+	std::cout << "return skybox render" << std::endl;
 }

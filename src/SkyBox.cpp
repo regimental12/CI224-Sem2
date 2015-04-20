@@ -11,15 +11,14 @@ SkyBox::SkyBox()
 	:position(glm::vec3(0,0,0)),
 	 texture(0),
 	 VBO(0),
-	 VAO(0)/*,
-	 iLoader(new ImageLoader())*/
+	 VAO(0)
 {
 	loadSkyBox();
 }
 
 SkyBox::~SkyBox()
 {
-	delete(iLoader);
+	
 }
 
 
@@ -38,33 +37,27 @@ void SkyBox::loadSkyBox()
     glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), (GLvoid*)(3 * sizeof(GLfloat)));
     glEnableVertexAttribArray(2);
     glBindVertexArray(0);
-    setTexture("images/container.jpg");
+    setTexture();
 }
 
 void SkyBox::Render(Shader shader , Camera* camera)
 {
+    std::cout << "enter skybox render" << std::endl;
     shader.useShader();
-
+    std::cout << "skybox shader" << std::endl;
     GLint modelLoc = glGetUniformLocation(shader.getProgram(), "model");
     GLint viewLoc = glGetUniformLocation(shader.getProgram(), "view");
     GLint projLoc = glGetUniformLocation(shader.getProgram(), "projection");
 
-
-    /*glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));*/
-
     glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(camera->view));
     glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(camera->projection));
-
+    std::cout << "enter bind VAO" << std::endl;
     glBindVertexArray(VAO);
-		  glBindTexture(GL_TEXTURE_2D, texture);
+		  std::cout << "vao bound" << std::endl;
+		  glBindTexture(GL_TEXTURE_2D, ImageLoader::getInstance()->GetTexture(3));
+		  std::cout << "bind texture called" << std::endl;
 		  glm::mat4 model;
 		  model = glm::translate(model, position);
-
-		  //model = glm::rotate(model, angle, glm::vec3(1.0f, 1.0f, 1.0f));
-
-		  //model = glm::rotate(model, angle, glm::vec3(1.0f, 1.0f, 0.5f));
-
 		  glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		  glDrawArrays(GL_TRIANGLES, 0, 36);
 		  glBindTexture(GL_TEXTURE_2D , 0);

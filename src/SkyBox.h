@@ -31,7 +31,7 @@ public:
 
 	//setters
 	void setPosition(glm::vec3 pos) { position = pos; }
-	void setTexture(std::string fileName) { texture = iLoader->LoadTexture(fileName); }
+	void setTexture() { texture = ImageLoader::getInstance()->GetTexture(3); }
 
 	//getters
 	glm::vec3 getPosition() { return position; }
@@ -41,7 +41,7 @@ private:
 	glm::vec3 position;
 	GLuint texture;
 	GLuint VBO, VAO;
-	ImageLoader *iLoader;
+	//ImageLoader *iLoader;
 	GLfloat vertices[36*5] =
 	{
 	  //X,   Y,     Z,      U,   V
