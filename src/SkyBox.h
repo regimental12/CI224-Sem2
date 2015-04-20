@@ -31,7 +31,7 @@ public:
 
 	//setters
 	void setPosition(glm::vec3 pos) { position = pos; }
-	void setTexture() { texture = ImageLoader::getInstance()->GetTexture(3); }
+	//void setTexture() { texture = ImageLoader::getInstance()->GetTexture(3); }
 
 	//getters
 	glm::vec3 getPosition() { return position; }

@@ -37,25 +37,22 @@ void SkyBox::loadSkyBox()
     glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), (GLvoid*)(3 * sizeof(GLfloat)));
     glEnableVertexAttribArray(2);
     glBindVertexArray(0);
-    setTexture();
+    //setTexture();
 }
 
 void SkyBox::Render(Shader shader , Camera* camera)
 {
-    std::cout << "enter skybox render" << std::endl;
     shader.useShader();
-    std::cout << "skybox shader" << std::endl;
+    
     GLint modelLoc = glGetUniformLocation(shader.getProgram(), "model");
     GLint viewLoc = glGetUniformLocation(shader.getProgram(), "view");
     GLint projLoc = glGetUniformLocation(shader.getProgram(), "projection");
 
     glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(camera->view));
     glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(camera->projection));
-    std::cout << "enter bind VAO" << std::endl;
+    
     glBindVertexArray(VAO);
-		  std::cout << "vao bound" << std::endl;
 		  glBindTexture(GL_TEXTURE_2D, ImageLoader::getInstance()->GetTexture(3));
-		  std::cout << "bind texture called" << std::endl;
 		  glm::mat4 model;
 		  model = glm::translate(model, position);
 		  glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
