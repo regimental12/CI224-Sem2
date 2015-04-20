@@ -10,15 +10,16 @@
 class ImageLoader
 {
 public:
-   static ImageLoader* getInstance();
+   /*static ImageLoader* getInstance();*/
+	ImageLoader();
     GLuint LoadTexture(std::string filename);
     ~ImageLoader();
     int getwidth();
     int getheight();
 
 private:
-    ImageLoader();
-    static ImageLoader* loader;
+    /*ImageLoader();
+    static ImageLoader* loader;*/
     
     GLuint texture;
     SDL_Surface* surface;
