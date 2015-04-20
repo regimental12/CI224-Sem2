@@ -1,3 +1,4 @@
+
 #include "Chunk.h"
 
 Chunk::Chunk(){
@@ -31,7 +32,7 @@ Chunk::~Chunk(){
 
 /*Cube* Chunk::getCubes()
 {
-      return Cubes;
+      //return Cubes;
 }*/
 
 
@@ -49,9 +50,15 @@ void Chunk::Init(){
 			if (yHeight[x][z] < yLOW) {
 				yLOW = yHeight[x][z];
 			}
-			// create different cubes here. so find out if we are at the max height.
+
 			for (int y = 0; y < size.y; y++) {	// only create cubes up to our value
 					Cubes[x][y][z] = new Cube((position.x*size.x)+x, (position.y*size.y)+y, (position.z*size.z)+z);
+
+					int dirtbuffer = (rand() % 3) + 1;
+
+					if (y >= yHeight[x][z] - dirtbuffer && y <= yHeight[x][z]) {
+						Cubes[x][y][z]->setType(Cube::Dirt);
+					}
 
 					if(y >= (int)(value * size.y)) {
 						delete(Cubes[x][y][z]);
@@ -88,30 +95,9 @@ void Chunk::Update(Camera*  cam){
 			for (int y = 0; y < size.y; y++) {
 				// only attempt to collide cubes that aren't NULL
 				if (Cubes[x][y][z] != NULL) {
-				  Collision(cam , Cubes[x][y][z]);
-				  //RayCollision(cam->near , cam->far , Cubes[x][y][z]);
-						
+						Collision(cam, Cubes[x][y][z]);
 				}
 			}
 		}
-	}
-	if(cam->mouseDown)
-	{
-	  for (int x = 0; x < size.x; x++) {
-		for (int z = 0; z < size.z; z++) {
-			for (int y = 0; y < size.y; y++) {
-				// only attempt to collide cubes that aren't NULL
-				if (Cubes[x][y][z] != NULL) {
-				  
-				  if(RayCollision(cam->near , cam->far , Cubes[x][y][z]))
-				  {
-				    Cubes[x][y][z] = NULL;
-				    cam->mouseDown = false;
-				  }
-						
-				}
-			}
-		}
-	}
 	}
 }

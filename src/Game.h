@@ -9,6 +9,7 @@
 #include "Shader.h"
 #include "Cube.h"
 #include "Camera.h"
+#include "SkyBox.h"
 #include <iostream>
 #include "World.h"
 #include "Chunk.h"
@@ -37,10 +38,12 @@ private:
   SDL_GLContext glContext;
   bool _running;
   Shader shader;
+  Shader skyShader;
   glm::mat4 view;
   glm::mat4 projection;
   Camera *camera;
   World *world;
+  SkyBox *skyBox;
   bool wireframe = false;
   
 };

@@ -1,64 +1,29 @@
-#include "Cube.h"
+/*
+ * SkyBox.cpp
+ *
+ *  Created on: 15 Apr 2015
+ *      Author: George
+ */
 
-Cube::Cube()
+#include "SkyBox.h"
+
+SkyBox::SkyBox()
+	:position(glm::vec3(0,0,0)),
+	 texture(0),
+	 VBO(0),
+	 VAO(0),
+	 iLoader(new ImageLoader())
 {
-	iLoader = new ImageLoader();
-	position = glm::vec3(0.0f, 0.0f, 0.0f);
-	loadCube();
+	loadSkyBox();
 }
 
-
-Cube::Cube(GLfloat x, GLfloat y, GLfloat z)
-{
-	iLoader = new ImageLoader();
-	position = glm::vec3(x, y, z);
-	loadCube();
-}
-
-Cube::~Cube()
+SkyBox::~SkyBox()
 {
 	delete(iLoader);
 }
 
-glm::vec3 Cube::getPosition()
-{
-    return position;
-}
 
-void Cube::setPosition(GLfloat x , GLfloat y , GLfloat z)
-{
-    position.x = x;
-    position.y = y;
-    position.z = z;
-}
-
-GLuint Cube::getTexture()
-{
-    return texture;
-}
-
-void Cube::setTexture(std::string fileName)
-{
-    // Fill out when image loader done
-   texture = iLoader->LoadTexture(fileName);
-
-    //texture = iLoader->LoadTexture(fileName.c_str());
-    //delete iLoader;
-}
-
-GLuint Cube::getVAO()
-{
-    return VAO;
-}
-
-GLuint Cube::getVBO()
-{
-    return VBO;
-}
-
-
-
-void Cube::loadCube()
+void SkyBox::loadSkyBox()
 {
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
@@ -73,10 +38,10 @@ void Cube::loadCube()
     glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), (GLvoid*)(3 * sizeof(GLfloat)));
     glEnableVertexAttribArray(2);
     glBindVertexArray(0);
-    setType(Cube::Stone);
+    setTexture("images/container.jpg");
 }
 
-void Cube::Render(Shader shader , Camera* camera)
+void SkyBox::Render(Shader shader , Camera* camera)
 {
     shader.useShader();
 
@@ -87,7 +52,7 @@ void Cube::Render(Shader shader , Camera* camera)
 
     /*glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
     glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));*/
-    
+
     glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(camera->view));
     glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(camera->projection));
 
@@ -105,20 +70,4 @@ void Cube::Render(Shader shader , Camera* camera)
 		  glBindTexture(GL_TEXTURE_2D , 0);
     glBindVertexArray(0);
     glUseProgram(0);
-}
-
-void Cube::setType(Type type) {
-	switch (type) {
-	case Cube::Dirt:
-		setTexture("images/dirt.jpg");
-		break;
-
-	case Cube::Stone:
-		setTexture("images/stone.jpg");
-		break;
-
-	default:
-		setTexture("images/stone.jpg");
-		break;
-	}
 }

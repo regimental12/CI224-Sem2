@@ -1,6 +1,5 @@
-#include "ImageLoader.h"
 
-ImageLoader* ImageLoader::loader = NULL;
+#include "ImageLoader.h"
 
 ImageLoader::ImageLoader()
 {
@@ -8,23 +7,12 @@ ImageLoader::ImageLoader()
     texture = 0;
     height = 0;
     width = 0;
-    
 }
 
 ImageLoader::~ImageLoader()
 {
 
 }
-
-ImageLoader* ImageLoader::getInstance()
-{
-  if(loader == nullptr)
-    {
-      loader = new ImageLoader();
-    }
-    return loader;
-}
-
 
 int ImageLoader::getheight()
 {
@@ -41,12 +29,13 @@ GLuint ImageLoader::LoadTexture(std::string filename)
     /**
      *	Load image and generate opengl texture
      */
+   // std::cout << "enteer LoadTexture" << std::endl;
     surface = IMG_Load(filename.c_str());
     if(surface == nullptr)
     {
 	std::cout << "Loading image failed :: " << IMG_GetError() << std::endl;
     }
-    
+    //std:: cout << "1" << std::endl;
     width = surface->w;
     height = surface->h;
     
@@ -62,7 +51,7 @@ GLuint ImageLoader::LoadTexture(std::string filename)
      *	Set texture filtering
      */
     glTexParameteri(GL_TEXTURE_2D , GL_TEXTURE_MIN_FILTER , GL_NEAREST);
-    glTexParameteri(GL_TEXTURE_2D , GL_TEXTURE_MAG_FILTER , GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D , GL_TEXTURE_MAG_FILTER , GL_NEAREST);
     glTexImage2D(GL_TEXTURE_2D , 0 , GL_RGB , width, height, 0 , GL_RGB , GL_UNSIGNED_BYTE, surface->pixels);
     
     glGenerateMipmap(GL_TEXTURE_2D);

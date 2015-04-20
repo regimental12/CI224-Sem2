@@ -23,13 +23,13 @@ This is our marking scheme copied from ProjectBrief.md which we can check off th
 **Quality of code (any apply)**  
   - [x] Clean structure - 5%  
   - [x] Modularity of engine/codebase - 10%  
-  - [ ] Cross platform build - 10%  
+  - [x] Cross platform build - 10%  
   
 **Working block world (only one applies)**  
   - [x] A basic block world (hard coded) - 5%  
-  - [ ] A procedural block world  - 10%  
+  - [x] A procedural block world  - 10%  
   - [x] A block world with data structures (chunks) - 10%
-  - [ ] A procedural block world with proper data structure - 20%  
+  - [x] A procedural block world with proper data structure - 20%  
   
 **Working player (only one applies)**  
   - [x] A player that moves - 5%  
