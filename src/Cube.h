@@ -18,7 +18,7 @@ class Cube
 {
 public:
 	enum Type {
-		Dirt, Stone
+		Air = 0, Dirt = 1, Stone = 2
 	};
 
   Cube();

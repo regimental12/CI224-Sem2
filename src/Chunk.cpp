@@ -57,10 +57,13 @@ void Chunk::Init(){
 
 					int dirtbuffer = (rand() % 3) + 1;
 
+					// between yheight and dirtbuffer away from yheight
 					if (y >= yHeight[x][z] - dirtbuffer && y <= yHeight[x][z]) {
 						//std::cout << "Cube Type " << Cubecount << std::endl;
 						Cubes[x][y][z]->setType(1);
 						//std::cout << "Cube Type set"  << std::endl;
+					} else if (y < yHeight[x][z] - dirtbuffer) {
+						Cubes[x][y][z]->setType(2);
 					}
 					
 					// This fucks everything up?
@@ -80,8 +83,8 @@ void Chunk::Render(Shader shader, Camera* camera) {
 		for (int z = 0; z < size.z; z++) {
 			for (int y = 0; y < yHeight[x][z]; y++) {
 
-				//check if cube is NULL
-				if (Cubes[x][y][z]) {
+				//check if cube is NULL or if cube type is NOT 0 which is air
+				if (Cubes[x][y][z] || Cubes[x][y][z]->getType() != 0) {
 					if(x == 0 || y == 0 || z == 0 || x == size.x-1 || y == yHeight[x][z]-1 || z == size.z-1){
 						Cubes[x][y][z]->Render(shader, camera);
 					}

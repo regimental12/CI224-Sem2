@@ -14,9 +14,9 @@ static int count = 0;
 
 static void Collision(Camera* playerCam, Cube* cube)
 {    
-    int x = abs(cube->getPosition().x - playerCam->cameraPos.x);
-    int y = abs(cube->getPosition().y - playerCam->cameraPos.y);
-    int z = abs(cube->getPosition().z - playerCam->cameraPos.z); 
+    int x = std::abs(cube->getPosition().x - playerCam->cameraPos.x);
+    int y = std::abs(cube->getPosition().y - playerCam->cameraPos.y);
+    int z = std::abs(cube->getPosition().z - playerCam->cameraPos.z);
     
     //int collisionDist = x*x + y*y + z*z;
     
