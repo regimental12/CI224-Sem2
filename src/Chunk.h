@@ -26,7 +26,7 @@ public:
 	//Cube* getCubes();
 	//bool mouseDown = false;
 private:
-	Cube* Cubes[16][24][16];
+	Cube* Cubes[16][48][16];
 	glm::vec3 position;
 	glm::vec3 size;
 	Perlin perlin;

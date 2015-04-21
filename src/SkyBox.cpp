@@ -8,7 +8,7 @@
 #include "SkyBox.h"
 
 SkyBox::SkyBox()
-	:position(glm::vec3(0,0,0)),
+	:position(glm::vec3(0,48,0)),
 	 texture(0),
 	 VBO(0),
 	 VAO(0)
