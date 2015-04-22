@@ -122,7 +122,7 @@ void Chunk::Update(Camera*  cam){
 		  }
 	  }
 	}
-	/*if(cam->mouseDownright)
+	if(cam->mouseDownright)
 	{
 	  for (int x = 0; x < size.x; x++) {
 		  for (int z = 0; z < size.z; z++) {
@@ -137,5 +137,5 @@ void Chunk::Update(Camera*  cam){
 			  }
 		  }
 	  }
-	}*/
+	}
 }

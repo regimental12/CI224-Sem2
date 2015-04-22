@@ -90,9 +90,9 @@ void Camera::handleMovement(SDL_Event *e , SDL_Window* _window)
 	}
 	
 	
-	if(e->type == SDL_MOUSEBUTTONDOWN)
-	{
-	  if(SDL_BUTTON(SDL_BUTTON_LEFT) )
+	/*if(e->type == SDL_MOUSEBUTTONDOWN)
+	{*/
+	  if(e->button.button == SDL_BUTTON_LEFT)
 	  {
 	      glm::vec4 viewport = glm::vec4(0.0f , 0.0f , 1366.0f , 768.0f);
 	      SDL_GetMouseState(&x1, &y1);
@@ -102,7 +102,7 @@ void Camera::handleMovement(SDL_Event *e , SDL_Window* _window)
 	      mouseDownleft = true;
 	      std::cout << x1 << " " << y1 << std::endl;
 	}
-	 if(SDL_BUTTON(SDL_BUTTON_RIGHT) )
+	 if(e->button.button == SDL_BUTTON_RIGHT )
 	  {
 	      glm::vec4 viewport = glm::vec4(0.0f , 0.0f , 1366.0f , 768.0f);
 	      SDL_GetMouseState(&x1, &y1);
@@ -112,7 +112,7 @@ void Camera::handleMovement(SDL_Event *e , SDL_Window* _window)
 	      mouseDownright = true;
 	      std::cout << x1 << " " << y1 << std::endl;
 	}
-	}
+	//}
 }
 
 
