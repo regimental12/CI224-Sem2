@@ -13,25 +13,45 @@
 static int count = 0;
 
 static void Collision(Camera* playerCam, Cube* cube)
-{    
-    int x = abs(cube->getPosition().x - playerCam->cameraPos.x);
-    int y = abs(cube->getPosition().y - playerCam->cameraPos.y);
-    int z = abs(cube->getPosition().z - playerCam->cameraPos.z); 
-    
-    //int collisionDist = x*x + y*y + z*z;
-    
-    if( x < 1)
-    {  
-      if(y < 1)
-      {
-	if(z < 1)
+{   
+	if(playerCam->cameraPos.x <= (cube->getPosition().x +0.5  ) && cube->getPosition().x <= (playerCam->cameraPos.x + 0.5  ) &&
+	playerCam->cameraPos.y <= (cube->getPosition().y + 0.5 ) && cube->getPosition().y <= (playerCam->cameraPos.y + 0.5 ) && 
+	playerCam->cameraPos.z <= (cube->getPosition().z + 0.5 ) && cube->getPosition().z <= (playerCam->cameraPos.z +0.5 ) )
 	{
 	  std::cout << "Bang!" << count << std::endl;
+	  
 	  count++;
 	  playerCam->cameraPos -= playerCam->cameraSpeed * playerCam->cameraDir;
 	}
-      }  
-    }
+  
+//     float x = fabs(cube->getPosition().x - playerCam->cameraPos.x);
+//     float y = fabs(cube->getPosition().y - playerCam->cameraPos.y);
+//     float z = fabs(cube->getPosition().z - playerCam->cameraPos.z); 
+//     
+//     float collisionDist = x+y+z;
+//     
+//     if( collisionDist <= 0.775f)
+//     {  
+// 	  std::cout << "Bang!" << count << std::endl;
+// 	  std::cout << x << " " << y << " " << z << std::endl;
+// 	  count++;
+// 	  playerCam->cameraPos -= playerCam->cameraSpeed * playerCam->cameraDir;
+//     }
+}
+
+static bool Collision(Camera* playerCam, Cube* cube , int i)
+{   
+	if(playerCam->cameraPos.x <= (cube->getPosition().x +0.5  ) && cube->getPosition().x <= (playerCam->cameraPos.x + 0.5  ) &&
+	playerCam->cameraPos.y <= (cube->getPosition().y + 0.5 ) && cube->getPosition().y <= (playerCam->cameraPos.y + 0.5 ) && 
+	playerCam->cameraPos.z <= (cube->getPosition().z + 0.5 ) && cube->getPosition().z <= (playerCam->cameraPos.z +0.5 ) )
+	{
+	  std::cout << "Bang!" << count << std::endl;
+	  
+	  count++;
+	  playerCam->cameraPos -= playerCam->cameraSpeed * playerCam->cameraDir;
+	  return true;
+	}
+	return false;
 }
 
 static bool RayCollision(glm::vec3 near , glm::vec3 far , Cube* cube)

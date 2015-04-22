@@ -41,7 +41,8 @@ public:
     bool firstMove = true;
     int x1, y1;
     glm::vec3 near , far ;
-    bool mouseDown = false;
+    bool mouseDownleft = false;
+    bool mouseDownright = false;
 };
 
 #endif

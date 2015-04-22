@@ -106,7 +106,7 @@ void Chunk::Update(Camera*  cam){
 			}
 		}
 	}
-	if(cam->mouseDown)
+	if(cam->mouseDownleft)
 	{
 	  for (int x = 0; x < size.x; x++) {
 		  for (int z = 0; z < size.z; z++) {
@@ -116,7 +116,24 @@ void Chunk::Update(Camera*  cam){
 					if(RayCollision(cam->near , cam->far , Cubes[x][y][z]))
 					{
 					  Cubes[x][y][z] = NULL;
-					  cam->mouseDown = false;
+					  cam->mouseDownleft = false;
+					}
+				  }
+			  }
+		  }
+	  }
+	}
+	if(cam->mouseDownright)
+	{
+	  for (int x = 0; x < size.x; x++) {
+		  for (int z = 0; z < size.z; z++) {
+			  for (int y = 0; y < size.y; y++) {
+				  if (Cubes[x][y][z] == NULL) {
+					if(Collision(cam , Cubes[x][y][z] , 1))
+					{
+					  Cubes[x][y][z] = new Cube((position.x*size.x)+x, (position.y*size.y)+y, (position.z*size.z)+z) ;
+					  Cubes[x][y][z]->setType(1);
+					  cam->mouseDownright = false;
 					}
 				  }
 			  }
