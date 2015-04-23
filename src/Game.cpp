@@ -136,7 +136,7 @@ void Game::Render()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	world->Render(shader, camera);
-	
+
 	skyBox->Render(skyShader, camera);
 	
 }

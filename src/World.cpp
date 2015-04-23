@@ -24,7 +24,7 @@ World::World()
 World::~World()
 {
 	//de-allocate pointers inside vector then clear the vector
-	for (int i = 0; i < Chunks.size(); i++) {
+	for (unsigned int i = 0; i < Chunks.size(); i++) {
 		delete(Chunks[i]);
 	}
 	Chunks.clear();
@@ -35,7 +35,7 @@ World::~World()
  */
 void World::Render(Shader shader, Camera* camera)
 {
-	for(int i = 0; i < Chunks.size(); i++) {
+	for(unsigned int i = 0; i < Chunks.size(); i++) {
 		Chunks[i]->Render(shader, camera);
 	}
 }
@@ -46,7 +46,7 @@ void World::Render(Shader shader, Camera* camera)
  */
 void World::Update(Camera* camera)
 {
-	for(int i = 0; i < Chunks.size(); i++) {
+	for(unsigned int i = 0; i < Chunks.size(); i++) {
 		Chunks[i]->Update(camera);
 	}
 }

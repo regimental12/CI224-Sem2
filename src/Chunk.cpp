@@ -80,15 +80,24 @@ void Chunk::Render(Shader shader, Camera* camera) {
 		for (int z = 0; z < size.z; z++) {
 			for (int y = 0; y < yHeight[x][z]; y++) {
 
-				//check if cube is NULL or if cube type is NOT 0 which is air
+				//check if cube is not NULL or if cube type is NOT 0 which is air
 				if (Cubes[x][y][z] || Cubes[x][y][z]->getType() != 0) {
-					if(x == 0 || y == 0 || z == 0 || x == size.x-1 || y == yHeight[x][z]-1 || z == size.z-1){
+
+					// render cubes on edges of chunks
+					if(x == 0 || x == size.x -1 ||
+							y == 0 || y == size.y -1 ||
+							z == 0 || z == size.z -1) {
+						Cubes[x][y][z]->Render(shader, camera);
+
+						//if one of 6 neighbours is air
+					} else if (Cubes[x][y+1][z]->getType() == 0 ||
+							Cubes[x][y-1][z]->getType() == 0 ||
+							Cubes[x+1][y][z]->getType() == 0 ||
+							Cubes[x-1][y][z]->getType() == 0 ||
+							Cubes[x][y][z+1]->getType() == 0 ||
+							Cubes[x][y][z-1]->getType() == 0) {
 						Cubes[x][y][z]->Render(shader, camera);
 					}
-						if(y >= yLOW) {
-							Cubes[x][y][z]->Render(shader, camera);
-						}
-
 				}
 			}
 		}
