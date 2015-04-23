@@ -103,6 +103,12 @@ void Game::HandleEvents(SDL_Event e ,SDL_Window*  _window)
 		case SDLK_F1:
 			wireframe = !wireframe;
 			break;
+		case SDLK_1:
+			camera->setPlacetype(1);
+			break;
+		case SDLK_2:
+			camera->setPlacetype(2);
+			break;
 		}
 	}
 	camera->handleMovement(&mainEvent , _window);

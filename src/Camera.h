@@ -36,6 +36,14 @@ public:
     void handleMovement(SDL_Event *e , SDL_Window*  _window);
     void update();
 
+    GLuint getPlaceType() {
+    	return placeType;
+    }
+
+    void setPlacetype(GLuint pT) {
+    	placeType = pT;
+    }
+
     glm::mat4 view;
     glm::mat4 projection;
     bool firstMove = true;
@@ -43,6 +51,7 @@ public:
     glm::vec3 near , far ;
     bool mouseDownleft = false;
     bool mouseDownright = false;
+    GLuint placeType = 1;
 };
 
 #endif

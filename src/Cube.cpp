@@ -74,7 +74,7 @@ void Cube::loadCube()
     glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), (GLvoid*)(3 * sizeof(GLfloat)));
     glEnableVertexAttribArray(2);
     glBindVertexArray(0);
-    //setType(0);
+    setType(0);
 }
 
 void Cube::Render(Shader shader , Camera* camera)

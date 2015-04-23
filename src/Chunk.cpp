@@ -130,7 +130,7 @@ void Chunk::Update(Camera*  cam){
 				  if (Cubes[x][y][z]->getType() == 0) {
 					if(rayCol(cam->x1 , cam->y1 , cam , Cubes[x][y][z]))
 					{
-					  Cubes[x][y][z]->setType(1);
+					  Cubes[x][y][z]->setType(cam->getPlaceType());
 					  cam->mouseDownright = false;
 					}
 				  }
