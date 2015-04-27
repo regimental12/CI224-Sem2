@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Regimental12/CI224-Sem2.svg?branch=master)](https://travis-ci.org/Regimental12/CI224-Sem2)
+[![Build Status](https://travis-ci.org/regimental12/CI224-Sem2.svg?branch=master)](https://travis-ci.org/regimental12/CI224-Sem2)
 
 #README
 
