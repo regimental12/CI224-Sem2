@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Regimental12/CI224-Sem2.svg?branch=master)](https://travis-ci.org/Regimental12/Ci224-Sem2)
+
 #README
 
 ##Dependancies
