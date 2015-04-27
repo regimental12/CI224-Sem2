@@ -8,7 +8,7 @@
 #include "GL/glew.h"
 #include "GL/glu.h"
 #include <iostream>
-
+#include "Inventory.h"
 
 #define GLM_FORCE_RADIANS
 
@@ -52,6 +52,7 @@ public:
     bool mouseDownleft = false;
     bool mouseDownright = false;
     GLuint placeType = 1;
+    Inventory* inventory;
 };
 
 #endif

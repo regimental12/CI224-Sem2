@@ -1,5 +1,6 @@
 
 #include "Chunk.h"
+#include "Inventory.h"
 
 Chunk::Chunk(){
 	size = glm::vec3(16, 10, 16);
@@ -113,9 +114,11 @@ void Chunk::Update(Camera* cam) {
 					Collision(cam, Cubes[x][y][z]);
 				}
 				if (cam->mouseDownleft) {
-					if (Cubes[x][y][z]->getType() != 0) {
+					if (Cubes[x][y][z] != 0) {
 						if (rayCol(cam->x1, cam->y1, cam, Cubes[x][y][z])) {
+							GLuint placed = Cubes[x][y][z]->getType();
 							Cubes[x][y][z]->setType(0);
+							cam->inventory->incBlockCount(placed);
 							cam->mouseDownleft = false;
 						}
 					}
@@ -123,8 +126,12 @@ void Chunk::Update(Camera* cam) {
 				if (cam->mouseDownright) {
 					if (Cubes[x][y][z]->getType() == 0) {
 						if (rayCol(cam->x1, cam->y1, cam, Cubes[x][y][z])) {
-							Cubes[x][y][z]->setType(cam->getPlaceType());
-							cam->mouseDownright = false;
+							if(cam->inventory->getBlockCount(cam->placeType) > 0)
+							{
+								Cubes[x][y][z]->setType(cam->getPlaceType());
+								cam->inventory->decBlockCount(Cubes[x][y][z]->getType());
+								cam->mouseDownright = false;
+							}
 						}
 					}
 				}

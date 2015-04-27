@@ -4,7 +4,10 @@
 /**
  * Initialise Variables;
  */
-Camera::Camera() : cameraPos ( glm::vec3(10.0f, 20.0f, -10.0f)),  projection ( glm::perspective(45.0f, (float)1366/(float)768, 0.1f, 1000.0f))
+Camera::Camera()
+	:cameraPos ( glm::vec3(10.0f, 20.0f, -10.0f)),
+	 projection ( glm::perspective(45.0f, (float)1366/(float)768, 0.1f, 1000.0f)),
+	 inventory(new Inventory())
 {
 
 }
