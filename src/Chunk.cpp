@@ -78,7 +78,7 @@ void Chunk::Render(Shader shader, Camera* camera) {
 
 	for (int x = 0; x < size.x; x++) {
 		for (int z = 0; z < size.z; z++) {
-			for (int y = 0; y < yHeight[x][z]; y++) {
+			for (int y = 0; y < size.y; y++) {
 
 				//check if cube is not NULL or if cube type is NOT 0 which is air
 				if (Cubes[x][y][z] || Cubes[x][y][z]->getType() != 0) {
@@ -104,47 +104,31 @@ void Chunk::Render(Shader shader, Camera* camera) {
 	}
 }
 
-void Chunk::Update(Camera*  cam){
+void Chunk::Update(Camera* cam) {
 	for (int x = 0; x < size.x; x++) {
 		for (int z = 0; z < size.z; z++) {
 			for (int y = 0; y < size.y; y++) {
 				// only attempt to collide cubes that aren't NULL
 				if (Cubes[x][y][z]->getType() != 0) {
-						Collision(cam, Cubes[x][y][z]);
+					Collision(cam, Cubes[x][y][z]);
+				}
+				if (cam->mouseDownleft) {
+					if (Cubes[x][y][z]->getType() != 0) {
+						if (rayCol(cam->x1, cam->y1, cam, Cubes[x][y][z])) {
+							Cubes[x][y][z]->setType(0);
+							cam->mouseDownleft = false;
+						}
+					}
+				}
+				if (cam->mouseDownright) {
+					if (Cubes[x][y][z]->getType() == 0) {
+						if (rayCol(cam->x1, cam->y1, cam, Cubes[x][y][z])) {
+							Cubes[x][y][z]->setType(cam->getPlaceType());
+							cam->mouseDownright = false;
+						}
+					}
 				}
 			}
 		}
-	}
-	if(cam->mouseDownleft)
-	{
-	  for (int x = 0; x < size.x; x++) {
-		  for (int z = 0; z < size.z; z++) {
-			  for (int y = 0; y < size.y; y++) {
-				  if (Cubes[x][y][z] != 0) {
-					if(rayCol(cam->x1 , cam->y1 , cam , Cubes[x][y][z]))
-					{
-					  Cubes[x][y][z]->setType(0);
-					  cam->mouseDownleft = false;
-					}
-				  }
-			  }
-		  }
-	  }
-	}
-	if(cam->mouseDownright)
-	{
-	  for (int x = 0; x < size.x; x++) {
-		  for (int z = 0; z < size.z; z++) {
-			  for (int y = 0; y < size.y; y++) {
-				  if (Cubes[x][y][z]->getType() == 0) {
-					if(rayCol(cam->x1 , cam->y1 , cam , Cubes[x][y][z]))
-					{
-					  Cubes[x][y][z]->setType(cam->getPlaceType());
-					  cam->mouseDownright = false;
-					}
-				  }
-			  }
-		  }
-	  }
 	}
 }
