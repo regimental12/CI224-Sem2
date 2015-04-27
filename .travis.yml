@@ -12,7 +12,10 @@ install:
   - sudo apt-get install -q -y libsdl2-image-dev
   - sudo apt-get install -q libglm-dev
   - sudo apt-get install -q libglew-dev
-script:
-  - autoconf
+  - sudo apt-get install -q automake
+  - sudo apt-get install -q build-essential
+  - sudo apt-get install -q libboost-all-dev
+  - autoreconf -i
   - ./configure
+  script:
   - make
