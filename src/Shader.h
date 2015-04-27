@@ -13,17 +13,17 @@
 class Shader
 {
 public:
-  Shader();
-  ~Shader();
-  void loadShader(std::string vFilename ,std::string fFilename);
-  void useShader();
-  GLuint getProgram();
-
+      Shader();
+      ~Shader();
+      void loadShader(std::string vFilename ,std::string fFilename);
+      void useShader();
+      GLuint getProgram();
+      
 private:
-  GLuint program;
-  std::string code;
-  std::string vertexCode;
-  std::string fragmentCode;
+      GLuint program;
+      std::string code;
+      std::string vertexCode;
+      std::string fragmentCode;
 };
 
 #endif

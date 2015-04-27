@@ -2,10 +2,8 @@
 #define _GAMEH_
 
 #include "SDL2/SDL.h"
-//#define GLEW_STATIC
 #include "GL/glew.h"
 #include "GL/gl.h"
-//#include "GL/glut.h"
 #include "Shader.h"
 #include "Cube.h"
 #include "Camera.h"
@@ -23,31 +21,31 @@
 class Game
 {
 public:
-  Game();
-  ~Game();
-  void Init();
-  void Loop();
-  void CleanUp();
-  void Render();
-  void Update();
-  void HandleEvents(SDL_Event e , SDL_Window* _window);
-  void objinit();
-  SDL_Window* _window;
+      Game();
+      ~Game();
+      void Init();
+      void Loop();
+      void CleanUp();
+      void Render();
+      void Update();
+      void HandleEvents(SDL_Event e , SDL_Window* _window);
+      void objinit();
+      SDL_Window* _window;
+      
 private:
-  
-  SDL_Event mainEvent;
-  SDL_GLContext glContext;
-  bool _running;
-  Shader shader;
-  Shader skyShader;
-  glm::mat4 view;
-  glm::mat4 projection;
-  Camera *camera;
-  World *world;
-  SkyBox *skyBox;
-  bool wireframe = false;
-  ImageLoader* iLoader;
-  
+      SDL_Event mainEvent;
+      SDL_GLContext glContext;
+      bool _running;
+      Shader shader;
+      Shader skyShader;
+      glm::mat4 view;
+      glm::mat4 projection;
+      Camera *camera;
+      World *world;
+      SkyBox *skyBox;
+      bool wireframe = false;
+      ImageLoader* iLoader;
+      
 };
 
 #endif
