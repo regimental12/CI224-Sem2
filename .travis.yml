@@ -13,6 +13,7 @@ install:
   - sudo apt-get install -q libglm-dev
   - sudo apt-get install -q libglew-dev
   - sudo apt-get install -q automake
+  - sudo apt-get install -q pkg-config
   - sudo apt-get install -q build-essential
   - sudo apt-get install -q libboost-all-dev
   - autoreconf -i
