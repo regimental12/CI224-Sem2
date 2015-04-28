@@ -14,6 +14,11 @@ Camera::Camera()
 
 /**
  * Handle input form passed in mainEvent struct. 
+ * 
+ * @param SDL_Event 
+ * @param SDL_Window
+ * 
+ * @return NULL
  */
 
 void Camera::handleMovement(SDL_Event *e , SDL_Window* _window)
@@ -111,7 +116,11 @@ void Camera::handleMovement(SDL_Event *e , SDL_Window* _window)
 	}
 }
 
-
+/**
+ * Camera update method.
+ *
+ * @return NULL
+ */
 void Camera::update()
 {
     view = glm::lookAt(cameraPos , cameraPos + cameraDir , cameraUp);

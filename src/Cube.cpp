@@ -1,12 +1,22 @@
 #include "Cube.h"
 
+
+/**
+ * Default Cube constructor
+ * 
+ */
 Cube::Cube()
 {
       position = glm::vec3(0.0f, 0.0f, 0.0f);
       loadCube();
 }
 
-
+/**
+ * Overload Cube constructor
+ * 
+ * @param GLfloat x , y , z
+ * 
+ */
 Cube::Cube(GLfloat x, GLfloat y, GLfloat z)
 {
       position = glm::vec3(x, y, z);
@@ -17,11 +27,25 @@ Cube::~Cube()
 {
 }
 
+/**
+ * Get method for position
+ * 
+ * @return glm::vec3
+ * 
+ */
 glm::vec3 Cube::getPosition()
 {
       return position;
 }
 
+/**
+ * Set method for position
+ * 
+ * @param GLfloat x , y, , z
+ * 
+ * @return NULL
+ * 
+ */
 void Cube::setPosition(GLfloat x , GLfloat y , GLfloat z)
 {
       position.x = x;
@@ -29,23 +53,46 @@ void Cube::setPosition(GLfloat x , GLfloat y , GLfloat z)
       position.z = z;
 }
 
+/**
+ * Get method for texture
+ * 
+ * @return GLuint
+ * 
+ */
 GLuint Cube::getTexture()
 {
       return texture;
 }
 
+/**
+ * Get method for vertex array object
+ * 
+ * @return GLuint
+ * 
+ */
 GLuint Cube::getVAO()
 {
       return VAO;
 }
 
+/**
+ * Get method for vertex buffer object
+ * 
+ * @return GLuint
+ * 
+ */
 GLuint Cube::getVBO()
 {
       return VBO;
 }
 
 
-
+/**
+ * load cube to grpahics memory
+ * 
+ * @return NULL
+ * 
+ */
 void Cube::loadCube()
 {
       glGenVertexArrays(1, &VAO);
@@ -64,6 +111,15 @@ void Cube::loadCube()
       setType(0);
 }
 
+/**
+ * Render method
+ * 
+ * @param Shader
+ * @param Camera
+ * 
+ * @return NULL
+ * 
+ */
 void Cube::Render(Shader shader , Camera* camera)
 {
       shader.useShader();
@@ -93,10 +149,22 @@ void Cube::Render(Shader shader , Camera* camera)
       glUseProgram(0);
 }
 
+/**
+ * Set method for type
+ * 
+ * @return GLuint
+ * 
+ */
 void Cube::setType(GLuint cubeType) {
       type = cubeType;
 }
 
+/**
+ * Get method for type
+ * 
+ * @return NULL
+ * 
+ */
 GLuint Cube::getType()
 {
       return type;

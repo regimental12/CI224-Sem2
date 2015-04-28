@@ -16,6 +16,11 @@
 
 /**
  * Cube collisions
+ * 
+ * @param Camera
+ * @param Cube
+ * 
+ * @return NULL
  */
 static void Collision(Camera* playerCam, Cube* cube)
 {   
@@ -29,6 +34,11 @@ static void Collision(Camera* playerCam, Cube* cube)
 
 /**
  * Ray VS cube collisions
+ * 
+ * @param Camera
+ * @param Cube
+ * 
+ * @return bool
  */
 static bool Collision1(Cube* cube, glm::vec4 ray)
 {   
@@ -43,6 +53,13 @@ static bool Collision1(Cube* cube, glm::vec4 ray)
 
 /**
  * Raycast function. Uses Antons Opengl 4 method
+ * 
+ * @param Camera
+ * @param Cube
+ * @param int mouse_x
+ * @param int mouse_y
+ * 
+ * @return bool
  */
 static bool rayCol(int mouse_x , int mouse_y  , Camera* cam , Cube* cube)
 {
