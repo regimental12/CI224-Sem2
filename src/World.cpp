@@ -12,13 +12,13 @@
  */
 World::World()
 {
-	for (int x =-1; x < 1; x++) {
-		for (int z = -1 ; z < 1; z++) {
-			Chunks.push_back(new Chunk(x, 0, z, perlin));
-		}
-	}
-
-
+      for (int x =-1; x < 1; x++) {
+	    for (int z = -1 ; z < 1; z++) {
+		  Chunks.push_back(new Chunk(x, 0, z, perlin));
+	    }
+      }
+      
+      
 }
 
 /**
@@ -26,11 +26,11 @@ World::World()
  */
 World::~World()
 {
-	//de-allocate pointers inside vector then clear the vector
-	for (unsigned int i = 0; i < Chunks.size(); i++) {
-		delete(Chunks[i]);
-	}
-	Chunks.clear();
+      //de-allocate pointers inside vector then clear the vector
+      for (unsigned int i = 0; i < Chunks.size(); i++) {
+	    delete(Chunks[i]);
+      }
+      Chunks.clear();
 }
 
 /**
@@ -43,9 +43,9 @@ World::~World()
  */
 void World::Render(Shader shader, Camera* camera)
 {
-	for(unsigned int i = 0; i < Chunks.size(); i++) {
-		Chunks[i]->Render(shader, camera);
-	}
+      for(unsigned int i = 0; i < Chunks.size(); i++) {
+	    Chunks[i]->Render(shader, camera);
+      }
 }
 
 /**
@@ -58,7 +58,7 @@ void World::Render(Shader shader, Camera* camera)
  */
 void World::Update(Camera* camera)
 {
-	for(unsigned int i = 0; i < Chunks.size(); i++) {
-		Chunks[i]->Update(camera);
-	}
+      for(unsigned int i = 0; i < Chunks.size(); i++) {
+	    Chunks[i]->Update(camera);
+      }
 }

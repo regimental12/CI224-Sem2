@@ -14,6 +14,11 @@ Camera::Camera()
 
 /**
  * Handle input form passed in mainEvent struct. 
+ * 
+ * @param SDL_Event 
+ * @param SDL_Window
+ * 
+ * @return NULL
  */
 
 void Camera::handleMovement(SDL_Event *e , SDL_Window* _window)
@@ -93,33 +98,29 @@ void Camera::handleMovement(SDL_Event *e , SDL_Window* _window)
 	  cameraDir = glm::normalize(front);
 	}
 	
-	
-	/*if(e->type == SDL_MOUSEBUTTONDOWN)
-	{*/
-	  if(e->button.button == SDL_BUTTON_LEFT)
-	  {
-	      glm::vec4 viewport = glm::vec4(0.0f , 0.0f , 1366.0f , 768.0f);
-	      SDL_GetMouseState(&x1, &y1);
-	      int y2 = 768 - y1;
-	      near = glm::unProject(glm::vec3(cameraPos.x , cameraPos.y, 0.0f) , view , projection , viewport );
-	      far = glm::unProject(glm::vec3(float(x1) ,float(y2), 1.0f ), view , projection , viewport );
-	      mouseDownleft = true;
-	      std::cout << x1 << " " << y1 << std::endl;
+	/**
+	 * Handle mouse buttons
+	 * Also invert y axis to convert SDL coords to Opengl coords.
+	 */
+	if(e->button.button == SDL_BUTTON_LEFT)
+	{
+	  SDL_GetMouseState(&x1, &y1);
+	  y1 = 768 - y1; 
+	  mouseDownleft = true;
 	}
-	 if(e->button.button == SDL_BUTTON_RIGHT )
-	  {
-	      glm::vec4 viewport = glm::vec4(0.0f , 0.0f , 1366.0f , 768.0f);
-	      SDL_GetMouseState(&x1, &y1);
-	      int y2 = 768 - y1;
-	      near = glm::unProject(glm::vec3(cameraPos.x , cameraPos.y, 0.0f) , view , projection , viewport );
-	      far = glm::unProject(glm::vec3(float(x1) ,float(y2), 1.0f ), view , projection , viewport );
-	      mouseDownright = true;
-	      std::cout << x1 << " " << y1 << std::endl;
+	if(e->button.button == SDL_BUTTON_RIGHT )
+	{
+	  SDL_GetMouseState(&x1, &y1);
+	  y1 = 768 - y1;
+	  mouseDownright = true;
 	}
-	//}
 }
 
-
+/**
+ * Camera update method.
+ *
+ * @return NULL
+ */
 void Camera::update()
 {
     view = glm::lookAt(cameraPos , cameraPos + cameraDir , cameraUp);
