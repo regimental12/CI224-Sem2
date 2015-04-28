@@ -16,7 +16,6 @@ Inventory::Inventory()
 	:dirtCount(0),
 	 stoneCount(0)
 {
-	// TODO Auto-generated constructor stub
 
 }
 
