@@ -2,15 +2,26 @@
 #include "Chunk.h"
 #include "Inventory.h"
 
-Chunk::Chunk(){
-	size = glm::vec3(16, 10, 16);
-	position.x = 0;
-	position.y = 0;
-	position.z = 0;
-
+/**
+ * Chunk constructor initialises values to zero.
+ */
+Chunk::Chunk()
+	:position(glm::vec3(0, 0, 0)),
+	 size(glm::vec3(16, 10, 16))
+{
 	Init();
 }
 
+/**
+ * Overloaded Chunk constructor that sets the position and noise used to generate the chunk.
+ *
+ * @param X - x position of the chunk
+ * @param Y - y position of the chunk
+ * @param Z - z position of the chunk
+ * @param noise - the PErlin noise being used to generate this chunk.
+ *
+ * @return NULL
+ */
 Chunk::Chunk(GLfloat X, GLfloat Y, GLfloat Z, Perlin noise){
 	perlin = noise;
 	size = glm::vec3(16, 48, 16);
@@ -19,19 +30,28 @@ Chunk::Chunk(GLfloat X, GLfloat Y, GLfloat Z, Perlin noise){
 	position.z = Z;
 
 	Init();
-	std::cout << "return from init" << std::endl;
 }
 
+/**
+ * Chunk destructor.
+ */
 Chunk::~Chunk(){
 	for (int x = 0; x < size.x; x++) {
 		for (int z = 0; z < size.z; z++) {
-			for (int y = 0; y < size.y; y++) {	// only create cubes up to our value
+			for (int y = 0; y < size.y; y++) {
 				delete Cubes[x][y][z];
 			}
 		}
 	}
 }
 
+
+/**
+ * Chunk initialisation method. Sets up the chunks model from
+ * the perlin noise passed into the constructor.
+ *
+ * @return NULL
+ */
 void Chunk::Init(){
 	for (int x = 0; x < size.x; x++) {
 		for (int z = 0; z < size.z; z++) {
@@ -75,6 +95,16 @@ void Chunk::Init(){
 	}
 }
 
+
+/**
+ * Chunks render function.
+ *
+ * @param shader - The shader being used to render the cubes
+ * 				   gets passed to the cubes when there render function is called.
+ * @param camera - The camera that will see the rendered chunks.
+ *
+ * @return NULL
+ */
 void Chunk::Render(Shader shader, Camera* camera) {
 
 	for (int x = 0; x < size.x; x++) {
@@ -90,7 +120,11 @@ void Chunk::Render(Shader shader, Camera* camera) {
 							z == 0 || z == size.z -1) {
 						Cubes[x][y][z]->Render(shader, camera);
 
-						//if one of 6 neighbours is air
+						/**
+						 * If one of 6 neighbours is air.
+						 * This way if a face is visible the cube
+						 * is rendered.
+						 */
 					} else if (Cubes[x][y+1][z]->getType() == 0 ||
 							Cubes[x][y-1][z]->getType() == 0 ||
 							Cubes[x+1][y][z]->getType() == 0 ||
@@ -105,14 +139,24 @@ void Chunk::Render(Shader shader, Camera* camera) {
 	}
 }
 
+
+/**
+ * Chunks update method.
+ *
+ * @param cam - the camera that will be used to test for collisions with cubes when it moves.
+ *
+ * @return NULL
+ */
 void Chunk::Update(Camera* cam) {
 	for (int x = 0; x < size.x; x++) {
 		for (int z = 0; z < size.z; z++) {
 			for (int y = 0; y < size.y; y++) {
-				// only attempt to collide cubes that aren't NULL
+				// only attempt to collide cubes that aren't air
 				if (Cubes[x][y][z]->getType() != 0) {
 					Collision(cam, Cubes[x][y][z]);
 				}
+
+
 				if (cam->mouseDownleft) {
 					if (Cubes[x][y][z] != 0) {
 						if (rayCol(cam->x1, cam->y1, cam, Cubes[x][y][z])) {
