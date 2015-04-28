@@ -7,6 +7,12 @@
 
 #include "SkyBox.h"
 
+/**
+ * Skybox constructor
+ * initialises values.
+ *
+ * then loads skybox.
+ */
 SkyBox::SkyBox()
 	:position(glm::vec3(0,48,0)),
 	 texture(0),
@@ -16,12 +22,19 @@ SkyBox::SkyBox()
 	loadSkyBox();
 }
 
+/**
+ * Skybox destructor.
+ */
 SkyBox::~SkyBox()
 {
 	
 }
 
-
+/**
+ * Loads skybox into the VAO and VBO. which gets passed to the shader program later.
+ *
+ * @return NULL
+ */
 void SkyBox::loadSkyBox()
 {
     glGenVertexArrays(1, &VAO);
@@ -37,9 +50,17 @@ void SkyBox::loadSkyBox()
     glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), (GLvoid*)(3 * sizeof(GLfloat)));
     glEnableVertexAttribArray(2);
     glBindVertexArray(0);
-    //setTexture();
 }
 
+
+/**
+ * Skybox render function. USes shader program and VBO/VAO to render skybox to screen.
+ *
+ * @param shader - the shader program that will be used to render the skybox
+ * @param camera - camera that will see the skybox when rendered.
+ *
+ * @return NULL
+ */
 void SkyBox::Render(Shader shader , Camera* camera)
 {
     shader.useShader();
