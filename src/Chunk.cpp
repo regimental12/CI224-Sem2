@@ -57,7 +57,7 @@ void Chunk::Init(){
 		for (int z = 0; z < size.z; z++) {
 
 			// get noise value - using x & z because Y is our up axis
-			double value = perlin.noise(((position.x*size.x)+x), ((position.z*size.z)+z), 0.8);
+			double value = perlin.octave(((position.x*size.x)+x), ((position.z*size.z)+z), 0.8, 20, 0.8);
 
 			//std::cout << (int)(perlin.noise(10 * ((position.x*size.x)+3), 10 * ((position.z*size.z)+9), 0.8) * size.y) << std::endl;
 
