@@ -7,6 +7,11 @@
 
 #include "Inventory.h"
 
+
+/**
+ * Inventory constructor.
+ * Initialises block counts to 0.
+ */
 Inventory::Inventory()
 	:dirtCount(0),
 	 stoneCount(0)
@@ -15,10 +20,22 @@ Inventory::Inventory()
 
 }
 
+/**
+ * Empty inventory destructor.
+ *
+ * @returns NULL
+ */
 Inventory::~Inventory() {
-	// TODO Auto-generated destructor stub
+
 }
 
+/**
+ * Inventory method to get block count of a certain type.
+ *
+ * @param type - Type of block to get the count for.
+ *
+ * @return INT - number of blocks of passed in type.
+ */
 int Inventory::getBlockCount(GLuint type)
 {
 	switch (type)
@@ -34,6 +51,13 @@ int Inventory::getBlockCount(GLuint type)
 	}
 }
 
+/**
+ * Method to increment block count for a certain type.
+ *
+ * @param type - Type of block to increment count for.
+ *
+ * @return NULL
+ */
 void Inventory::incBlockCount(GLuint type)
 {
 	switch (type)
@@ -49,6 +73,13 @@ void Inventory::incBlockCount(GLuint type)
 	}
 }
 
+/**
+ * Method to decrement block count for a certain type.
+ *
+ * @param type - Type of block to decrement count for.
+ *
+ * @return NULL
+ */
 void Inventory::decBlockCount(GLuint type)
 {
 	switch (type)
