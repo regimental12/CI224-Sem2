@@ -4,8 +4,12 @@
 /**
  * Initialise Variables;
  */
-Camera::Camera() : cameraPos ( glm::vec3(0.0f, 10.0f, -10.0f)),  projection ( glm::perspective(45.0f, (float)1024/(float)768, 0.1f, 1000.0f))
+Camera::Camera()
+	:cameraPos ( glm::vec3(10.0f, 20.0f, -10.0f)),
+	 projection ( glm::perspective(45.0f, (float)1366/(float)768, 0.1f, 1000.0f)),
+	 inventory(new Inventory())
 {
+
 }
 
 /**
@@ -90,14 +94,29 @@ void Camera::handleMovement(SDL_Event *e , SDL_Window* _window)
 	}
 	
 	
-	if(e->type == SDL_MOUSEBUTTONDOWN)
-	{
+	/*if(e->type == SDL_MOUSEBUTTONDOWN)
+	{*/
+	  if(e->button.button == SDL_BUTTON_LEFT)
+	  {
 	      glm::vec4 viewport = glm::vec4(0.0f , 0.0f , 1366.0f , 768.0f);
 	      SDL_GetMouseState(&x1, &y1);
-	      near = glm::unProject(glm::vec3(float(x1) , float(y1) , 0.0f ), view , projection , viewport );
-	      far = glm::unProject(glm::vec3(float(x1) , float(y1) , 1.0f ), view , projection , viewport );
-	      mouseDown = true;
+	      int y2 = 768 - y1;
+	      near = glm::unProject(glm::vec3(cameraPos.x , cameraPos.y, 0.0f) , view , projection , viewport );
+	      far = glm::unProject(glm::vec3(float(x1) ,float(y2), 1.0f ), view , projection , viewport );
+	      mouseDownleft = true;
+	      std::cout << x1 << " " << y1 << std::endl;
 	}
+	 if(e->button.button == SDL_BUTTON_RIGHT )
+	  {
+	      glm::vec4 viewport = glm::vec4(0.0f , 0.0f , 1366.0f , 768.0f);
+	      SDL_GetMouseState(&x1, &y1);
+	      int y2 = 768 - y1;
+	      near = glm::unProject(glm::vec3(cameraPos.x , cameraPos.y, 0.0f) , view , projection , viewport );
+	      far = glm::unProject(glm::vec3(float(x1) ,float(y2), 1.0f ), view , projection , viewport );
+	      mouseDownright = true;
+	      std::cout << x1 << " " << y1 << std::endl;
+	}
+	//}
 }
 
 

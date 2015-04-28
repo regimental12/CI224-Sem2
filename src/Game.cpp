@@ -1,4 +1,7 @@
 #include "Game.h"
+#include <sstream>
+#include <string>
+#include <iostream>
 
 Game::Game()
 {
@@ -8,6 +11,7 @@ Game::Game()
   camera = new Camera();
   world = NULL;
   skyBox = NULL;
+  iLoader = NULL;
 }
 
 Game::~Game()
@@ -52,8 +56,13 @@ void Game::Init()
 
 void Game::objinit()
 {
+	//std::cout << "Enter obj init" << std::endl;
+	iLoader = ImageLoader::getInstance();
+	//std::cout << "loaded images" << std::endl;
 	world = new World();
+	//std::cout << "world" << std::endl;
 	skyBox = new SkyBox();
+	
 	std::cout << "loaded data" << std::endl;
 }
 
@@ -97,6 +106,12 @@ void Game::HandleEvents(SDL_Event e ,SDL_Window*  _window)
 		case SDLK_F1:
 			wireframe = !wireframe;
 			break;
+		case SDLK_1:
+			camera->setPlacetype(1);
+			break;
+		case SDLK_2:
+			camera->setPlacetype(2);
+			break;
 		}
 	}
 	camera->handleMovement(&mainEvent , _window);
@@ -106,12 +121,28 @@ void Game::HandleEvents(SDL_Event e ,SDL_Window*  _window)
 
 void Game::Update()
 {
-	camera->update();
 	world->Update(camera);
+	camera->update();
+
+
+	int StoneC = camera->inventory->getBlockCount(2);
+	std::stringstream temp_Sstr;
+	temp_Sstr<<(StoneC);
+	std::string strSCount = temp_Sstr.str();
+
+	int DirtC = camera->inventory->getBlockCount(1);
+	std::stringstream temp_Dstr;
+	temp_Dstr<<(DirtC);
+	std::string strDCount = temp_Dstr.str();
+
+	std::string title = "Voxel Game 2.0 | Stone: " + strSCount + " | Dirt: " + strDCount;
+
+	SDL_SetWindowTitle(_window, title.c_str());
 }
 
 void Game::Render()
 {
+	
 	//checks wireframe bool and sets LINE or FILL mode accordingly
 	if(wireframe) {
 		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
@@ -123,5 +154,7 @@ void Game::Render()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	world->Render(shader, camera);
+
 	skyBox->Render(skyShader, camera);
+	
 }

@@ -13,6 +13,7 @@
 #include <iostream>
 #include "World.h"
 #include "Chunk.h"
+#include "ImageLoader.h"
 
 #define GLM_FORCE_RADIANS
 #include "glm/glm.hpp"
@@ -45,6 +46,7 @@ private:
   World *world;
   SkyBox *skyBox;
   bool wireframe = false;
+  ImageLoader* iLoader;
   
 };
 

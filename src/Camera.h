@@ -8,7 +8,7 @@
 #include "GL/glew.h"
 #include "GL/glu.h"
 #include <iostream>
-
+#include "Inventory.h"
 
 #define GLM_FORCE_RADIANS
 
@@ -36,12 +36,23 @@ public:
     void handleMovement(SDL_Event *e , SDL_Window*  _window);
     void update();
 
+    GLuint getPlaceType() {
+    	return placeType;
+    }
+
+    void setPlacetype(GLuint pT) {
+    	placeType = pT;
+    }
+
     glm::mat4 view;
     glm::mat4 projection;
     bool firstMove = true;
     int x1, y1;
     glm::vec3 near , far ;
-    bool mouseDown = false;
+    bool mouseDownleft = false;
+    bool mouseDownright = false;
+    GLuint placeType = 1;
+    Inventory* inventory;
 };
 
 #endif

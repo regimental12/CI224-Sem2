@@ -2,7 +2,7 @@
 
 Cube::Cube()
 {
-	iLoader = new ImageLoader();
+	//iLoader = new ImageLoader();
 	position = glm::vec3(0.0f, 0.0f, 0.0f);
 	loadCube();
 }
@@ -10,7 +10,7 @@ Cube::Cube()
 
 Cube::Cube(GLfloat x, GLfloat y, GLfloat z)
 {
-	iLoader = new ImageLoader();
+	//iLoader = new ImageLoader();
 	position = glm::vec3(x, y, z);
 	loadCube();
 }
@@ -38,12 +38,13 @@ GLuint Cube::getTexture()
 }
 
 void Cube::setTexture(std::string fileName)
-{
+{/*
     // Fill out when image loader done
    texture = iLoader->LoadTexture(fileName);
 
     //texture = iLoader->LoadTexture(fileName.c_str());
     //delete iLoader;
+    */
 }
 
 GLuint Cube::getVAO()
@@ -73,7 +74,7 @@ void Cube::loadCube()
     glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), (GLvoid*)(3 * sizeof(GLfloat)));
     glEnableVertexAttribArray(2);
     glBindVertexArray(0);
-    setType(Cube::Stone);
+    setType(0);
 }
 
 void Cube::Render(Shader shader , Camera* camera)
@@ -83,23 +84,21 @@ void Cube::Render(Shader shader , Camera* camera)
     GLint modelLoc = glGetUniformLocation(shader.getProgram(), "model");
     GLint viewLoc = glGetUniformLocation(shader.getProgram(), "view");
     GLint projLoc = glGetUniformLocation(shader.getProgram(), "projection");
-
-
-    /*glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));*/
     
     glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(camera->view));
     glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(camera->projection));
 
     glBindVertexArray(VAO);
-		  glBindTexture(GL_TEXTURE_2D, texture);
+		  if(this->getType() > 0)
+		  {
+		      glBindTexture(GL_TEXTURE_2D, ImageLoader::getInstance()->GetTexture(this->getType()));
+		  }
+		  else
+		  {
+		      return;
+		  }
 		  glm::mat4 model;
 		  model = glm::translate(model, position);
-
-		  //model = glm::rotate(model, angle, glm::vec3(1.0f, 1.0f, 1.0f));
-
-		  //model = glm::rotate(model, angle, glm::vec3(1.0f, 1.0f, 0.5f));
-
 		  glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		  glDrawArrays(GL_TRIANGLES, 0, 36);
 		  glBindTexture(GL_TEXTURE_2D , 0);
@@ -107,18 +106,12 @@ void Cube::Render(Shader shader , Camera* camera)
     glUseProgram(0);
 }
 
-void Cube::setType(Type type) {
-	switch (type) {
-	case Cube::Dirt:
-		setTexture("images/dirt.jpg");
-		break;
-
-	case Cube::Stone:
-		setTexture("images/stone.jpg");
-		break;
-
-	default:
-		setTexture("images/stone.jpg");
-		break;
-	}
+void Cube::setType(GLuint cubeType) {
+	type = cubeType;
 }
+
+GLuint Cube::getType()
+{
+    return type;
+}
+

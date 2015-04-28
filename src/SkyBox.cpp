@@ -7,22 +7,34 @@
 
 #include "SkyBox.h"
 
+/**
+ * Skybox constructor
+ * initialises values.
+ *
+ * then loads skybox.
+ */
 SkyBox::SkyBox()
-	:position(glm::vec3(0,0,0)),
+	:position(glm::vec3(0,48,0)),
 	 texture(0),
 	 VBO(0),
-	 VAO(0),
-	 iLoader(new ImageLoader())
+	 VAO(0)
 {
 	loadSkyBox();
 }
 
+/**
+ * Skybox destructor.
+ */
 SkyBox::~SkyBox()
 {
-	delete(iLoader);
+	
 }
 
-
+/**
+ * Loads skybox into the VAO and VBO. which gets passed to the shader program later.
+ *
+ * @return NULL
+ */
 void SkyBox::loadSkyBox()
 {
     glGenVertexArrays(1, &VAO);
@@ -38,33 +50,32 @@ void SkyBox::loadSkyBox()
     glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), (GLvoid*)(3 * sizeof(GLfloat)));
     glEnableVertexAttribArray(2);
     glBindVertexArray(0);
-    setTexture("images/container.jpg");
 }
 
+
+/**
+ * Skybox render function. USes shader program and VBO/VAO to render skybox to screen.
+ *
+ * @param shader - the shader program that will be used to render the skybox
+ * @param camera - camera that will see the skybox when rendered.
+ *
+ * @return NULL
+ */
 void SkyBox::Render(Shader shader , Camera* camera)
 {
     shader.useShader();
-
+    
     GLint modelLoc = glGetUniformLocation(shader.getProgram(), "model");
     GLint viewLoc = glGetUniformLocation(shader.getProgram(), "view");
     GLint projLoc = glGetUniformLocation(shader.getProgram(), "projection");
 
-
-    /*glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));*/
-
     glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(camera->view));
     glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(camera->projection));
-
+    
     glBindVertexArray(VAO);
-		  glBindTexture(GL_TEXTURE_2D, texture);
+		  glBindTexture(GL_TEXTURE_2D, ImageLoader::getInstance()->GetTexture(3));
 		  glm::mat4 model;
 		  model = glm::translate(model, position);
-
-		  //model = glm::rotate(model, angle, glm::vec3(1.0f, 1.0f, 1.0f));
-
-		  //model = glm::rotate(model, angle, glm::vec3(1.0f, 1.0f, 0.5f));
-
 		  glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		  glDrawArrays(GL_TRIANGLES, 0, 36);
 		  glBindTexture(GL_TEXTURE_2D , 0);
