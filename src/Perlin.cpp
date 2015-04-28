@@ -8,6 +8,9 @@
 #include "Perlin.h"
 #include <cmath>
 
+/**
+ * Perlin constructor intialises the permutation vectors to a set random list.
+ */
 Perlin::Perlin() {
 
 	// Initialize the permutation vector with the reference values
@@ -28,14 +31,35 @@ Perlin::Perlin() {
 	p.insert(p.end(), p.begin(), p.end());
 }
 
+/**
+ * Perlin destructor. Does nothing.
+ */
 Perlin::~Perlin() {
 
 }
 
+/**
+ * Perlin fade function. takes a parameter and mutates it then returns it.
+ *
+ * @param t - value to fade
+ *
+ * @return DOUBLE - faded value
+ */
 double Perlin::fade(double t) {
 	return t * t * t * (t * (t * 6 - 15) + 10);
 }
 
+
+/**
+ * The actual noise function. Returns a value between -1 and 1.
+ *
+ * @param x - x value of the position the noise is wanted for.
+ * @param y - y value of the position the noise is wanted for.
+ * @param z - z value of the position the noise is wanted for.
+ * 			  This value can be a set value to get 2D noise.
+ *
+ * @return DOUBLE - Noise for a certain position for (X, Y, Z)
+ */
 double Perlin::noise(double x, double y, double z) {
 	// Find the unit cube that contains the point
 	int X = (int) floor(x) & 255;
@@ -65,18 +89,49 @@ double Perlin::noise(double x, double y, double z) {
 	return (res + 1.0)/2.0;
 }
 
+/**
+ * Gradient function.
+ *
+ * @param hash - The hash value used to return a gradient
+ * @param x - x position we get a gradient for
+ * @param y - y position we get a gradient for
+ * @param z - z position we get a gradient for
+ *
+ * @return DOUBLE - The calculated gradient
+ */
 double Perlin::grad(int hash, double x, double y, double z) {
 	int h = hash & 15;
-	// Convert lower 4 bits of hash inot 12 gradient directions
+	// Convert lower 4 bits of hash ito 12 gradient directions
 	double u = h < 8 ? x : y,
 		   v = h < 4 ? y : h == 12 || h == 14 ? x : z;
 	return ((h & 1) == 0 ? u : -u) + ((h & 2) == 0 ? v : -v);
 }
 
+/**
+ * A lerp function. i.e. linear interpolation between two points.
+ *
+ * @param t - constant value
+ * @param a - value to lerp from
+ * @param b - value to lerp too
+ *
+ * @return DOUBLE - the resulting lerp.
+ */
 double Perlin::lerp(double t, double a, double b) {
 	return a + t * (b - a);
 }
 
+
+/**
+ * A function to produce noise for multiple octaves.
+ *
+ * @param x - x position of noise
+ * @param y - y position of noise
+ * @param z - z position of noise - can be constant value for 2D noise
+ * @param octaves - number of octaves wanted
+ * @param persistence - how persistent should this function be? usually between 0 and 1.0.
+ *
+ * @return DOUBLE octave noise for (x, y, z) position
+ */
 double Perlin::octave(double x, double y, double z, int octaves, double persistance){
 	double total = 0 ;
 	double frequency = 1;
