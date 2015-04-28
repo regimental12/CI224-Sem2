@@ -21,6 +21,9 @@ World::World()
 
 }
 
+/**
+ * World destructor.
+ */
 World::~World()
 {
 	//de-allocate pointers inside vector then clear the vector
@@ -31,7 +34,12 @@ World::~World()
 }
 
 /**
- * Render should call each of the 9 loaded chunks own render method
+ * Render should call each of the 9 loaded chunks own render method.
+ *
+ * @param shader - the shader used to render the chunks
+ * @param camera - teh camera that sees the chunks
+ *
+ * @return NULL
  */
 void World::Render(Shader shader, Camera* camera)
 {
@@ -43,6 +51,10 @@ void World::Render(Shader shader, Camera* camera)
 /**
  * Update will find the chunk the player is in and check that all 8 surrounding chunks are loaded.
  * If they arne't it will load them. If they are it will do nothing.
+ *
+ * @param camera - camera that collides with chunks
+ *
+ * @return NULL
  */
 void World::Update(Camera* camera)
 {
