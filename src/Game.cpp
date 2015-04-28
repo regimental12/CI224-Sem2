@@ -18,6 +18,9 @@ Game::~Game()
 {
 }
 
+/**
+ * Initialise subsytems and load data
+ */
 void Game::Init()
 {
       
@@ -57,6 +60,9 @@ void Game::objinit()
       std::cout << "loaded data" << std::endl;
 }
 
+/**
+ * cleanup any data left over
+ */
 void Game::CleanUp()
 {
       SDL_GL_DeleteContext(glContext);
@@ -66,6 +72,9 @@ void Game::CleanUp()
       SDL_Quit();
 }
 
+/**
+ * Main loop
+ */
 void Game::Loop()
 {
       while (_running)

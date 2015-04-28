@@ -1,3 +1,6 @@
+/**
+ * Main game class all engine initialisation and game logic called form here
+ */
 #ifndef _GAMEH_
 #define _GAMEH_
 

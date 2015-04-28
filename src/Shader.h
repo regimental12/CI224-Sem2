@@ -1,3 +1,6 @@
+/**
+ * Shader class
+ */
 #ifndef _SHADERH_
 #define _SHADERH_
 
