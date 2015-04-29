@@ -28,18 +28,6 @@ or
 
 `./src/Mineclone.exe` for windows.
 
-##Current Plan
-
- - Code Cleanup
-   - Comments
-   - Inititalisatiopn lists
-   - etc...
- - Change Image Loader
- - Magic numbers itno commons.h
- - Skybox use cube map
- - Smooth out landscape
- - work on Player
-
 ##Marking Scheme  
 **The main aim:**  
 *Implement fewer features fully, rather than all features badly.*  
