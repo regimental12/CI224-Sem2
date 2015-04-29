@@ -16,6 +16,7 @@ install:
   - sudo apt-get install -q pkg-config
   - sudo apt-get install -q build-essential
   - sudo apt-get install -q libboost-all-dev
+  - libtoolize --force
   - autoreconf -i
   - ./configure
   script:
