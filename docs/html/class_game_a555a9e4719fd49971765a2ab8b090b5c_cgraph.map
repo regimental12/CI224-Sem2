@@ -1,0 +1,5 @@
+<map id="Game::Init" name="Game::Init">
+<area shape="rect" id="node2" href="$class_shader.html#a19a6341e1d67136647556d9cff3c2242" title="Shader::loadShader" alt="" coords="136,5,272,32"/>
+<area shape="rect" id="node3" href="$class_game.html#a7b9c3ffde53cdf3fa685d6e9b5ae43f3" title="Game::objinit" alt="" coords="155,56,253,83"/>
+<area shape="rect" id="node4" href="$class_image_loader.html#adf162e4bf26be1abb849ce46f9634b69" title="ImageLoader::getInstance" alt="" coords="320,56,493,83"/>
+</map>

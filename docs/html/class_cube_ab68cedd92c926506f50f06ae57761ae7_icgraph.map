@@ -1,0 +1,7 @@
+<map id="Cube::setType" name="Cube::setType">
+<area shape="rect" id="node2" href="$class_chunk.html#ae50a8df55381d68288831e392012a938" title="Chunk::Init" alt="" coords="178,5,265,32"/>
+<area shape="rect" id="node4" href="$class_chunk.html#a6e993f948335d6ead2ec2eee206af847" title="Chunk::Update" alt="" coords="166,56,277,83"/>
+<area shape="rect" id="node5" href="$class_cube.html#a13e5899692dffbb09019809d2998f71a" title="Cube::loadCube" alt="" coords="163,107,279,133"/>
+<area shape="rect" id="node3" href="$class_chunk.html#acc32e1562cad6664c98ee07edecdbdf9" title="Chunk::Chunk" alt="" coords="328,5,435,32"/>
+<area shape="rect" id="node6" href="$class_cube.html#a06f3d86fb63e3aad08623610aa3c17b4" title="Cube::Cube" alt="" coords="335,107,427,133"/>
+</map>

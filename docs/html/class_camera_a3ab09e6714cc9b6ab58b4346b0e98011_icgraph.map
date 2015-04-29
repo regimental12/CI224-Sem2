@@ -1,0 +1,5 @@
+<map id="Camera::handleMovement" name="Camera::handleMovement">
+<area shape="rect" id="node2" href="$class_game.html#a6b7a69223477dbfae5f570763385a2f1" title="Game::HandleEvents" alt="" coords="229,5,376,32"/>
+<area shape="rect" id="node3" href="$class_game.html#a28d8a0a65bda89be42d9c46fc2e4f14b" title="Game::Loop" alt="" coords="424,5,517,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a1fa3253ca11014c1b01923a1674ff19c" title="main" alt="" coords="565,5,616,32"/>
+</map>

@@ -1,0 +1,148 @@
+\hypertarget{class_sky_box}{}\section{Sky\+Box Class Reference}
+\label{class_sky_box}\index{Sky\+Box@{Sky\+Box}}
+
+
+{\ttfamily \#include $<$Sky\+Box.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_sky_box_a548db645757da94296cb80402206dd3b}{Sky\+Box} ()
+\item 
+\hyperlink{class_sky_box_aef6a9b7d384358fd2095d1e171d8a997}{$\sim$\+Sky\+Box} ()
+\item 
+void \hyperlink{class_sky_box_a95c75c3c40102bf9a1a4ca9980c609d5}{load\+Sky\+Box} ()
+\item 
+void \hyperlink{class_sky_box_af5f74045e6fb7761699a5b60aa4c38ef}{Render} (\hyperlink{class_shader}{Shader} shader, \hyperlink{class_camera}{Camera} $\ast$camera)
+\item 
+void \hyperlink{class_sky_box_a17d52c20c04d83aa3befaa4d40a37dd7}{set\+Position} (glm\+::vec3 pos)
+\item 
+glm\+::vec3 \hyperlink{class_sky_box_aa4905c9e9f9ffd8c3f46397d9a324644}{get\+Position} ()
+\item 
+G\+Luint \hyperlink{class_sky_box_a7cba71a3279e0988707cc72e170d50b8}{get\+Texture} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_sky_box_a548db645757da94296cb80402206dd3b}{}\index{Sky\+Box@{Sky\+Box}!Sky\+Box@{Sky\+Box}}
+\index{Sky\+Box@{Sky\+Box}!Sky\+Box@{Sky\+Box}}
+\subsubsection[{Sky\+Box}]{\setlength{\rightskip}{0pt plus 5cm}Sky\+Box\+::\+Sky\+Box (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sky_box_a548db645757da94296cb80402206dd3b}
+Skybox constructor initialises values.
+
+then loads skybox. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{class_sky_box_a548db645757da94296cb80402206dd3b_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_sky_box_aef6a9b7d384358fd2095d1e171d8a997}{}\index{Sky\+Box@{Sky\+Box}!````~Sky\+Box@{$\sim$\+Sky\+Box}}
+\index{````~Sky\+Box@{$\sim$\+Sky\+Box}!Sky\+Box@{Sky\+Box}}
+\subsubsection[{$\sim$\+Sky\+Box}]{\setlength{\rightskip}{0pt plus 5cm}Sky\+Box\+::$\sim$\+Sky\+Box (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sky_box_aef6a9b7d384358fd2095d1e171d8a997}
+Skybox destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_sky_box_aa4905c9e9f9ffd8c3f46397d9a324644}{}\index{Sky\+Box@{Sky\+Box}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!Sky\+Box@{Sky\+Box}}
+\subsubsection[{get\+Position}]{\setlength{\rightskip}{0pt plus 5cm}glm\+::vec3 Sky\+Box\+::get\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_sky_box_aa4905c9e9f9ffd8c3f46397d9a324644}
+\hypertarget{class_sky_box_a7cba71a3279e0988707cc72e170d50b8}{}\index{Sky\+Box@{Sky\+Box}!get\+Texture@{get\+Texture}}
+\index{get\+Texture@{get\+Texture}!Sky\+Box@{Sky\+Box}}
+\subsubsection[{get\+Texture}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Sky\+Box\+::get\+Texture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_sky_box_a7cba71a3279e0988707cc72e170d50b8}
+\hypertarget{class_sky_box_a95c75c3c40102bf9a1a4ca9980c609d5}{}\index{Sky\+Box@{Sky\+Box}!load\+Sky\+Box@{load\+Sky\+Box}}
+\index{load\+Sky\+Box@{load\+Sky\+Box}!Sky\+Box@{Sky\+Box}}
+\subsubsection[{load\+Sky\+Box}]{\setlength{\rightskip}{0pt plus 5cm}void Sky\+Box\+::load\+Sky\+Box (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sky_box_a95c75c3c40102bf9a1a4ca9980c609d5}
+Loads skybox into the V\+A\+O and V\+B\+O. which gets passed to the shader program later.
+
+\begin{DoxyReturn}{Returns}
+N\+U\+L\+L 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{class_sky_box_a95c75c3c40102bf9a1a4ca9980c609d5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_sky_box_af5f74045e6fb7761699a5b60aa4c38ef}{}\index{Sky\+Box@{Sky\+Box}!Render@{Render}}
+\index{Render@{Render}!Sky\+Box@{Sky\+Box}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}void Sky\+Box\+::\+Render (
+\begin{DoxyParamCaption}
+\item[{{\bf Shader}}]{shader, }
+\item[{{\bf Camera} $\ast$}]{camera}
+\end{DoxyParamCaption}
+)}\label{class_sky_box_af5f74045e6fb7761699a5b60aa4c38ef}
+Skybox render function. U\+Ses shader program and V\+B\+O/\+V\+A\+O to render skybox to screen.
+
+
+\begin{DoxyParams}{Parameters}
+{\em shader} & -\/ the shader program that will be used to render the skybox \\
+\hline
+{\em camera} & -\/ camera that will see the skybox when rendered.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+L\+L 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{class_sky_box_af5f74045e6fb7761699a5b60aa4c38ef_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_sky_box_af5f74045e6fb7761699a5b60aa4c38ef_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_sky_box_a17d52c20c04d83aa3befaa4d40a37dd7}{}\index{Sky\+Box@{Sky\+Box}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Sky\+Box@{Sky\+Box}}
+\subsubsection[{set\+Position}]{\setlength{\rightskip}{0pt plus 5cm}void Sky\+Box\+::set\+Position (
+\begin{DoxyParamCaption}
+\item[{glm\+::vec3}]{pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_sky_box_a17d52c20c04d83aa3befaa4d40a37dd7}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_sky_box_8h}{Sky\+Box.\+h}\item 
+src/\hyperlink{_sky_box_8cpp}{Sky\+Box.\+cpp}\end{DoxyCompactItemize}

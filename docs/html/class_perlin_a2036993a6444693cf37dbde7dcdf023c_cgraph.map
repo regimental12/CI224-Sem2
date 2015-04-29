@@ -1,0 +1,5 @@
+<map id="Perlin::noise" name="Perlin::noise">
+<area shape="rect" id="node2" href="$class_perlin.html#affd1073ebf50ec892e36805510df2792" title="Perlin::fade" alt="" coords="149,5,237,32"/>
+<area shape="rect" id="node3" href="$class_perlin.html#a2075b908242dbcd32eb45b31c5bf969f" title="Perlin::lerp" alt="" coords="151,56,235,83"/>
+<area shape="rect" id="node4" href="$class_perlin.html#a8143acc826a14ce25e864ecf68f62e73" title="Perlin::grad" alt="" coords="149,107,237,133"/>
+</map>

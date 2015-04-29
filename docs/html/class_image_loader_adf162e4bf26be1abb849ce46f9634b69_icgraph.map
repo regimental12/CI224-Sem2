@@ -1,0 +1,10 @@
+<map id="ImageLoader::getInstance" name="ImageLoader::getInstance">
+<area shape="rect" id="node2" href="$class_cube.html#aeeeccb9eb5da6e9d8114be298742cf00" title="Cube::Render" alt="" coords="235,5,338,32"/>
+<area shape="rect" id="node4" href="$class_game.html#a7b9c3ffde53cdf3fa685d6e9b5ae43f3" title="Game::objinit" alt="" coords="237,56,336,83"/>
+<area shape="rect" id="node7" href="$class_sky_box.html#af5f74045e6fb7761699a5b60aa4c38ef" title="SkyBox::Render" alt="" coords="227,107,346,133"/>
+<area shape="rect" id="node3" href="$class_chunk.html#a3c85fe052765b8c1da975b1f7fc60637" title="Chunk::Render" alt="" coords="395,5,506,32"/>
+<area shape="rect" id="node5" href="$class_game.html#a555a9e4719fd49971765a2ab8b090b5c" title="Game::Init" alt="" coords="560,56,643,83"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#a1fa3253ca11014c1b01923a1674ff19c" title="main" alt="" coords="696,81,747,108"/>
+<area shape="rect" id="node8" href="$class_game.html#a0897730fc9fed789f6c0f11d21a0c14a" title="Game::Render" alt="" coords="397,107,504,133"/>
+<area shape="rect" id="node9" href="$class_game.html#a28d8a0a65bda89be42d9c46fc2e4f14b" title="Game::Loop" alt="" coords="555,107,648,133"/>
+</map>

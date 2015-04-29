@@ -1,0 +1,5 @@
+<map id="Game::Update" name="Game::Update">
+<area shape="rect" id="node2" href="$class_world.html#a48ae860aaeca4178c206900fa6a7871b" title="World::Update" alt="" coords="192,5,299,32"/>
+<area shape="rect" id="node3" href="$class_camera.html#a42cda7239981a5618660d04bd5893556" title="Camera::update" alt="" coords="188,56,303,83"/>
+<area shape="rect" id="node4" href="$class_inventory.html#a463d58902824c007dc9a10ab54e9c671" title="Inventory::getBlockCount" alt="" coords="160,107,331,133"/>
+</map>

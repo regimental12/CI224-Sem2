@@ -1,0 +1,5 @@
+<map id="World::Render" name="World::Render">
+<area shape="rect" id="node2" href="$class_game.html#a0897730fc9fed789f6c0f11d21a0c14a" title="Game::Render" alt="" coords="160,5,267,32"/>
+<area shape="rect" id="node3" href="$class_game.html#a28d8a0a65bda89be42d9c46fc2e4f14b" title="Game::Loop" alt="" coords="315,5,408,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a1fa3253ca11014c1b01923a1674ff19c" title="main" alt="" coords="456,5,507,32"/>
+</map>

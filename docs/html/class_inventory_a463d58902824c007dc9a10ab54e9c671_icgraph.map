@@ -1,0 +1,6 @@
+<map id="Inventory::getBlockCount" name="Inventory::getBlockCount">
+<area shape="rect" id="node2" href="$class_chunk.html#a6e993f948335d6ead2ec2eee206af847" title="Chunk::Update" alt="" coords="225,5,335,32"/>
+<area shape="rect" id="node3" href="$class_game.html#a1c5373c68261c54aff03e6abe40fee52" title="Game::Update" alt="" coords="227,56,333,83"/>
+<area shape="rect" id="node4" href="$class_game.html#a28d8a0a65bda89be42d9c46fc2e4f14b" title="Game::Loop" alt="" coords="384,56,477,83"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a1fa3253ca11014c1b01923a1674ff19c" title="main" alt="" coords="525,56,576,83"/>
+</map>

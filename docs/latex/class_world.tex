@@ -1,0 +1,102 @@
+\hypertarget{class_world}{}\section{World Class Reference}
+\label{class_world}\index{World@{World}}
+
+
+{\ttfamily \#include $<$World.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_world_afa39d4e6f714a7a3691ac0c656f5e8a8}{World} ()
+\item 
+\hyperlink{class_world_a8c73fba541a5817fff65147ba47cd827}{$\sim$\+World} ()
+\item 
+void \hyperlink{class_world_a48ae860aaeca4178c206900fa6a7871b}{Update} (\hyperlink{class_camera}{Camera} $\ast$camera)
+\item 
+void \hyperlink{class_world_adf195d52a1580150e1ca155f32a6b51a}{Render} (\hyperlink{class_shader}{Shader} shader, \hyperlink{class_camera}{Camera} $\ast$camera)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_world_afa39d4e6f714a7a3691ac0c656f5e8a8}{}\index{World@{World}!World@{World}}
+\index{World@{World}!World@{World}}
+\subsubsection[{World}]{\setlength{\rightskip}{0pt plus 5cm}World\+::\+World (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_world_afa39d4e6f714a7a3691ac0c656f5e8a8}
+On creation \hyperlink{class_world}{World} needs to create 9 chunks i.\+e. chunk (0,0) and all 8 surrounding chunks. E.\+G. -\/ If X is (0,0) +++ +\+X+ +++ So chunks created are\+: ( 1,-\/1), ( 1,0), ( 1,1) ( 0,-\/1), ( 0,0), ( 0,1) (-\/1,-\/1), (-\/1,0), (-\/1,1) \hypertarget{class_world_a8c73fba541a5817fff65147ba47cd827}{}\index{World@{World}!````~World@{$\sim$\+World}}
+\index{````~World@{$\sim$\+World}!World@{World}}
+\subsubsection[{$\sim$\+World}]{\setlength{\rightskip}{0pt plus 5cm}World\+::$\sim$\+World (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_world_a8c73fba541a5817fff65147ba47cd827}
+\hyperlink{class_world}{World} destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_world_adf195d52a1580150e1ca155f32a6b51a}{}\index{World@{World}!Render@{Render}}
+\index{Render@{Render}!World@{World}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}void World\+::\+Render (
+\begin{DoxyParamCaption}
+\item[{{\bf Shader}}]{shader, }
+\item[{{\bf Camera} $\ast$}]{camera}
+\end{DoxyParamCaption}
+)}\label{class_world_adf195d52a1580150e1ca155f32a6b51a}
+Render should call each of the 9 loaded chunks own render method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em shader} & -\/ the shader used to render the chunks \\
+\hline
+{\em camera} & -\/ teh camera that sees the chunks\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+L\+L 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_world_adf195d52a1580150e1ca155f32a6b51a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_world_a48ae860aaeca4178c206900fa6a7871b}{}\index{World@{World}!Update@{Update}}
+\index{Update@{Update}!World@{World}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void World\+::\+Update (
+\begin{DoxyParamCaption}
+\item[{{\bf Camera} $\ast$}]{camera}
+\end{DoxyParamCaption}
+)}\label{class_world_a48ae860aaeca4178c206900fa6a7871b}
+Update will find the chunk the player is in and check that all 8 surrounding chunks are loaded. If they arne\textquotesingle{}t it will load them. If they are it will do nothing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & -\/ camera that collides with chunks\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+L\+L 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_world_a48ae860aaeca4178c206900fa6a7871b_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_world_8h}{World.\+h}\item 
+src/\hyperlink{_world_8cpp}{World.\+cpp}\end{DoxyCompactItemize}

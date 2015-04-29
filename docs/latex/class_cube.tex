@@ -1,0 +1,311 @@
+\hypertarget{class_cube}{}\section{Cube Class Reference}
+\label{class_cube}\index{Cube@{Cube}}
+
+
+{\ttfamily \#include $<$Cube.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_cube_aa23329b4c4998aa957e44b6a44b9bfcf}{Type} \{ \hyperlink{class_cube_aa23329b4c4998aa957e44b6a44b9bfcfa96d073bf026e7fda861a7abe6b06df48}{Air} = 0, 
+\hyperlink{class_cube_aa23329b4c4998aa957e44b6a44b9bfcfa39debf286eddf291013f7956e2e241ce}{Dirt} = 1, 
+\hyperlink{class_cube_aa23329b4c4998aa957e44b6a44b9bfcfad77c682c3ef00d11319a1bed70ff9556}{Stone} = 2
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cube_a06f3d86fb63e3aad08623610aa3c17b4}{Cube} ()
+\item 
+\hyperlink{class_cube_a8523687590ff90c49bc54281d0d3e47a}{Cube} (G\+Lfloat x, G\+Lfloat y, G\+Lfloat z)
+\item 
+\hyperlink{class_cube_aa814e979cecb8c451fdb332ded2cea1e}{$\sim$\+Cube} ()
+\item 
+glm\+::vec3 \hyperlink{class_cube_ae55713af649b1cc24426d2ca209b8163}{get\+Position} ()
+\item 
+void \hyperlink{class_cube_a6940368c7d15292b4bccdf3ffc67ec93}{set\+Position} (G\+Lfloat x, G\+Lfloat y, G\+Lfloat z)
+\item 
+void \hyperlink{class_cube_aeeeccb9eb5da6e9d8114be298742cf00}{Render} (\hyperlink{class_shader}{Shader} shader, \hyperlink{class_camera}{Camera} $\ast$camera)
+\item 
+G\+Luint \hyperlink{class_cube_a92ef19e9427e3d4f098d575db03757c6}{get\+Texture} ()
+\item 
+void \hyperlink{class_cube_a13e5899692dffbb09019809d2998f71a}{load\+Cube} ()
+\item 
+G\+Luint \hyperlink{class_cube_af4f3394054081c69c8f4f9c2a6b9ba54}{get\+V\+A\+O} ()
+\item 
+G\+Luint \hyperlink{class_cube_aec756e9d5ff559a226ce52a300688508}{get\+V\+B\+O} ()
+\item 
+void \hyperlink{class_cube_ab68cedd92c926506f50f06ae57761ae7}{set\+Type} (G\+Luint cube\+Type)
+\item 
+G\+Luint \hyperlink{class_cube_a27aea823ea0926b6fb9315ae9cfac5bb}{get\+Type} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_cube_aa23329b4c4998aa957e44b6a44b9bfcf}{}\index{Cube@{Cube}!Type@{Type}}
+\index{Type@{Type}!Cube@{Cube}}
+\subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Cube\+::\+Type}}\label{class_cube_aa23329b4c4998aa957e44b6a44b9bfcf}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Air@{Air}!Cube@{Cube}}\index{Cube@{Cube}!Air@{Air}}\item[{\em 
+\hypertarget{class_cube_aa23329b4c4998aa957e44b6a44b9bfcfa96d073bf026e7fda861a7abe6b06df48}{}Air\label{class_cube_aa23329b4c4998aa957e44b6a44b9bfcfa96d073bf026e7fda861a7abe6b06df48}
+}]\index{Dirt@{Dirt}!Cube@{Cube}}\index{Cube@{Cube}!Dirt@{Dirt}}\item[{\em 
+\hypertarget{class_cube_aa23329b4c4998aa957e44b6a44b9bfcfa39debf286eddf291013f7956e2e241ce}{}Dirt\label{class_cube_aa23329b4c4998aa957e44b6a44b9bfcfa39debf286eddf291013f7956e2e241ce}
+}]\index{Stone@{Stone}!Cube@{Cube}}\index{Cube@{Cube}!Stone@{Stone}}\item[{\em 
+\hypertarget{class_cube_aa23329b4c4998aa957e44b6a44b9bfcfad77c682c3ef00d11319a1bed70ff9556}{}Stone\label{class_cube_aa23329b4c4998aa957e44b6a44b9bfcfad77c682c3ef00d11319a1bed70ff9556}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_cube_a06f3d86fb63e3aad08623610aa3c17b4}{}\index{Cube@{Cube}!Cube@{Cube}}
+\index{Cube@{Cube}!Cube@{Cube}}
+\subsubsection[{Cube}]{\setlength{\rightskip}{0pt plus 5cm}Cube\+::\+Cube (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_cube_a06f3d86fb63e3aad08623610aa3c17b4}
+Default \hyperlink{class_cube}{Cube} constructor 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_cube_a06f3d86fb63e3aad08623610aa3c17b4_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_cube_a8523687590ff90c49bc54281d0d3e47a}{}\index{Cube@{Cube}!Cube@{Cube}}
+\index{Cube@{Cube}!Cube@{Cube}}
+\subsubsection[{Cube}]{\setlength{\rightskip}{0pt plus 5cm}Cube\+::\+Cube (
+\begin{DoxyParamCaption}
+\item[{G\+Lfloat}]{x, }
+\item[{G\+Lfloat}]{y, }
+\item[{G\+Lfloat}]{z}
+\end{DoxyParamCaption}
+)}\label{class_cube_a8523687590ff90c49bc54281d0d3e47a}
+Overload \hyperlink{class_cube}{Cube} constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em G\+Lfloat} & x , y , z \\
+\hline
+\end{DoxyParams}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_cube_a8523687590ff90c49bc54281d0d3e47a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_cube_aa814e979cecb8c451fdb332ded2cea1e}{}\index{Cube@{Cube}!````~Cube@{$\sim$\+Cube}}
+\index{````~Cube@{$\sim$\+Cube}!Cube@{Cube}}
+\subsubsection[{$\sim$\+Cube}]{\setlength{\rightskip}{0pt plus 5cm}Cube\+::$\sim$\+Cube (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_cube_aa814e979cecb8c451fdb332ded2cea1e}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_cube_ae55713af649b1cc24426d2ca209b8163}{}\index{Cube@{Cube}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!Cube@{Cube}}
+\subsubsection[{get\+Position}]{\setlength{\rightskip}{0pt plus 5cm}glm\+::vec3 Cube\+::get\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_cube_ae55713af649b1cc24426d2ca209b8163}
+Get method for position
+
+\begin{DoxyReturn}{Returns}
+glm\+::vec3 
+\end{DoxyReturn}
+\hypertarget{class_cube_a92ef19e9427e3d4f098d575db03757c6}{}\index{Cube@{Cube}!get\+Texture@{get\+Texture}}
+\index{get\+Texture@{get\+Texture}!Cube@{Cube}}
+\subsubsection[{get\+Texture}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Cube\+::get\+Texture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_cube_a92ef19e9427e3d4f098d575db03757c6}
+Get method for texture
+
+\begin{DoxyReturn}{Returns}
+G\+Luint 
+\end{DoxyReturn}
+\hypertarget{class_cube_a27aea823ea0926b6fb9315ae9cfac5bb}{}\index{Cube@{Cube}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!Cube@{Cube}}
+\subsubsection[{get\+Type}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Cube\+::get\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_cube_a27aea823ea0926b6fb9315ae9cfac5bb}
+Get method for type
+
+\begin{DoxyReturn}{Returns}
+N\+U\+L\+L 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_cube_a27aea823ea0926b6fb9315ae9cfac5bb_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_cube_af4f3394054081c69c8f4f9c2a6b9ba54}{}\index{Cube@{Cube}!get\+V\+A\+O@{get\+V\+A\+O}}
+\index{get\+V\+A\+O@{get\+V\+A\+O}!Cube@{Cube}}
+\subsubsection[{get\+V\+A\+O}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Cube\+::get\+V\+A\+O (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_cube_af4f3394054081c69c8f4f9c2a6b9ba54}
+Get method for vertex array object
+
+\begin{DoxyReturn}{Returns}
+G\+Luint 
+\end{DoxyReturn}
+\hypertarget{class_cube_aec756e9d5ff559a226ce52a300688508}{}\index{Cube@{Cube}!get\+V\+B\+O@{get\+V\+B\+O}}
+\index{get\+V\+B\+O@{get\+V\+B\+O}!Cube@{Cube}}
+\subsubsection[{get\+V\+B\+O}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Cube\+::get\+V\+B\+O (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_cube_aec756e9d5ff559a226ce52a300688508}
+Get method for vertex buffer object
+
+\begin{DoxyReturn}{Returns}
+G\+Luint 
+\end{DoxyReturn}
+\hypertarget{class_cube_a13e5899692dffbb09019809d2998f71a}{}\index{Cube@{Cube}!load\+Cube@{load\+Cube}}
+\index{load\+Cube@{load\+Cube}!Cube@{Cube}}
+\subsubsection[{load\+Cube}]{\setlength{\rightskip}{0pt plus 5cm}void Cube\+::load\+Cube (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_cube_a13e5899692dffbb09019809d2998f71a}
+load cube to grpahics memory
+
+\begin{DoxyReturn}{Returns}
+N\+U\+L\+L 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{class_cube_a13e5899692dffbb09019809d2998f71a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{class_cube_a13e5899692dffbb09019809d2998f71a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_cube_aeeeccb9eb5da6e9d8114be298742cf00}{}\index{Cube@{Cube}!Render@{Render}}
+\index{Render@{Render}!Cube@{Cube}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}void Cube\+::\+Render (
+\begin{DoxyParamCaption}
+\item[{{\bf Shader}}]{shader, }
+\item[{{\bf Camera} $\ast$}]{camera}
+\end{DoxyParamCaption}
+)}\label{class_cube_aeeeccb9eb5da6e9d8114be298742cf00}
+Render method
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_shader}{Shader}} & \\
+\hline
+{\em \hyperlink{class_camera}{Camera}} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+L\+L 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{class_cube_aeeeccb9eb5da6e9d8114be298742cf00_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{class_cube_aeeeccb9eb5da6e9d8114be298742cf00_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_cube_a6940368c7d15292b4bccdf3ffc67ec93}{}\index{Cube@{Cube}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Cube@{Cube}}
+\subsubsection[{set\+Position}]{\setlength{\rightskip}{0pt plus 5cm}void Cube\+::set\+Position (
+\begin{DoxyParamCaption}
+\item[{G\+Lfloat}]{x, }
+\item[{G\+Lfloat}]{y, }
+\item[{G\+Lfloat}]{z}
+\end{DoxyParamCaption}
+)}\label{class_cube_a6940368c7d15292b4bccdf3ffc67ec93}
+Set method for position
+
+
+\begin{DoxyParams}{Parameters}
+{\em G\+Lfloat} & x , y, , z\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+L\+L 
+\end{DoxyReturn}
+\hypertarget{class_cube_ab68cedd92c926506f50f06ae57761ae7}{}\index{Cube@{Cube}!set\+Type@{set\+Type}}
+\index{set\+Type@{set\+Type}!Cube@{Cube}}
+\subsubsection[{set\+Type}]{\setlength{\rightskip}{0pt plus 5cm}void Cube\+::set\+Type (
+\begin{DoxyParamCaption}
+\item[{G\+Luint}]{cube\+Type}
+\end{DoxyParamCaption}
+)}\label{class_cube_ab68cedd92c926506f50f06ae57761ae7}
+Set method for type
+
+\begin{DoxyReturn}{Returns}
+G\+Luint 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_cube_ab68cedd92c926506f50f06ae57761ae7_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_cube_8h}{Cube.\+h}\item 
+src/\hyperlink{_cube_8cpp}{Cube.\+cpp}\end{DoxyCompactItemize}

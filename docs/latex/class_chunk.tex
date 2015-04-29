@@ -1,0 +1,191 @@
+\hypertarget{class_chunk}{}\section{Chunk Class Reference}
+\label{class_chunk}\index{Chunk@{Chunk}}
+
+
+{\ttfamily \#include $<$Chunk.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_chunk_acc32e1562cad6664c98ee07edecdbdf9}{Chunk} ()
+\item 
+\hyperlink{class_chunk_a83076c5f08f43296f3d6fb39c406b68f}{Chunk} (G\+Lfloat X, G\+Lfloat Y, G\+Lfloat Z, \hyperlink{class_perlin}{Perlin} noise)
+\item 
+\hyperlink{class_chunk_ad21b515f41c9a1d21740b9e7e3f8eede}{$\sim$\+Chunk} ()
+\item 
+void \hyperlink{class_chunk_a6e993f948335d6ead2ec2eee206af847}{Update} (\hyperlink{class_camera}{Camera} $\ast$camera)
+\item 
+void \hyperlink{class_chunk_a3c85fe052765b8c1da975b1f7fc60637}{Render} (\hyperlink{class_shader}{Shader} shader, \hyperlink{class_camera}{Camera} $\ast$camera)
+\item 
+void \hyperlink{class_chunk_ae50a8df55381d68288831e392012a938}{Init} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_chunk_acc32e1562cad6664c98ee07edecdbdf9}{}\index{Chunk@{Chunk}!Chunk@{Chunk}}
+\index{Chunk@{Chunk}!Chunk@{Chunk}}
+\subsubsection[{Chunk}]{\setlength{\rightskip}{0pt plus 5cm}Chunk\+::\+Chunk (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_chunk_acc32e1562cad6664c98ee07edecdbdf9}
+\hyperlink{class_chunk}{Chunk} constructor initialises values to zero. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_chunk_acc32e1562cad6664c98ee07edecdbdf9_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_chunk_a83076c5f08f43296f3d6fb39c406b68f}{}\index{Chunk@{Chunk}!Chunk@{Chunk}}
+\index{Chunk@{Chunk}!Chunk@{Chunk}}
+\subsubsection[{Chunk}]{\setlength{\rightskip}{0pt plus 5cm}Chunk\+::\+Chunk (
+\begin{DoxyParamCaption}
+\item[{G\+Lfloat}]{X, }
+\item[{G\+Lfloat}]{Y, }
+\item[{G\+Lfloat}]{Z, }
+\item[{{\bf Perlin}}]{noise}
+\end{DoxyParamCaption}
+)}\label{class_chunk_a83076c5f08f43296f3d6fb39c406b68f}
+Overloaded \hyperlink{class_chunk}{Chunk} constructor that sets the position and noise used to generate the chunk.
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & -\/ x position of the chunk \\
+\hline
+{\em Y} & -\/ y position of the chunk \\
+\hline
+{\em Z} & -\/ z position of the chunk \\
+\hline
+{\em noise} & -\/ the P\+Erlin noise being used to generate this chunk.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+L\+L 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_chunk_a83076c5f08f43296f3d6fb39c406b68f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_chunk_ad21b515f41c9a1d21740b9e7e3f8eede}{}\index{Chunk@{Chunk}!````~Chunk@{$\sim$\+Chunk}}
+\index{````~Chunk@{$\sim$\+Chunk}!Chunk@{Chunk}}
+\subsubsection[{$\sim$\+Chunk}]{\setlength{\rightskip}{0pt plus 5cm}Chunk\+::$\sim$\+Chunk (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_chunk_ad21b515f41c9a1d21740b9e7e3f8eede}
+\hyperlink{class_chunk}{Chunk} destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_chunk_ae50a8df55381d68288831e392012a938}{}\index{Chunk@{Chunk}!Init@{Init}}
+\index{Init@{Init}!Chunk@{Chunk}}
+\subsubsection[{Init}]{\setlength{\rightskip}{0pt plus 5cm}void Chunk\+::\+Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_chunk_ae50a8df55381d68288831e392012a938}
+\hyperlink{class_chunk}{Chunk} initialisation method. Sets up the chunks model from the perlin noise passed into the constructor.
+
+\begin{DoxyReturn}{Returns}
+N\+U\+L\+L 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_chunk_ae50a8df55381d68288831e392012a938_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{class_chunk_ae50a8df55381d68288831e392012a938_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_chunk_a3c85fe052765b8c1da975b1f7fc60637}{}\index{Chunk@{Chunk}!Render@{Render}}
+\index{Render@{Render}!Chunk@{Chunk}}
+\subsubsection[{Render}]{\setlength{\rightskip}{0pt plus 5cm}void Chunk\+::\+Render (
+\begin{DoxyParamCaption}
+\item[{{\bf Shader}}]{shader, }
+\item[{{\bf Camera} $\ast$}]{camera}
+\end{DoxyParamCaption}
+)}\label{class_chunk_a3c85fe052765b8c1da975b1f7fc60637}
+Chunks render function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em shader} & -\/ The shader being used to render the cubes gets passed to the cubes when there render function is called. \\
+\hline
+{\em camera} & -\/ The camera that will see the rendered chunks.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+L\+L 
+\end{DoxyReturn}
+If one of 6 neighbours is air. This way if a face is visible the cube is rendered.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_chunk_a3c85fe052765b8c1da975b1f7fc60637_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_chunk_a6e993f948335d6ead2ec2eee206af847}{}\index{Chunk@{Chunk}!Update@{Update}}
+\index{Update@{Update}!Chunk@{Chunk}}
+\subsubsection[{Update}]{\setlength{\rightskip}{0pt plus 5cm}void Chunk\+::\+Update (
+\begin{DoxyParamCaption}
+\item[{{\bf Camera} $\ast$}]{cam}
+\end{DoxyParamCaption}
+)}\label{class_chunk_a6e993f948335d6ead2ec2eee206af847}
+Chunks update method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cam} & -\/ the camera that will be used to test for collisions with cubes when it moves.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+L\+L 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{class_chunk_a6e993f948335d6ead2ec2eee206af847_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_chunk_8h}{Chunk.\+h}\item 
+src/\hyperlink{_chunk_8cpp}{Chunk.\+cpp}\end{DoxyCompactItemize}

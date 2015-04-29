@@ -1,0 +1,20 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$class_game.html#a555a9e4719fd49971765a2ab8b090b5c" title="Game::Init" alt="" coords="121,56,204,83"/>
+<area shape="rect" id="node6" href="$class_game.html#a28d8a0a65bda89be42d9c46fc2e4f14b" title="Game::Loop" alt="" coords="116,157,209,184"/>
+<area shape="rect" id="node19" href="$class_game.html#afe8f2a4980f240bbfba8c1f495ff5075" title="Game::CleanUp" alt="" coords="105,208,221,235"/>
+<area shape="rect" id="node3" href="$class_shader.html#a19a6341e1d67136647556d9cff3c2242" title="Shader::loadShader" alt="" coords="275,5,411,32"/>
+<area shape="rect" id="node4" href="$class_game.html#a7b9c3ffde53cdf3fa685d6e9b5ae43f3" title="Game::objinit" alt="" coords="293,56,392,83"/>
+<area shape="rect" id="node5" href="$class_image_loader.html#adf162e4bf26be1abb849ce46f9634b69" title="ImageLoader::getInstance" alt="" coords="688,145,861,172"/>
+<area shape="rect" id="node7" href="$class_game.html#a6b7a69223477dbfae5f570763385a2f1" title="Game::HandleEvents" alt="" coords="269,107,416,133"/>
+<area shape="rect" id="node10" href="$class_game.html#a1c5373c68261c54aff03e6abe40fee52" title="Game::Update" alt="" coords="289,183,396,209"/>
+<area shape="rect" id="node14" href="$class_game.html#a0897730fc9fed789f6c0f11d21a0c14a" title="Game::Render" alt="" coords="289,309,396,336"/>
+<area shape="rect" id="node8" href="$class_camera.html#a1f54fbe68c3810a2f4df001c671323bc" title="Camera::setPlacetype" alt="" coords="476,56,628,83"/>
+<area shape="rect" id="node9" href="$class_camera.html#a3ab09e6714cc9b6ab58b4346b0e98011" title="Camera::handleMovement" alt="" coords="465,107,639,133"/>
+<area shape="rect" id="node11" href="$class_world.html#a48ae860aaeca4178c206900fa6a7871b" title="World::Update" alt="" coords="499,157,605,184"/>
+<area shape="rect" id="node12" href="$class_camera.html#a42cda7239981a5618660d04bd5893556" title="Camera::update" alt="" coords="495,208,609,235"/>
+<area shape="rect" id="node13" href="$class_inventory.html#a463d58902824c007dc9a10ab54e9c671" title="Inventory::getBlockCount" alt="" coords="467,259,637,285"/>
+<area shape="rect" id="node15" href="$class_world.html#adf195d52a1580150e1ca155f32a6b51a" title="World::Render" alt="" coords="499,309,605,336"/>
+<area shape="rect" id="node16" href="$class_sky_box.html#af5f74045e6fb7761699a5b60aa4c38ef" title="SkyBox::Render" alt="" coords="493,360,611,387"/>
+<area shape="rect" id="node17" href="$class_shader.html#a6212f8a189b932362d1f6cffb31b6633" title="Shader::useShader" alt="" coords="708,335,841,361"/>
+<area shape="rect" id="node18" href="$class_shader.html#ab3b6ebf2670424320d518f417a676fc2" title="Shader::getProgram" alt="" coords="705,385,844,412"/>
+</map>

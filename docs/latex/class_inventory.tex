@@ -1,0 +1,134 @@
+\hypertarget{class_inventory}{}\section{Inventory Class Reference}
+\label{class_inventory}\index{Inventory@{Inventory}}
+
+
+{\ttfamily \#include $<$Inventory.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_inventory_a10485613fc8bfb32ee564d9b5110f8fb}{Inventory} ()
+\item 
+\hyperlink{class_inventory_a6c6dfcb6d977c74a7abf46809e892e3d}{$\sim$\+Inventory} ()
+\item 
+int \hyperlink{class_inventory_a463d58902824c007dc9a10ab54e9c671}{get\+Block\+Count} (G\+Luint type)
+\item 
+void \hyperlink{class_inventory_ad4526e79a12197311ff5a09cfe2f06b7}{inc\+Block\+Count} (G\+Luint type)
+\item 
+void \hyperlink{class_inventory_a985395e4e612f60ae9f6091af31dbfa4}{dec\+Block\+Count} (G\+Luint type)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_inventory_a10485613fc8bfb32ee564d9b5110f8fb}{}\index{Inventory@{Inventory}!Inventory@{Inventory}}
+\index{Inventory@{Inventory}!Inventory@{Inventory}}
+\subsubsection[{Inventory}]{\setlength{\rightskip}{0pt plus 5cm}Inventory\+::\+Inventory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_inventory_a10485613fc8bfb32ee564d9b5110f8fb}
+\hyperlink{class_inventory}{Inventory} constructor. Initialises block counts to 0. \hypertarget{class_inventory_a6c6dfcb6d977c74a7abf46809e892e3d}{}\index{Inventory@{Inventory}!````~Inventory@{$\sim$\+Inventory}}
+\index{````~Inventory@{$\sim$\+Inventory}!Inventory@{Inventory}}
+\subsubsection[{$\sim$\+Inventory}]{\setlength{\rightskip}{0pt plus 5cm}Inventory\+::$\sim$\+Inventory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_inventory_a6c6dfcb6d977c74a7abf46809e892e3d}
+Empty inventory destructor.
+
+\begin{DoxyReturn}{Returns}
+N\+U\+L\+L 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_inventory_a985395e4e612f60ae9f6091af31dbfa4}{}\index{Inventory@{Inventory}!dec\+Block\+Count@{dec\+Block\+Count}}
+\index{dec\+Block\+Count@{dec\+Block\+Count}!Inventory@{Inventory}}
+\subsubsection[{dec\+Block\+Count}]{\setlength{\rightskip}{0pt plus 5cm}void Inventory\+::dec\+Block\+Count (
+\begin{DoxyParamCaption}
+\item[{G\+Luint}]{type}
+\end{DoxyParamCaption}
+)}\label{class_inventory_a985395e4e612f60ae9f6091af31dbfa4}
+Method to decrement block count for a certain type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & -\/ Type of block to decrement count for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+L\+L 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{class_inventory_a985395e4e612f60ae9f6091af31dbfa4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_inventory_a463d58902824c007dc9a10ab54e9c671}{}\index{Inventory@{Inventory}!get\+Block\+Count@{get\+Block\+Count}}
+\index{get\+Block\+Count@{get\+Block\+Count}!Inventory@{Inventory}}
+\subsubsection[{get\+Block\+Count}]{\setlength{\rightskip}{0pt plus 5cm}int Inventory\+::get\+Block\+Count (
+\begin{DoxyParamCaption}
+\item[{G\+Luint}]{type}
+\end{DoxyParamCaption}
+)}\label{class_inventory_a463d58902824c007dc9a10ab54e9c671}
+\hyperlink{class_inventory}{Inventory} method to get block count of a certain type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & -\/ Type of block to get the count for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+I\+N\+T -\/ number of blocks of passed in type. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_inventory_a463d58902824c007dc9a10ab54e9c671_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_inventory_ad4526e79a12197311ff5a09cfe2f06b7}{}\index{Inventory@{Inventory}!inc\+Block\+Count@{inc\+Block\+Count}}
+\index{inc\+Block\+Count@{inc\+Block\+Count}!Inventory@{Inventory}}
+\subsubsection[{inc\+Block\+Count}]{\setlength{\rightskip}{0pt plus 5cm}void Inventory\+::inc\+Block\+Count (
+\begin{DoxyParamCaption}
+\item[{G\+Luint}]{type}
+\end{DoxyParamCaption}
+)}\label{class_inventory_ad4526e79a12197311ff5a09cfe2f06b7}
+Method to increment block count for a certain type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & -\/ Type of block to increment count for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+L\+L 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{class_inventory_ad4526e79a12197311ff5a09cfe2f06b7_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_inventory_8h}{Inventory.\+h}\item 
+src/\hyperlink{_inventory_8cpp}{Inventory.\+cpp}\end{DoxyCompactItemize}

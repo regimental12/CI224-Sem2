@@ -1,0 +1,7 @@
+<map id="Game::Render" name="Game::Render">
+<area shape="rect" id="node2" href="$class_world.html#adf195d52a1580150e1ca155f32a6b51a" title="World::Render" alt="" coords="167,5,273,32"/>
+<area shape="rect" id="node3" href="$class_sky_box.html#af5f74045e6fb7761699a5b60aa4c38ef" title="SkyBox::Render" alt="" coords="161,56,279,83"/>
+<area shape="rect" id="node4" href="$class_shader.html#a6212f8a189b932362d1f6cffb31b6633" title="Shader::useShader" alt="" coords="348,5,481,32"/>
+<area shape="rect" id="node5" href="$class_shader.html#ab3b6ebf2670424320d518f417a676fc2" title="Shader::getProgram" alt="" coords="345,56,484,83"/>
+<area shape="rect" id="node6" href="$class_image_loader.html#adf162e4bf26be1abb849ce46f9634b69" title="ImageLoader::getInstance" alt="" coords="328,107,501,133"/>
+</map>

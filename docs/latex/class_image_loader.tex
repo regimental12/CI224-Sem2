@@ -1,0 +1,109 @@
+\hypertarget{class_image_loader}{}\section{Image\+Loader Class Reference}
+\label{class_image_loader}\index{Image\+Loader@{Image\+Loader}}
+
+
+{\ttfamily \#include $<$Image\+Loader.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+G\+Luint \hyperlink{class_image_loader_ab52b48518d13ff284d7d68bf7119d943}{Load\+Texture} (std\+::string filename)
+\item 
+\hyperlink{class_image_loader_a844109a0a6b4e4a9513fa6822f623dcc}{$\sim$\+Image\+Loader} ()
+\item 
+void \hyperlink{class_image_loader_adc8753fda50916c2e53d3e071502bb74}{Load\+Textures} ()
+\item 
+G\+Luint \hyperlink{class_image_loader_af71479e10a84606ab284ac1293436261}{Get\+Texture} (G\+Luint type)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_image_loader}{Image\+Loader} $\ast$ \hyperlink{class_image_loader_adf162e4bf26be1abb849ce46f9634b69}{get\+Instance} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Singleton class for image handling 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_image_loader_a844109a0a6b4e4a9513fa6822f623dcc}{}\index{Image\+Loader@{Image\+Loader}!````~Image\+Loader@{$\sim$\+Image\+Loader}}
+\index{````~Image\+Loader@{$\sim$\+Image\+Loader}!Image\+Loader@{Image\+Loader}}
+\subsubsection[{$\sim$\+Image\+Loader}]{\setlength{\rightskip}{0pt plus 5cm}Image\+Loader\+::$\sim$\+Image\+Loader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_image_loader_a844109a0a6b4e4a9513fa6822f623dcc}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_image_loader_adf162e4bf26be1abb849ce46f9634b69}{}\index{Image\+Loader@{Image\+Loader}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!Image\+Loader@{Image\+Loader}}
+\subsubsection[{get\+Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Image\+Loader} $\ast$ Image\+Loader\+::get\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_image_loader_adf162e4bf26be1abb849ce46f9634b69}
+Public access method If instance does not exist, crate it and return it, else just return it 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_image_loader_adf162e4bf26be1abb849ce46f9634b69_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_image_loader_af71479e10a84606ab284ac1293436261}{}\index{Image\+Loader@{Image\+Loader}!Get\+Texture@{Get\+Texture}}
+\index{Get\+Texture@{Get\+Texture}!Image\+Loader@{Image\+Loader}}
+\subsubsection[{Get\+Texture}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Image\+Loader\+::\+Get\+Texture (
+\begin{DoxyParamCaption}
+\item[{G\+Luint}]{type}
+\end{DoxyParamCaption}
+)}\label{class_image_loader_af71479e10a84606ab284ac1293436261}
+Return texture type \hypertarget{class_image_loader_ab52b48518d13ff284d7d68bf7119d943}{}\index{Image\+Loader@{Image\+Loader}!Load\+Texture@{Load\+Texture}}
+\index{Load\+Texture@{Load\+Texture}!Image\+Loader@{Image\+Loader}}
+\subsubsection[{Load\+Texture}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Image\+Loader\+::\+Load\+Texture (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{filename}
+\end{DoxyParamCaption}
+)}\label{class_image_loader_ab52b48518d13ff284d7d68bf7119d943}
+Load image and generate opengl texture
+
+Set texture parameters
+
+Set texture filtering
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_image_loader_ab52b48518d13ff284d7d68bf7119d943_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_image_loader_adc8753fda50916c2e53d3e071502bb74}{}\index{Image\+Loader@{Image\+Loader}!Load\+Textures@{Load\+Textures}}
+\index{Load\+Textures@{Load\+Textures}!Image\+Loader@{Image\+Loader}}
+\subsubsection[{Load\+Textures}]{\setlength{\rightskip}{0pt plus 5cm}void Image\+Loader\+::\+Load\+Textures (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_image_loader_adc8753fda50916c2e53d3e071502bb74}
+Load all textures. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_image_loader_adc8753fda50916c2e53d3e071502bb74_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_image_loader_8h}{Image\+Loader.\+h}\item 
+src/\hyperlink{_image_loader_8cpp}{Image\+Loader.\+cpp}\end{DoxyCompactItemize}

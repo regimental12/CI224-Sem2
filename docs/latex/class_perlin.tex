@@ -1,0 +1,249 @@
+\hypertarget{class_perlin}{}\section{Perlin Class Reference}
+\label{class_perlin}\index{Perlin@{Perlin}}
+
+
+{\ttfamily \#include $<$Perlin.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_perlin_af435cbd994560e90e5707fe841e3d2e1}{Perlin} ()
+\item 
+\hyperlink{class_perlin_a74c52ee250a2c10683b4ad3ac9ef2055}{$\sim$\+Perlin} ()
+\item 
+double \hyperlink{class_perlin_affd1073ebf50ec892e36805510df2792}{fade} (double t)
+\item 
+double \hyperlink{class_perlin_a2036993a6444693cf37dbde7dcdf023c}{noise} (double x, double y, double z)
+\item 
+double \hyperlink{class_perlin_a8143acc826a14ce25e864ecf68f62e73}{grad} (int hash, double x, double y, double z)
+\item 
+double \hyperlink{class_perlin_a2075b908242dbcd32eb45b31c5bf969f}{lerp} (double t, double a, double b)
+\item 
+double \hyperlink{class_perlin_a9279f30e21d3d19e0d4013e2cc797694}{octave} (double x, double y, double z, int octaves, double persistance)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_perlin_af435cbd994560e90e5707fe841e3d2e1}{}\index{Perlin@{Perlin}!Perlin@{Perlin}}
+\index{Perlin@{Perlin}!Perlin@{Perlin}}
+\subsubsection[{Perlin}]{\setlength{\rightskip}{0pt plus 5cm}Perlin\+::\+Perlin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_perlin_af435cbd994560e90e5707fe841e3d2e1}
+\hyperlink{class_perlin}{Perlin} constructor intialises the permutation vectors to a set random list. \hypertarget{class_perlin_a74c52ee250a2c10683b4ad3ac9ef2055}{}\index{Perlin@{Perlin}!````~Perlin@{$\sim$\+Perlin}}
+\index{````~Perlin@{$\sim$\+Perlin}!Perlin@{Perlin}}
+\subsubsection[{$\sim$\+Perlin}]{\setlength{\rightskip}{0pt plus 5cm}Perlin\+::$\sim$\+Perlin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_perlin_a74c52ee250a2c10683b4ad3ac9ef2055}
+\hyperlink{class_perlin}{Perlin} destructor. Does nothing. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_perlin_affd1073ebf50ec892e36805510df2792}{}\index{Perlin@{Perlin}!fade@{fade}}
+\index{fade@{fade}!Perlin@{Perlin}}
+\subsubsection[{fade}]{\setlength{\rightskip}{0pt plus 5cm}double Perlin\+::fade (
+\begin{DoxyParamCaption}
+\item[{double}]{t}
+\end{DoxyParamCaption}
+)}\label{class_perlin_affd1073ebf50ec892e36805510df2792}
+\hyperlink{class_perlin}{Perlin} fade function. takes a parameter and mutates it then returns it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & -\/ value to fade\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D\+O\+U\+B\+L\+E -\/ faded value 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_perlin_affd1073ebf50ec892e36805510df2792_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_perlin_a8143acc826a14ce25e864ecf68f62e73}{}\index{Perlin@{Perlin}!grad@{grad}}
+\index{grad@{grad}!Perlin@{Perlin}}
+\subsubsection[{grad}]{\setlength{\rightskip}{0pt plus 5cm}double Perlin\+::grad (
+\begin{DoxyParamCaption}
+\item[{int}]{hash, }
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z}
+\end{DoxyParamCaption}
+)}\label{class_perlin_a8143acc826a14ce25e864ecf68f62e73}
+Gradient function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hash} & -\/ The hash value used to return a gradient \\
+\hline
+{\em x} & -\/ x position we get a gradient for \\
+\hline
+{\em y} & -\/ y position we get a gradient for \\
+\hline
+{\em z} & -\/ z position we get a gradient for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D\+O\+U\+B\+L\+E -\/ The calculated gradient 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_perlin_a8143acc826a14ce25e864ecf68f62e73_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_perlin_a2075b908242dbcd32eb45b31c5bf969f}{}\index{Perlin@{Perlin}!lerp@{lerp}}
+\index{lerp@{lerp}!Perlin@{Perlin}}
+\subsubsection[{lerp}]{\setlength{\rightskip}{0pt plus 5cm}double Perlin\+::lerp (
+\begin{DoxyParamCaption}
+\item[{double}]{t, }
+\item[{double}]{a, }
+\item[{double}]{b}
+\end{DoxyParamCaption}
+)}\label{class_perlin_a2075b908242dbcd32eb45b31c5bf969f}
+A lerp function. i.\+e. linear interpolation between two points.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & -\/ constant value \\
+\hline
+{\em a} & -\/ value to lerp from \\
+\hline
+{\em b} & -\/ value to lerp too\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D\+O\+U\+B\+L\+E -\/ the resulting lerp. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_perlin_a2075b908242dbcd32eb45b31c5bf969f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_perlin_a2036993a6444693cf37dbde7dcdf023c}{}\index{Perlin@{Perlin}!noise@{noise}}
+\index{noise@{noise}!Perlin@{Perlin}}
+\subsubsection[{noise}]{\setlength{\rightskip}{0pt plus 5cm}double Perlin\+::noise (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z}
+\end{DoxyParamCaption}
+)}\label{class_perlin_a2036993a6444693cf37dbde7dcdf023c}
+The actual noise function. Returns a value between -\/1 and 1.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ x value of the position the noise is wanted for. \\
+\hline
+{\em y} & -\/ y value of the position the noise is wanted for. \\
+\hline
+{\em z} & -\/ z value of the position the noise is wanted for. This value can be a set value to get 2\+D noise.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D\+O\+U\+B\+L\+E -\/ Noise for a certain position for (X, Y, Z) 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{class_perlin_a2036993a6444693cf37dbde7dcdf023c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_perlin_a2036993a6444693cf37dbde7dcdf023c_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_perlin_a9279f30e21d3d19e0d4013e2cc797694}{}\index{Perlin@{Perlin}!octave@{octave}}
+\index{octave@{octave}!Perlin@{Perlin}}
+\subsubsection[{octave}]{\setlength{\rightskip}{0pt plus 5cm}double Perlin\+::octave (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z, }
+\item[{int}]{octaves, }
+\item[{double}]{persistance}
+\end{DoxyParamCaption}
+)}\label{class_perlin_a9279f30e21d3d19e0d4013e2cc797694}
+A function to produce noise for multiple octaves.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ x position of noise \\
+\hline
+{\em y} & -\/ y position of noise \\
+\hline
+{\em z} & -\/ z position of noise -\/ can be constant value for 2\+D noise \\
+\hline
+{\em octaves} & -\/ number of octaves wanted \\
+\hline
+{\em persistence} & -\/ how persistent should this function be? usually between 0 and 1.\+0.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D\+O\+U\+B\+L\+E octave noise for (x, y, z) position 
+\end{DoxyReturn}
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_perlin_a9279f30e21d3d19e0d4013e2cc797694_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_perlin_a9279f30e21d3d19e0d4013e2cc797694_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_perlin_8h}{Perlin.\+h}\item 
+src/\hyperlink{_perlin_8cpp}{Perlin.\+cpp}\end{DoxyCompactItemize}

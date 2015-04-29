@@ -1,0 +1,8 @@
+<map id="Chunk::Update" name="Chunk::Update">
+<area shape="rect" id="node2" href="$class_cube.html#a27aea823ea0926b6fb9315ae9cfac5bb" title="Cube::getType" alt="" coords="198,5,306,32"/>
+<area shape="rect" id="node3" href="$class_cube.html#ab68cedd92c926506f50f06ae57761ae7" title="Cube::setType" alt="" coords="198,56,306,83"/>
+<area shape="rect" id="node4" href="$class_inventory.html#ad4526e79a12197311ff5a09cfe2f06b7" title="Inventory::incBlockCount" alt="" coords="167,107,337,133"/>
+<area shape="rect" id="node5" href="$class_inventory.html#a463d58902824c007dc9a10ab54e9c671" title="Inventory::getBlockCount" alt="" coords="167,157,337,184"/>
+<area shape="rect" id="node6" href="$class_camera.html#abab3e9c2360aa3480efc6d630e1f79e8" title="Camera::getPlaceType" alt="" coords="174,208,330,235"/>
+<area shape="rect" id="node7" href="$class_inventory.html#a985395e4e612f60ae9f6091af31dbfa4" title="Inventory::decBlockCount" alt="" coords="165,259,339,285"/>
+</map>

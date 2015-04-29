@@ -1,0 +1,5 @@
+<map id="SkyBox::Render" name="SkyBox::Render">
+<area shape="rect" id="node2" href="$class_shader.html#a6212f8a189b932362d1f6cffb31b6633" title="Shader::useShader" alt="" coords="193,5,327,32"/>
+<area shape="rect" id="node3" href="$class_shader.html#ab3b6ebf2670424320d518f417a676fc2" title="Shader::getProgram" alt="" coords="191,56,329,83"/>
+<area shape="rect" id="node4" href="$class_image_loader.html#adf162e4bf26be1abb849ce46f9634b69" title="ImageLoader::getInstance" alt="" coords="173,107,347,133"/>
+</map>
