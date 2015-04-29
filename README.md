@@ -5,10 +5,28 @@
 ##Dependancies
 This project uses a few libraries from the get go these are:-
 - [SDL2](https://www.libsdl.org/download-2.0.php)
+- [SDL2_Image](https://www.libsdl.org/projects/SDL_image/)
 - [GLEW](http://glew.sourceforge.net/)
+- [GLM](http://glm.g-truc.net/0.9.6/index.html)
 
 ##Build Instructions  
-Currently to build you must run  the gcc command to compile all of src/* into an .exe file. When we implement a Build system the project will be built using `./configure` then `make all`
+
+If you have autotools and it's dependencies installed you should only have to run the following 3 commands to build.
+`autoreconf -i`
+`./configure`
+`make all`
+
+For windows builds you need to use teh standard g++ command and link to the libraries as autotools isn't the easiest thing to install on windows.
+
+###Run information
+
+From the root directory of the repo run the following command
+
+`./src/Mineclone`
+
+or 
+
+`./src/Mineclone.exe` for windows.
 
 ##Current Plan
 
@@ -47,10 +65,9 @@ This is our marking scheme copied from ProjectBrief.md which we can check off th
   
 **Working player (only one applies)**  
   - [x] A player that moves - 5%  
-  - [ ] A player with HUD - 10%  
-  - [ ] A player with interaction - 15%  
-  - [ ] A player with interaction and HUD and inventory - 20%  
+  - [x] A player with HUD - 10%  
+  - [x] A player with interaction - 15%  
+  - [x] A player with interaction and HUD and inventory - 20%  
   
 **Working entities (only one applies)**  
-  - [ ] Entities with basic AI (Just wander aimlessly) - 10%  
-  - [ ] Entities with path finding and goals (can actively attack/find the player) - 20%  
+  - [x] Optimisations done - up to 20%
