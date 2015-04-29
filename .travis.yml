@@ -19,6 +19,6 @@ install:
   - libtoolize --force
   - autoreconf -i
   - ./configure
-  script:
+script:
   - make
   
