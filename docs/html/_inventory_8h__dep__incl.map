@@ -1,18 +1,17 @@
 <map id="src/Inventory.h" name="src/Inventory.h">
-<area shape="rect" id="node2" href="$_camera_8h.html" title="src/Camera.h" alt="" coords="284,80,385,107"/>
-<area shape="rect" id="node6" href="$_chunk_8cpp.html" title="src/Chunk.cpp" alt="" coords="5,379,112,405"/>
-<area shape="rect" id="node17" href="$_inventory_8cpp.html" title="src/Inventory.cpp" alt="" coords="409,80,532,107"/>
-<area shape="rect" id="node3" href="$_camera_8cpp.html" title="src/Camera.cpp" alt="" coords="372,155,487,181"/>
-<area shape="rect" id="node4" href="$_cube_8h.html" title="src/Cube.h" alt="" coords="210,155,296,181"/>
-<area shape="rect" id="node5" href="$_chunk_8h.html" title="src/Chunk.h" alt="" coords="129,304,223,331"/>
-<area shape="rect" id="node8" href="$_game_8h.html" title="src/Game.h" alt="" coords="284,453,375,480"/>
-<area shape="rect" id="node12" href="$_collision_8h.html" title="src/Collision.h" alt="" coords="371,229,476,256"/>
-<area shape="rect" id="node15" href="$_sky_box_8h.html" title="src/SkyBox.h" alt="" coords="561,155,663,181"/>
-<area shape="rect" id="node14" href="$_cube_8cpp.html" title="src/Cube.cpp" alt="" coords="195,229,295,256"/>
-<area shape="rect" id="node7" href="$_world_8h.html" title="src/World.h" alt="" coords="145,379,233,405"/>
-<area shape="rect" id="node11" href="$_world_8cpp.html" title="src/World.cpp" alt="" coords="138,453,240,480"/>
-<area shape="rect" id="node9" href="$_game_8cpp.html" title="src/Game.cpp" alt="" coords="215,528,319,555"/>
-<area shape="rect" id="node10" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="343,528,440,555"/>
-<area shape="rect" id="node13" href="$_collision_8cpp.html" title="src/Collision.cpp" alt="" coords="367,304,485,331"/>
-<area shape="rect" id="node16" href="$_sky_box_8cpp.html" title="src/SkyBox.cpp" alt="" coords="612,229,727,256"/>
+<area shape="rect" id="node2" href="$_camera_8h.html" title="src/Camera.h" alt="" coords="267,80,368,107"/>
+<area shape="rect" id="node6" href="$_chunk_8cpp.html" title="src/Chunk.cpp" alt="" coords="41,379,148,405"/>
+<area shape="rect" id="node16" href="$_inventory_8cpp.html" title="src/Inventory.cpp" alt="" coords="392,80,515,107"/>
+<area shape="rect" id="node3" href="$_camera_8cpp.html" title="src/Camera.cpp" alt="" coords="628,155,743,181"/>
+<area shape="rect" id="node4" href="$_cube_8h.html" title="src/Cube.h" alt="" coords="274,155,360,181"/>
+<area shape="rect" id="node5" href="$_chunk_8h.html" title="src/Chunk.h" alt="" coords="109,304,203,331"/>
+<area shape="rect" id="node8" href="$_game_8h.html" title="src/Game.h" alt="" coords="367,453,457,480"/>
+<area shape="rect" id="node12" href="$_collision_8h.html" title="src/Collision.h" alt="" coords="94,229,199,256"/>
+<area shape="rect" id="node14" href="$_sky_box_8h.html" title="src/SkyBox.h" alt="" coords="503,155,604,181"/>
+<area shape="rect" id="node13" href="$_cube_8cpp.html" title="src/Cube.cpp" alt="" coords="223,229,323,256"/>
+<area shape="rect" id="node7" href="$_world_8h.html" title="src/World.h" alt="" coords="207,379,296,405"/>
+<area shape="rect" id="node11" href="$_world_8cpp.html" title="src/World.cpp" alt="" coords="201,453,303,480"/>
+<area shape="rect" id="node9" href="$_game_8cpp.html" title="src/Game.cpp" alt="" coords="297,528,401,555"/>
+<area shape="rect" id="node10" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="426,528,523,555"/>
+<area shape="rect" id="node15" href="$_sky_box_8cpp.html" title="src/SkyBox.cpp" alt="" coords="500,229,615,256"/>
 </map>

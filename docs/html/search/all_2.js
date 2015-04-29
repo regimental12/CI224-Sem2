@@ -11,7 +11,6 @@ var searchData=
   ['chunk_2ecpp',['Chunk.cpp',['../_chunk_8cpp.html',1,'']]],
   ['chunk_2eh',['Chunk.h',['../_chunk_8h.html',1,'']]],
   ['cleanup',['CleanUp',['../class_game.html#afe8f2a4980f240bbfba8c1f495ff5075',1,'Game']]],
-  ['collision_2ecpp',['Collision.cpp',['../_collision_8cpp.html',1,'']]],
   ['collision_2eh',['Collision.h',['../_collision_8h.html',1,'']]],
   ['cube',['Cube',['../class_cube.html',1,'Cube'],['../class_cube.html#a06f3d86fb63e3aad08623610aa3c17b4',1,'Cube::Cube()'],['../class_cube.html#a8523687590ff90c49bc54281d0d3e47a',1,'Cube::Cube(GLfloat x, GLfloat y, GLfloat z)']]],
   ['cube_2ecpp',['Cube.cpp',['../_cube_8cpp.html',1,'']]],

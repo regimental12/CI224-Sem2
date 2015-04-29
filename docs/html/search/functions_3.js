@@ -6,7 +6,6 @@ var searchData=
   ['getplacetype',['getPlaceType',['../class_camera.html#abab3e9c2360aa3480efc6d630e1f79e8',1,'Camera']]],
   ['getposition',['getPosition',['../class_cube.html#ae55713af649b1cc24426d2ca209b8163',1,'Cube::getPosition()'],['../class_sky_box.html#aa4905c9e9f9ffd8c3f46397d9a324644',1,'SkyBox::getPosition()']]],
   ['getprogram',['getProgram',['../class_shader.html#ab3b6ebf2670424320d518f417a676fc2',1,'Shader']]],
-  ['getray',['getRay',['../class_ray_cast.html#a87834fb8de45433e8525936d08885613',1,'RayCast']]],
   ['gettexture',['getTexture',['../class_cube.html#a92ef19e9427e3d4f098d575db03757c6',1,'Cube::getTexture()'],['../class_sky_box.html#a7cba71a3279e0988707cc72e170d50b8',1,'SkyBox::getTexture()'],['../class_image_loader.html#af71479e10a84606ab284ac1293436261',1,'ImageLoader::GetTexture()']]],
   ['gettype',['getType',['../class_cube.html#a27aea823ea0926b6fb9315ae9cfac5bb',1,'Cube']]],
   ['getvao',['getVAO',['../class_cube.html#af4f3394054081c69c8f4f9c2a6b9ba54',1,'Cube']]],

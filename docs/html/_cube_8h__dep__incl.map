@@ -1,12 +1,11 @@
 <map id="src/Cube.h" name="src/Cube.h">
-<area shape="rect" id="node2" href="$_chunk_8h.html" title="src/Chunk.h" alt="" coords="151,155,244,181"/>
+<area shape="rect" id="node2" href="$_chunk_8h.html" title="src/Chunk.h" alt="" coords="164,155,257,181"/>
 <area shape="rect" id="node5" href="$_game_8h.html" title="src/Game.h" alt="" coords="75,304,165,331"/>
-<area shape="rect" id="node9" href="$_collision_8h.html" title="src/Collision.h" alt="" coords="194,80,299,107"/>
-<area shape="rect" id="node11" href="$_cube_8cpp.html" title="src/Cube.cpp" alt="" coords="323,80,423,107"/>
-<area shape="rect" id="node3" href="$_chunk_8cpp.html" title="src/Chunk.cpp" alt="" coords="292,229,399,256"/>
-<area shape="rect" id="node4" href="$_world_8h.html" title="src/World.h" alt="" coords="178,229,267,256"/>
-<area shape="rect" id="node8" href="$_world_8cpp.html" title="src/World.cpp" alt="" coords="190,304,292,331"/>
+<area shape="rect" id="node9" href="$_collision_8h.html" title="src/Collision.h" alt="" coords="158,80,263,107"/>
+<area shape="rect" id="node10" href="$_cube_8cpp.html" title="src/Cube.cpp" alt="" coords="287,80,387,107"/>
+<area shape="rect" id="node3" href="$_chunk_8cpp.html" title="src/Chunk.cpp" alt="" coords="157,229,264,256"/>
+<area shape="rect" id="node4" href="$_world_8h.html" title="src/World.h" alt="" coords="289,229,377,256"/>
+<area shape="rect" id="node8" href="$_world_8cpp.html" title="src/World.cpp" alt="" coords="282,304,384,331"/>
 <area shape="rect" id="node6" href="$_game_8cpp.html" title="src/Game.cpp" alt="" coords="5,379,109,405"/>
 <area shape="rect" id="node7" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="134,379,231,405"/>
-<area shape="rect" id="node10" href="$_collision_8cpp.html" title="src/Collision.cpp" alt="" coords="269,155,387,181"/>
 </map>

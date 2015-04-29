@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['shader_2ecpp',['Shader.cpp',['../_shader_8cpp.html',1,'']]],
-  ['shader_2eh',['Shader.h',['../_shader_8h.html',1,'']]],
-  ['skybox_2ecpp',['SkyBox.cpp',['../_sky_box_8cpp.html',1,'']]],
-  ['skybox_2eh',['SkyBox.h',['../_sky_box_8h.html',1,'']]]
+  ['world_2ecpp',['World.cpp',['../_world_8cpp.html',1,'']]],
+  ['world_2eh',['World.h',['../_world_8h.html',1,'']]]
 ];
