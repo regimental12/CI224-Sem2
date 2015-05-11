@@ -1,0 +1,11 @@
+The work within this git repository is copyright - Richard Hankins & George Vicarey witht the following noteable exceptions.
+
+Exceptions
+===============
+1) The source code within src/Perlin.cpp and src/Perlin.h are derived from Ken PErlin's refernce implementation of his improved noise algorithm found here : (http://mrl.nyu.edu/~perlin/noise/).
+
+2) The raycasting found within src/Collision.h is derived fron Anton's OpenGL tutorials and book the exact tutorial is found here : (http://antongerdelan.net/opengl/raycasting.html)
+
+These exceptions have been used fairly in accordance with the United Kingdoms copyright law which allows fair use of an authors copyrighted works for educational use.
+
+For anyoen wanting to implemnt a noise funciton we would suggest using OpenSimplex noise (http://en.wikipedia.org/wiki/OpenSimplex_noise).
